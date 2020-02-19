@@ -1,0 +1,61 @@
+templatePaths {
+    page {
+        templateRootPath = EXT:project_configuration/Resources/Private/Templates/Page
+        partialRootPath = EXT:project_configuration/Resources/Private/Partials/Page
+        layoutRootPath = EXT:project_configuration/Resources/Private/Layouts/Page
+    }
+
+    default {
+        templateRootPath = EXT:project_configuration/Resources/Private/Templates/ContentElements
+        partialRootPath = EXT:project_configuration/Resources/Private/Partials/ContentElements
+        layoutRootPath = EXT:project_configuration/Resources/Private/Layouts/ContentElements
+    }
+
+    carousel {
+        templateRootPath = EXT:base_carousel/Resources/Private/Templates
+        partialRootPath = EXT:base_carousel/Resources/Private/Partials
+        layoutRootPath = EXT:base_carousel/Resources/Private/Layouts
+    }
+
+    columns {
+        templateRootPath = EXT:base_columns/Resources/Private/Templates
+        partialRootPath = EXT:base_columns/Resources/Private/Partials
+        layoutRootPath = EXT:base_columns/Resources/Private/Layouts
+    }
+
+    extendedSection {
+        templateRootPath = EXT:base_extendedsection/Resources/Private/Templates
+        partialRootPath = EXT:base_extendedsection/Resources/Private/Partials
+        layoutRootPath = EXT:base_extendedsection/Resources/Private/Layouts
+    }
+
+    gallery {
+        templateRootPath = EXT:base_gallery/Resources/Private/Templates
+        partialRootPath = EXT:base_gallery/Resources/Private/Partials
+        layoutRootPath = EXT:base_gallery/Resources/Private/Layouts
+    }
+    
+    menus {
+        templateRootPath = EXT:base_menus/Resources/Private/Templates
+        partialRootPath = EXT:base_menus/Resources/Private/Partials
+        layoutRootPath = EXT:base_menus/Resources/Private/Layouts
+    }
+        
+    section {
+        templateRootPath = EXT:base_section/Resources/Private/Templates
+        partialRootPath = EXT:base_section/Resources/Private/Partials
+        layoutRootPath = EXT:base_section/Resources/Private/Layouts
+    }
+            
+    teaser {
+        templateRootPath = EXT:base_teaser/Resources/Private/Templates
+        partialRootPath = EXT:base_teaser/Resources/Private/Partials
+        layoutRootPath = EXT:base_teaser/Resources/Private/Layouts
+    }
+            
+    textRoundMedia {
+        templateRootPath = EXT:base_textroundmedia/Resources/Private/Templates
+        partialRootPath = EXT:base_textroundmedia/Resources/Private/Partials
+        layoutRootPath = EXT:base_textroundmedia/Resources/Private/Layouts
+    }
+}

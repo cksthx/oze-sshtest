@@ -1,0 +1,24 @@
+$logo-path: "/typo3conf/ext/project_configuration/Resources/Public/Images/logo.svg" !default;
+
+// Basic Sass
+@import "variables";
+@import "globals";
+@import "fluid_styled_content";
+@import "navigation";
+@import "breadcrumbs";
+@import "sociallinks";
+@import "uploads";
+@import "utilities";
+
+//Content Elements
+@import "base_carousel/Resources/Private/Sass/carousel";
+@import "base_extendedsection/Resources/Private/Sass/style.scss";
+@import "base_gallery/Resources/Private/Sass/gallery";
+@import "base_section/Resources/Private/Sass/style.scss";
+@import "base_columns/Resources/Private/Sass/style.scss";
+@import "base_menus/Resources/Private/Sass/style.scss";
+@import "base_teaser/Resources/Private/Sass/style.scss";
+@import "base_textroundmedia/Resources/Private/Sass/style.scss";
+
+// Additions and theming
+@import "theme";

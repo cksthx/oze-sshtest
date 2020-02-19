@@ -1,0 +1,37 @@
+# =======================================
+# Project Configuration: TypoScript Setup
+# =======================================
+
+# Base configurations
+@import 'EXT:base_configuration/Configuration/TypoScript/Setup/LibContentElement.typoscript'
+@import 'EXT:base_configuration/Configuration/TypoScript/Setup/Menus.typoscript'
+@import 'EXT:base_configuration/Configuration/TypoScript/Setup/Page.typoscript'
+@import 'EXT:base_configuration/Configuration/TypoScript/Setup/OpenGraph.typoscript'
+@import 'EXT:base_configuration/Configuration/TypoScript/Setup/FluidTemplate.typoscript'
+@import 'EXT:base_configuration/Configuration/TypoScript/Setup/Config.typoscript'
+@import 'EXT:base_configuration/Configuration/TypoScript/Setup/Rte.typoscript'
+@import 'EXT:base_configuration/Configuration/TypoScript/Setup/PageContents.typoscript'
+
+# Content Elements
+@import 'EXT:base_carousel/Configuration/TypoScript/setup.typoscript'
+@import 'EXT:base_columns/Configuration/TypoScript/setup.typoscript'
+@import 'EXT:base_extendedsection/Configuration/TypoScript/setup.typoscript'
+@import 'EXT:base_gallery/Configuration/TypoScript/setup.typoscript'
+@import 'EXT:base_menus/Configuration/TypoScript/setup.typoscript'
+@import 'EXT:base_section/Configuration/TypoScript/setup.typoscript'
+@import 'EXT:base_teaser/Configuration/TypoScript/setup.typoscript'
+@import 'EXT:base_textroundmedia/Configuration/TypoScript/setup.typoscript'
+
+# Project configurations
+@import 'EXT:project_configuration/Configuration/TypoScript/Setup/Page.typoscript'
+
+# extensions
+# =======
+# set path with extension name and setup file here:
+# @import 'EXT:project_configuration/Configuration/TypoScript/Setup/Extensions/EXTENSION_NAME/setup.typoscript'
+
+config {
+    # Site URL prefix
+    # ===============
+    absRefPrefix = auto
+}

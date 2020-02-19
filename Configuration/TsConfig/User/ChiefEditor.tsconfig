@@ -1,0 +1,8 @@
+# =====================================================================
+# COMKOM° Project Configuration: Example User TSconfig for chiefeditors
+# =====================================================================
+
+options {
+	#pageTree.showPageIdWithTitle = 1
+	#pageTree.showNavTitle = 1
+}

@@ -1,0 +1,12 @@
+{
+    "name": "project-configuration",
+    "version": "1.0.1",
+    "description": "Basic configuration for Project",
+    "homepage": "http://www.comkom.de",
+    "author": {
+        "name": "Paul Greinke",
+        "email": "paulgreinke@comkom.de"
+    },
+    "dependencies": {},
+    "private": true
+}

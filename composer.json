@@ -1,0 +1,41 @@
+{
+    "name": "comkom/project-configuration",
+    "type": "typo3-cms-extension",
+    "description": "Basic configuration for any project",
+    "version": "2.0",
+    "authors": [        
+        {
+            "name": "Team COMKOM°",
+            "email": "mail@comkom.de",
+            "homepage": "https://www.comkom.de",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "typo3/cms-core": "^9.5",
+        "comkom/base-configuration": "dev-dev",
+        "comkom/base-carousel": "dev-dev",
+        "comkom/base-extendedsection": "dev-dev",
+        "comkom/base-menus": "dev-dev",
+        "comkom/base-teaser": "dev-dev",
+        "comkom/base-columns": "dev-dev",
+        "comkom/base-gallery": "dev-dev",
+        "comkom/base-textroundmedia": "dev-dev",
+        "comkom/base-section": "dev-dev"
+    },
+    "replace": {
+        "project_configuration": "self.version",
+        "typo3-ter/project_configuration": "self.version"
+    },
+    "repositories": [
+        { "type": "vcs", "url": "https://oppro.comkom.de/git/base-configuration.git" },
+        { "type": "vcs", "url": "https://oppro.comkom.de/git/base-carousel.git" },
+        { "type": "vcs", "url": "https://oppro.comkom.de/git/base-extendedsection.git" },
+        { "type": "vcs", "url": "https://oppro.comkom.de/git/base-menus.git" },
+        { "type": "vcs", "url": "https://oppro.comkom.de/git/base-teaser.git" },
+        { "type": "vcs", "url": "https://oppro.comkom.de/git/base-columns.git" },
+        { "type": "vcs", "url": "https://oppro.comkom.de/git/base-gallery.git" },
+        { "type": "vcs", "url": "https://oppro.comkom.de/git/base-textroundmedia.git" },
+        { "type": "vcs", "url": "https://oppro.comkom.de/git/base-section.git" }
+    ]
+}

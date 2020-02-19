@@ -1,0 +1,37 @@
+# ========================================================
+# COMKOM° Project Configuration: Page TsConfig
+# ========================================================
+
+# TCEMain
+# =======
+@import 'EXT:base_configuration/Configuration/TsConfig/Page/TceMain.tsconfig'
+
+# Example usergroup (id 1) for standard page permissions
+// TCEMAIN {
+//     permissions {
+//         groupid = 1
+//         user = show, editcontent, edit, new, delete
+//         group = show, editcontent, edit, new, delete
+//         everybody =
+//     }
+// }
+
+# backend forms
+# =============
+@import 'EXT:base_configuration/Configuration/TsConfig/Page/BackendForms.tsconfig'
+
+# rte
+# ===
+@import 'EXT:base_configuration/Configuration/TsConfig/Page/Rte.tsconfig'
+
+# Backend Layouts
+@import 'EXT:base_configuration/Configuration/TsConfig/Page/LibBackendLayouts.tsconfig'
+
+mod.web_layout.BackendLayouts {
+    static < lib.backendLayouts.static
+    flex < lib.backendLayouts.flex
+    heroimage < lib.backendLayouts.heroimage
+}
+
+# Extensions
+# =====================

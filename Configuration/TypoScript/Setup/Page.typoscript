@@ -1,0 +1,23 @@
+# =========================================
+# Project Configuration: Page Configuration
+# =========================================
+
+page {
+    headerData.10.template.file = EXT:project_configuration/Resources/Private/Partials/Page/HeaderData.html
+
+    includeCSS {
+        style = EXT:project_configuration/Resources/Public/Css/style.css
+        style.media = all
+    }
+}
+
+# ==================
+# PreviewRenderer CE
+# ==================
+
+plugin.ceConfiguration {
+    settings {
+        elements = sectionBackgroundImage,imageTeaser,extendedSectionImage,extendedSectionTeaser,textTeaser,textRoundMedia,gallery
+        elements_with_subheader = textTeaser,textRoundMedia,textmedia
+    }
+}

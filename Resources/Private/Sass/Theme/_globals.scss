@@ -1,0 +1,19 @@
+// background colors
+//============================
+.tc-1 { background-color: $primary; }
+.tc-2 { background-color: $secondary; }
+.tc-3 { background-color: $tertiary; }
+.tc-4 { background-color: $quaternary; }
+
+// Default Button 
+//============================
+.btn-default {
+    @include button-variant($white, $gray-900);
+    color: $gray-900;
+}
+.btn-primary {
+    color: $white;
+}
+.btn-secondary {
+    color: $white;
+}

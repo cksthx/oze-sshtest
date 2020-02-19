@@ -1,0 +1,34 @@
+# ===========================================
+# Project Configuration: TypoScript Constants
+# ===========================================
+
+# Base constants
+@import 'EXT:base_configuration/Configuration/TypoScript/Constants/Site.typoscript'
+
+# Project constants
+@import 'EXT:project_configuration/Configuration/TypoScript/Constants/TemplatePaths.typoscript'
+
+CompanyName = COMKOM° Whitelabel
+CompanyEmail = mail@comkom.de
+CompanyClaim =
+
+# Social Media Konstanten
+# =======================
+
+# Die Meta-Angaben "Facebook_app_id" und "Twitter_site" koennen aktuell nicht ausgegeben werden
+// Facebook_app_id =
+// Twitter_site =
+
+DummyImage = EXT:base_configuration/Resources/Public/Images/preview-image.svg
+
+# Rootpage
+# ========
+RootId = 1
+
+page.meta.robots = noindex,nofollow
+config.debug = 0
+
+[applicationContext = Development]
+page.meta.robots = noindex,nofollow
+config.debug = 1
+[end]

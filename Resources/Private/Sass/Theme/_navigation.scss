@@ -1,0 +1,75 @@
+#main-navi {
+    @include media-breakpoint-up(sm) {
+        &.navbar-expand {
+            &-sm, &-md, &-lg, &-xl {
+                &>.container {
+                    padding-left: ($grid-gutter-width/2) !important;
+                    padding-right: ($grid-gutter-width/2) !important;
+                }
+            }
+        }
+    }
+    .dropdown {
+        position: static;
+        .dropdown-menu {
+            left: 0;
+            right: 0;
+            margin: 0;
+            background-color: $gray-300;
+            border: none;
+            @include media-breakpoint-up(lg) {
+                border-radius: 0;
+                .container {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                }
+            }
+            .overview {
+                padding-top: 0.25rem;
+            }
+            &.show {
+                margin-bottom: 0.5rem;
+                .link-list {
+                    .nav {
+                        flex-direction: column;
+                        padding-top: 0.25rem;
+                        @include media-breakpoint-up(lg) {
+                            flex-direction: row; 
+                            justify-content: flex-end;
+                                .nav-item {
+                                padding-left: 0.5rem;
+                                padding-right: 0.5rem;
+                                &:first-of-type {
+                                    padding-left: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .dropdown-item {
+                padding-left: 0;
+                padding-right: 0;
+                color: rgba(0,0,0,0.5);
+                &:hover, &:focus {
+                    background-color: transparent;
+                    color: rgba(0,0,0,0.7);
+                }
+                &.active, &:active {
+                    background-color: transparent;
+                    color: rgba(0,0,0,0.9);
+                }
+            }
+        }
+    }
+
+    .navbar-brand.navbar-brand-backgroundimage {
+        width: 120px;
+        max-height: $navbar-brand-height;
+		text-indent:-99999px;
+		background: url($logo-path) no-repeat;
+		background-position: left center;
+        background-size: contain;
+	}
+}

@@ -1,0 +1,17 @@
+.DS_Store
+
+# yarn files
+
+node_modules/
+yarn-error.log
+yarn.lock
+
+# Media
+Resources/Public/Images/*
+!Resources/Public/Images/*.svg
+
+# Domain Configuration
+Configuration/TypoScript/Constants/Domain_local.typoscript
+
+!.keep
+

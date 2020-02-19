@@ -1,0 +1,267 @@
+// Images
+/////////////////////////////////////
+
+.image > span img, .image > a > span img, picture > img, picture > a > img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+.ce-align-left { text-align: left; }
+.ce-align-center { text-align: center; }
+.ce-align-right { text-align: right; }
+.ce-table td, .ce-table th { vertical-align: top; }
+.ce-textpic, .ce-nowrap .ce-bodytext, .ce-gallery, .ce-row, .ce-uploads li, .ce-uploads div { overflow: hidden; }
+.ce-gallery { max-width: 100%; }
+.ce-left .ce-gallery, .ce-column { float: left; }
+.ce-center .ce-outer { position: relative; float: right; right: 50%; }
+.ce-center .ce-inner { position: relative; float: right; right: -50%; }
+.ce-right .ce-gallery { float: right; }
+.ce-gallery figure { display: table; margin: 0; }
+.ce-gallery figcaption { display: table-caption; caption-side: bottom; }
+.ce-gallery img { display: block; }
+.ce-gallery iframe { border-width: 0; }
+
+// Globale Gallery Definition
+/////////////////////////////////////
+.ce-intext.ce-right .ce-gallery, .ce-intext.ce-left .ce-gallery, .ce-above .ce-gallery, .ce-below .ce-gallery, .ck-image-group .ce-gallery {
+    margin: 0 0 $grid-gutter-width 0;
+    max-width: none;
+    padding-left: 0;
+    padding-right: 0;
+    .ce-row.row {
+        margin-bottom: $grid-gutter-width;
+        &:last-child { margin-bottom:0; }
+        > .ce-column {
+            margin-bottom: $grid-gutter-width;
+            &:last-child { margin-bottom:0; }
+        }
+    }
+}
+
+// Bild im Text Definition für Gallery
+/////////////////////////////////////
+.ce-intext.ce-right, .ce-intext.ce-left {
+    // Einspaltig
+    .ce-gallery {
+        @include media-breakpoint-up(sm) {
+            max-width: ((map-get($container-max-widths, "sm") / 12) * 6) + $grid-gutter-width;
+            padding-left: $grid-gutter-width;
+            padding-right: $grid-gutter-width;
+        }
+        @include media-breakpoint-up(md) {
+            max-width: ((map-get($container-max-widths, "md") / 12) * 6) + $grid-gutter-width;
+        }
+        @include media-breakpoint-up(lg) {
+            max-width: ((map-get($container-max-widths, "lg") / 12) * 4) + $grid-gutter-width;
+        }
+        @include media-breakpoint-up(xl) {
+            max-width: ((map-get($container-max-widths, "xl") / 12) * 4) + $grid-gutter-width;
+        }
+    }
+    // Zwei- und Dreispaltig
+    .ce-gallery.ce-gallery-2-col, .ce-gallery.ce-gallery-3-col {
+        @include media-breakpoint-up(lg) {
+            max-width: ((map-get($container-max-widths, "lg") / 12) * 6) + $grid-gutter-width;
+        }
+        @include media-breakpoint-up(xl) {
+            max-width: ((map-get($container-max-widths, "xl") / 12) * 6) + $grid-gutter-width;
+        }
+    }
+}
+.ce-intext.ce-left .ce-gallery {
+    @include media-breakpoint-up(sm) {
+        margin-left: -1 * $grid-gutter-width;
+    }
+}
+.ce-intext.ce-right .ce-gallery {
+    @include media-breakpoint-up(sm) {
+        margin-right: -1 * $grid-gutter-width;
+    }
+}
+
+// Bild neben Text (nowrap) Definition
+/////////////////////////////////////
+
+// Bodytext
+.ce-intext.ce-right.ce-nowrap .ce-bodytext, .ce-intext.ce-left.ce-nowrap .ce-bodytext {
+    overflow: visible;
+    @include media-breakpoint-up(md) { overflow: hidden; }
+}
+.ce-intext.ce-right.ce-nowrap, .ce-intext.ce-left.ce-nowrap {
+    // Einspaltig
+    .ce-gallery {
+        overflow: visible;
+        @include media-breakpoint-up(sm) {
+            max-width: inherit;
+            padding-left: 0;
+            padding-right: 0;
+            margin-left: 0;
+        }
+        @include media-breakpoint-up(md) {
+            max-width: ((map-get($container-max-widths, "md") / 12) * 6) + $grid-gutter-width;
+            padding-left: $grid-gutter-width;
+            padding-right: $grid-gutter-width;
+        }
+        @include media-breakpoint-up(lg) {
+            max-width: ((map-get($container-max-widths, "lg") / 12) * 4) + $grid-gutter-width;
+        }
+        @include media-breakpoint-up(xl) {
+            max-width: ((map-get($container-max-widths, "xl") / 12) * 4) + $grid-gutter-width;
+        }
+    }
+    // Zwei- und Dreispaltig
+    .ce-gallery.ce-gallery-2-col, .ce-gallery.ce-gallery-3-col {
+        @include media-breakpoint-up(lg) {
+            max-width: ((map-get($container-max-widths, "lg") / 12) * 6) + $grid-gutter-width;
+        }
+        @include media-breakpoint-up(xl) {
+            max-width: ((map-get($container-max-widths, "xl") / 12) * 6) + $grid-gutter-width;
+        }
+    }
+}
+.ce-intext.ce-right.ce-nowrap .ce-gallery {
+    @include media-breakpoint-up(sm) {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    @include media-breakpoint-up(md) { margin-right: -1 * $grid-gutter-width !important; }
+}
+.ce-intext.ce-left.ce-nowrap .ce-gallery {
+    @include media-breakpoint-up(md) { margin-left: -1 * $grid-gutter-width !important; }
+}
+
+// margin-bottom Definitionen Anfang
+.ce-intext, .ce-above, .ce-below, .ck-image-group {
+    .ce-gallery.ce-gallery-2-col {
+        .ce-row.row {
+            > .ce-column { margin-bottom: 0px; }
+        }
+    }
+}
+@include media-breakpoint-up(sm) {
+    .ce-intext.ce-nowrap .ce-gallery.ce-gallery-3-col,
+    .ce-above .ce-gallery.ce-gallery-3-col,
+    .ce-below .ce-gallery.ce-gallery-3-col,
+    .ck-image-group .ce-gallery.ce-gallery-3-col {
+        .ce-row.row {
+            > .ce-column { margin-bottom: 0px; }
+        }
+    }
+}
+@include media-breakpoint-up(md) {
+    .ce-intext.ce-nowrap .ce-gallery.ce-gallery-3-col {
+        .ce-row.row {
+            > .ce-column {
+                margin-bottom: $grid-gutter-width;
+                &:last-child { margin-bottom:0; }
+            }
+        }
+    }
+}
+@include media-breakpoint-up(lg) {
+    .ce-intext .ce-gallery.ce-gallery-3-col {
+        .ce-row.row {
+            > .ce-column { margin-bottom: 0px; }
+        }
+    }
+}
+// margin-bottom Definitionen Ende
+
+.ce-column {
+    position: relative;
+    min-height: 1px;
+    padding-left:  ($grid-gutter-width / 2);
+    padding-right: ($grid-gutter-width / 2);
+    @include media-breakpoint-up(md) {
+        float: left;
+    }
+}
+.ce-column:last-child { margin-right: 0; }
+
+.ce-row {
+    @include make-row();
+}
+.ce-row.row + .ce-row.row { margin-top: $grid-gutter-width; }
+.ce-row:last-child { margin-bottom: 0; }
+
+.ce-above .ce-bodytext { clear: both; }
+
+.ce-intext.ce-left ol, .ce-intext.ce-left ul { padding-left: 40px; overflow: auto; }
+
+/* Headline */
+.ce-headline-left { text-align: left; }
+.ce-headline-center { text-align: center; }
+.ce-headline-right { text-align: right; }
+
+/* Uploads */
+.ce-uploads { margin: 0; padding: 0; }
+.ce-uploads li { list-style: none outside none; margin: 1em 0; }
+.ce-uploads img { float: left; padding-right: 1em; vertical-align: top; }
+.ce-uploads span { display: block; }
+
+/* Table */
+.ce-table { width: 100%; max-width: 100%; }
+.ce-table th, .ce-table td { padding: 0.5em 0.75em; vertical-align: top; }
+.ce-table thead th { border-bottom: 2px solid #dadada; }
+.ce-table th, .ce-table td { border-top: 1px solid #dadada; }
+.ce-table-striped tbody tr:nth-of-type(odd) { background-color: rgba(0,0,0,.05); }
+.ce-table-bordered th, .ce-table-bordered td { border: 1px solid #dadada; }
+
+/* Space */
+.frame { @extend .mb-3; @extend .mb-xl-5; }
+.frame.frame-space-before-none { @extend .mt-0; }
+.frame.frame-space-after-none { @extend .mb-0; }
+
+.frame.frame-space-before-extra-small { @extend .mt-1; }
+.frame.frame-space-before-small { @extend .mt-2; }
+.frame.frame-space-before-medium { @extend .mt-3; }
+.frame.frame-space-before-large { @extend .mt-4; }
+.frame.frame-space-before-extra-large { @extend .mt-5; }
+.frame.frame-space-after-extra-small { @extend .mb-1; }
+.frame.frame-space-after-small { @extend .mb-2; }
+.frame.frame-space-after-medium { @extend .mb-3; }
+.frame.frame-space-after-large { @extend .mb-4; }
+.frame.frame-space-after-extra-large { @extend .mb-5; }
+
+/* Frame */
+.frame-ruler-before:before { content: ''; display: block; border-top: 1px solid rgba(0,0,0,0.25); margin-bottom: 2em; }
+.frame-ruler-after:after { content: ''; display: block; border-bottom: 1px solid rgba(0,0,0,0.25); margin-top: 2em; }
+
+.ce-bodytext + .ce-gallery { margin-top: ($grid-gutter-width); }
+
+
+/* Frame widths */
+@include media-breakpoint-up(lg) {
+    .frame-75-left {
+        max-width: calc(75% - #{$grid-gutter-width} * 1 / 4) ;
+        margin-right: auto;
+    }
+    .frame-66-left {
+        max-width: calc(66.66667% - #{$grid-gutter-width} * 1 / 3) ;
+        margin-right: auto;
+    }
+    .frame-50-left {
+        max-width: calc(50% - #{$grid-gutter-width} * 1 / 2) ;
+        margin-right: auto;
+    }
+    .frame-33-left {
+        max-width: calc(33.33333% - #{$grid-gutter-width} * 2 / 3) ;
+        margin-right: auto;
+    }
+    .frame-75-right {
+        max-width: calc(75% - #{$grid-gutter-width} * 1 / 4) ;
+        margin-left: auto;
+    }
+    .frame-66-right {
+        max-width: calc(66.66667% - #{$grid-gutter-width} * 1 / 3) ;
+        margin-left: auto;
+    }
+    .frame-50-right {
+        max-width: calc(50% - #{$grid-gutter-width} * 1 / 2) ;
+        margin-left: auto;
+    }
+    .frame-33-right {
+        max-width: calc(33.33333% - #{$grid-gutter-width} * 2 / 3) ;
+        margin-left: auto;
+    }
+}

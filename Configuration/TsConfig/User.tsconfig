@@ -1,0 +1,37 @@
+# ====================================================
+# COMKOM° Project Configuration: Example User TsConfig
+# ====================================================
+
+// Example Usergroup (id 2) for Editors
+// [usergroup = 2]
+//     @import 'EXT:project_configuration/Configuration/TsConfig/User/Editor.tsconfig'
+// [END]
+
+// Example Usergroup (id 3) for Chiefeditors
+// [usergroup = 3]
+//     @import 'EXT:project_configuration/Configuration/TsConfig/User/ChiefEditor.tsconfig'
+// [END]
+
+
+# restrict backend layouts colPos to allowed content elements
+#  ==========================================================
+
+// Example key visual: show only allowed content elements: extendedsection
+// [globalVar = GP:colPos==5]&&[usergroup = 2]
+// page.mod.wizards.newContentElement.wizardItems.common.show =
+// page.mod.wizards.newContentElement.wizardItems.special.show =
+// page.mod.wizards.newContentElement.wizardItems.forms.show =
+// page.mod.wizards.newContentElement.wizardItems.plugins.show =
+// page.mod.wizards.newContentElement.wizardItems.menu.show =
+// page.tx_gridelements.excludeLayoutIds = section,teaserContainer,twoColumns,threeColumns,fourColumns
+// [END]
+
+// Example content: do not show any of the standard elements, only allow section gridelement
+// [globalVar = GP:colPos==0]&&[usergroup = 2]
+// page.mod.wizards.newContentElement.wizardItems.common.show =
+// page.mod.wizards.newContentElement.wizardItems.special.show =
+// page.mod.wizards.newContentElement.wizardItems.forms.show =
+// page.mod.wizards.newContentElement.wizardItems.plugins.show =
+// page.mod.wizards.newContentElement.wizardItems.menu.show =
+// page.tx_gridelements.excludeLayoutIds = extendedSection,teaserContainer,carousel,twoColumns,threeColumns,fourColumns
+// [END]
