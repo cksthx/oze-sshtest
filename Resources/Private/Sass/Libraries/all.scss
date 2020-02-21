@@ -68,8 +68,8 @@
 // ==================
 
 // From carousel or gallery Extension
-$slick-loader-path: "/typo3conf/ext/base_carousel/node_modules/slick-carousel/slick/";
-$slick-font-path: "/typo3conf/ext/base_carousel/node_modules/slick-carousel/slick/fonts/";
+$slick-loader-path: "/typo3conf/ext/base_configuration/node_modules/slick-carousel/slick/";
+$slick-font-path: "/typo3conf/ext/base_configuration/node_modules/slick-carousel/slick/fonts/";
 
-@import "base_carousel/node_modules/slick-carousel/slick/slick.scss";
-@import "base_carousel/node_modules/slick-carousel/slick/slick-theme.scss";
+@import "base_configuration/node_modules/slick-carousel/slick/slick.scss";
+@import "base_configuration/node_modules/slick-carousel/slick/slick-theme.scss";
