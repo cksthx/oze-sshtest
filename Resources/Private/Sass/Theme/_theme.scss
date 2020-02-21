@@ -24,6 +24,8 @@
             width: 1.5em;
             content: counters(item,".") ". ";
             display: inline-block;
+            font-family: "Open Sans Condensed";
+            font-weight: 700;
         }
         ul, ol {
             margin-top: 0.5em;
