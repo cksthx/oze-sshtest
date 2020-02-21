@@ -2,9 +2,7 @@
  * Define any varible modification for bootstrap here
  */
 
-$font-family-sans-serif: "Open Sans";
-
-$primary: #325077;
+$primary: #0073A5;
 $secondary: #FA6D57;
 $tertiary: #6c757d;
 $quaternary: #20c997;
@@ -19,3 +17,8 @@ $spacers: (
     6: ($spacer * 4),
     7: ($spacer * 5)
 );
+
+$font-family-sans-serif: "Open Sans";
+$headings-font-family: "Open Sans Condensed";
+$headings-font-weight: 700;
+$headings-color: $primary;
