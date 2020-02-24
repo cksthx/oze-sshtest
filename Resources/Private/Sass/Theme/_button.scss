@@ -1,0 +1,41 @@
+.btn {
+	background-image: none;
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 1rem;
+	@include media-breakpoint-up(md) {
+		font-size: 1.2rem;
+	}
+}
+.btn-primary, .btn-outline-primary {
+	&:hover {
+		border-color: $primary-lighter;
+		background-color: $primary-lighter;
+	}
+	&:focus {
+		border-color: $primary-light;
+		background-color: $primary-light;
+		color: $white;
+		box-shadow: none;
+	}
+	&:not(:disabled):not(.disabled):active, 
+	&:not(:disabled):not(.disabled).active {
+		border-color: $primary-light;
+		background-color: $primary-light;
+		&:focus {
+			box-shadow: none;
+		}
+	}
+}
+
+.show {
+	&>.btn-primary, &>.btn-outline-primary{
+		.dropdown-toggle {
+			border-color: $primary-light;
+			background-color: $primary-light;
+			&:focus {
+				box-shadow: none;
+			}
+		}
+	}
+}
