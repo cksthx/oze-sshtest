@@ -6,6 +6,9 @@
 	@include media-breakpoint-up(md) {
 		font-size: 1.2rem;
 	}
+	&:not(:last-child) {
+		margin-right: 12px;
+	}
 }
 .btn-primary, .btn-outline-primary {
 	&:hover {
