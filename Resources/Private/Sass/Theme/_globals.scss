@@ -43,3 +43,28 @@ table.table {
 		color: $primary;
 	}
 }
+
+blockquote {
+	position: relative;
+	margin: 12px;
+	padding: 32px 24px 18px 24px;
+	color: $primary;
+	font-weight: 600;
+	background: $gray-100;
+	&:after {
+		content: '';
+		position: absolute;
+		top: -12px;
+		left: -12px;
+		display: block;
+		height: 25px;
+		width: 38px;
+		background-image: url("../Images/quotation.svg");
+		background-repeat: no-repeat;
+	}
+	& + p > .small {
+		color: $primary;
+		font-size: 0.875rem;
+		margin-left: 36px;
+	}
+}
