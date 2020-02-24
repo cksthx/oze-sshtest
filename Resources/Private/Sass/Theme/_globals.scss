@@ -49,6 +49,12 @@ table.table {
 	}
 }
 
+.figure-caption {
+	margin-top: 12px;
+	color: $primary;
+	font-size: 0.875rem;
+}
+
 blockquote {
 	position: relative;
 	margin: 12px;
@@ -68,8 +74,7 @@ blockquote {
 		background-repeat: no-repeat;
 	}
 	& + p > .small {
-		color: $primary;
-		font-size: 0.875rem;
+		@extend .figure-caption;
 		margin-left: 36px;
 	}
 }
