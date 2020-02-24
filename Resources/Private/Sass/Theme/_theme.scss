@@ -18,7 +18,7 @@
         counter-increment: item;
         padding-left: 1.5em;
         line-height: 1.5em;
-        margin-bottom: 0.5em;
+        margin-bottom: 0.75rem;
         &:before {
             margin-left: -1.5em;
             width: 1.5em;
@@ -26,9 +26,13 @@
             display: inline-block;
             font-family: "Open Sans Condensed";
             font-weight: 700;
+            color: $primary;
         }
         ul, ol {
-            margin-top: 0.5em;
+            margin-top: 0.75rem;
+            li:before {
+                color: $primary-lighter;
+            }
         }
         ol {
             li {
@@ -57,7 +61,7 @@
     li {
         padding-left: 1em;
         text-indent: -1em;
-        margin-bottom: 0.5em;
+        margin-bottom: 0.75rem;
         line-height: 1.5;
         &:before {
             content: "\002022";
@@ -65,7 +69,10 @@
             color: $primary;
         }
         ul, ol {
-            margin-top: 0.5em;
+            margin-top: 0.75rem;
+            li:before {
+                color: $primary-lighter;
+            }
         }
     }
     &.link-list {

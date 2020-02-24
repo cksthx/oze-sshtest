@@ -6,6 +6,7 @@ $primary: #0073A5;
 $secondary: #FA6D57;
 $tertiary: #6c757d;
 $quaternary: #20c997;
+$gray-900: #3c3c3b;
 
 $theme-colors: (
     "tertiary": $tertiary,
@@ -17,6 +18,11 @@ $spacers: (
     6: ($spacer * 4),
     7: ($spacer * 5)
 );
+
+$line-height-base: 1.375;
+
+$paragraph-margin-bottom: 0.75rem;
+$headings-margin-bottom: 0.75rem;
 
 $font-family-sans-serif: "Open Sans";
 $headings-font-family: "Open Sans Condensed";
