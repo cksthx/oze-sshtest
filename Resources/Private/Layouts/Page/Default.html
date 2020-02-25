@@ -1,0 +1,16 @@
+<f:spaceless>
+    <header>
+        <f:render partial="Menu/Navigation" arguments="{mainmenu: mainmenu, siteName: siteName}" />
+        <f:render section="Keyvisual" />
+        <f:render partial="Menu/Breadcrumb" arguments="{breadcrumb: breadcrumb}" />
+    </header>
+
+    <main id="maincontent">
+        <f:render section="headertitle" />
+        <f:render section="Main" />
+    </main>
+
+    <footer id="contentinfo">
+        <f:render partial="Footer" arguments="{siteName: siteName}" />
+    </footer>
+</f:spaceless>
