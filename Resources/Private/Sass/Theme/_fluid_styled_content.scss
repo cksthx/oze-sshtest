@@ -216,25 +216,25 @@
 /* Frame spacing */
 /* Frames except for the last one inside of each parent get spaced below. */
 .frame+.frame {
-    margin-top: $frame-spacer*3;
+    margin-top: $frame-spacer;
 }
 
 /* Overwrites spacing above Frame. */
 .frame.frame-space-before-none {margin-top: 0;}
-.frame.frame-space-before-extra-small { margin-top: $frame-spacer*1; }
-.frame.frame-space-before-small { margin-top: $frame-spacer*2; }
-.frame.frame-space-before-medium { margin-top: $frame-spacer*3; }
-.frame.frame-space-before-large { margin-top: $frame-spacer*4; }
-.frame.frame-space-before-extra-large { margin-top: $frame-spacer*5; }
+.frame.frame-space-before-extra-small { margin-top: $frame-spacer/4; }
+.frame.frame-space-before-small { margin-top: $frame-spacer/2; }
+.frame.frame-space-before-medium { margin-top: $frame-spacer; }
+.frame.frame-space-before-large { margin-top: $frame-spacer*1.5; }
+.frame.frame-space-before-extra-large { margin-top: $frame-spacer*2; }
 
 /* Overwrites spacing below Frame. */
 /* These might never be needed. Every possible spacing-case should also be possible by spacing above frame only */
 .frame.frame-space-after-none {margin-top: 0;}
-.frame.frame-space-after-extra-small { margin-bottom: $frame-spacer*1; }
-.frame.frame-space-after-small { margin-bottom: $frame-spacer*2; }
-.frame.frame-space-after-medium { margin-bottom: $frame-spacer*3; }
-.frame.frame-space-after-large { margin-bottom: $frame-spacer*4; }
-.frame.frame-space-after-extra-large { margin-bottom: $frame-spacer*5; }
+.frame.frame-space-after-extra-small { margin-bottom: $frame-spacer/4; }
+.frame.frame-space-after-small { margin-bottom: $frame-spacer/2; }
+.frame.frame-space-after-medium { margin-bottom: $frame-spacer; }
+.frame.frame-space-after-large { margin-bottom: $frame-spacer*1.5; }
+.frame.frame-space-after-extra-large { margin-bottom: $frame-spacer*2; }
 
 /* Frame widths */
 /* Only on desktop by default. On mobile devices and tablets width will be 100% */
