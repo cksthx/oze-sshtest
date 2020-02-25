@@ -17,7 +17,7 @@
     li {
         counter-increment: item;
         padding-left: 1.25rem;
-        margin-bottom: 0.75rem;
+        // margin-bottom: 0.75rem;
         &:before {
             margin-left: -1.25rem;
             width: 1.25rem;
@@ -28,7 +28,7 @@
             color: $primary;
         }
         ul, ol {
-            margin-top: 0.75rem;
+            margin-top: $paragraph-margin-bottom;
             li:before {
                 color: $primary-lighter;
             }
@@ -60,7 +60,7 @@
     li {
         padding-left: 1.25rem;
         text-indent: -1.25rem;
-        margin-bottom: 0.75rem;
+        // margin-bottom: 0.75rem;
         &:before {
             content: "";
             display: inline-block;
@@ -72,7 +72,7 @@
             margin-bottom: 2px;
         }
         ul, ol {
-            margin-top: 0.75rem;
+            margin-top: $paragraph-margin-bottom;
             li:before {
                 background: $primary-lighter;
             }

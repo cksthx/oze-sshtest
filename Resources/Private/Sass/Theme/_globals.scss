@@ -5,6 +5,9 @@
 .tc-3 { background-color: $primary-lighter; }
 .tc-4 { background-color: $primary-lightest; }
 
+
+// typography 
+//============================
 body {
 	-webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -48,6 +51,8 @@ h6, .h6 {
 	}
 }
 
+// links
+//============================
 a {
 	font-weight: 600;
 	background-image: linear-gradient(to right, $primary-lighter 0%, $primary-lighter 100%);
@@ -62,6 +67,8 @@ a {
 	}
 }
 
+// tables 
+//============================
 table.table {
 	th, td {
 		border-top: none;
@@ -74,12 +81,16 @@ table.table {
 	}
 }
 
+// fig-caption 
+//============================
 .figure-caption {
 	margin-top: 12px;
 	color: $primary;
 	font-size: 0.875rem;
 }
 
+// blockquotes 
+//============================
 blockquote {
 	position: relative;
 	margin: 12px;
@@ -101,5 +112,24 @@ blockquote {
 	& + p > .small {
 		@extend .figure-caption;
 		margin-left: 36px;
+	}
+}
+
+// spacing within frames 
+//============================
+.frame {
+	p, ol, ul, dl, table ,blockquote {
+		margin-bottom: 0;
+		&:not(:last-child) {
+			margin-bottom: $paragraph-margin-bottom;
+		}
+	}
+	ol, ul, dl {
+		li {
+			margin-bottom: 0;
+			&:not(:last-child) {
+				margin-bottom: $paragraph-margin-bottom;
+			}
+		}
 	}
 }
