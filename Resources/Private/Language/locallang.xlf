@@ -8,6 +8,9 @@
             <trans-unit id="stylesset.fax" xml:space="preserve">
                 <source>Fax</source>
             </trans-unit>
+            <trans-unit id="tce_forms.frame_class.altLabels.layout.1" xml:space="preserve">
+                <source>Box, gray</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>

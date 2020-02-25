@@ -10,6 +10,10 @@
                 <source>Fax</source>
                 <target>Fax</target>
             </trans-unit>
+            <trans-unit id="tce_forms.frame_class.altLabels.layout.1" xml:space="preserve">
+                <source>Box, gray</source>
+                <target>Box, grau</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>
