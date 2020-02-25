@@ -8,9 +8,13 @@
 # Project constants
 @import 'EXT:project_configuration/Configuration/TypoScript/Constants/TemplatePaths.typoscript'
 
-CompanyName = COMKOM° Whitelabel
-CompanyEmail = mail@comkom.de
+CompanyName = Orthopädisches Zentrum Essen
+CompanyEmail = info@oze-essen.de
 CompanyClaim =
+
+# Copyright
+# =========
+CopyText = &middot; {$CompanyName}<br>Alle Rechte vorbehalten.
 
 # Social Media Konstanten
 # =======================
