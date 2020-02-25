@@ -18,4 +18,4 @@ $ext_config_path = 'EXT:project_configuration/Configuration/';
 
 # Custom definition for rte
 # =========================
-$GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['custom'] = 'EXT:base_configuration/Configuration/YAML/CustomRte.yaml';
+$GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['custom'] = 'EXT:project_configuration/Configuration/YAML/CustomRte.yaml';
