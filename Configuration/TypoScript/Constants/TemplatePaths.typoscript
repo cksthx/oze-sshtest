@@ -24,9 +24,9 @@ templatePaths {
     }
 
     extendedSection {
-        templateRootPath = EXT:base_extendedsection/Resources/Private/Templates
-        partialRootPath = EXT:base_extendedsection/Resources/Private/Partials
-        layoutRootPath = EXT:base_extendedsection/Resources/Private/Layouts
+        templateRootPath = EXT:project_configuration/Resources/Private/Templates/ExtendedSection
+        partialRootPath = EXT:project_configuration/Resources/Private/Partials/ExtendedSection
+        layoutRootPath = EXT:project_configuration/Resources/Private/Layouts/ExtendedSection
     }
 
     gallery {
