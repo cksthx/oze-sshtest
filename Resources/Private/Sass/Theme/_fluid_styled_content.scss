@@ -207,30 +207,37 @@
 .ce-table-striped tbody tr:nth-of-type(odd) { background-color: rgba(0,0,0,.05); }
 .ce-table-bordered th, .ce-table-bordered td { border: 1px solid #dadada; }
 
-/* Space */
-.frame { @extend .mb-3; @extend .mb-xl-5; }
-.frame.frame-space-before-none { @extend .mt-0; }
-.frame.frame-space-after-none { @extend .mb-0; }
-
-.frame.frame-space-before-extra-small { @extend .mt-1; }
-.frame.frame-space-before-small { @extend .mt-2; }
-.frame.frame-space-before-medium { @extend .mt-3; }
-.frame.frame-space-before-large { @extend .mt-4; }
-.frame.frame-space-before-extra-large { @extend .mt-5; }
-.frame.frame-space-after-extra-small { @extend .mb-1; }
-.frame.frame-space-after-small { @extend .mb-2; }
-.frame.frame-space-after-medium { @extend .mb-3; }
-.frame.frame-space-after-large { @extend .mb-4; }
-.frame.frame-space-after-extra-large { @extend .mb-5; }
-
 /* Frame */
 .frame-ruler-before:before { content: ''; display: block; border-top: 1px solid rgba(0,0,0,0.25); margin-bottom: 2em; }
 .frame-ruler-after:after { content: ''; display: block; border-bottom: 1px solid rgba(0,0,0,0.25); margin-top: 2em; }
 
 .ce-bodytext + .ce-gallery { margin-top: ($grid-gutter-width); }
 
+/* Frame spacing */
+/* Frames except for the last one inside of each parent get spaced below. */
+.frame+.frame {
+    margin-top: $frame-spacer*3;
+}
+
+/* Overwrites spacing above Frame. */
+.frame.frame-space-before-none {margin-top: 0;}
+.frame.frame-space-before-extra-small { margin-top: $frame-spacer*1; }
+.frame.frame-space-before-small { margin-top: $frame-spacer*2; }
+.frame.frame-space-before-medium { margin-top: $frame-spacer*3; }
+.frame.frame-space-before-large { margin-top: $frame-spacer*4; }
+.frame.frame-space-before-extra-large { margin-top: $frame-spacer*5; }
+
+/* Overwrites spacing below Frame. */
+/* These might never be needed. Every possible spacing-case should also be possible by spacing above frame only */
+.frame.frame-space-after-none {margin-top: 0;}
+.frame.frame-space-after-extra-small { margin-bottom: $frame-spacer*1; }
+.frame.frame-space-after-small { margin-bottom: $frame-spacer*2; }
+.frame.frame-space-after-medium { margin-bottom: $frame-spacer*3; }
+.frame.frame-space-after-large { margin-bottom: $frame-spacer*4; }
+.frame.frame-space-after-extra-large { margin-bottom: $frame-spacer*5; }
 
 /* Frame widths */
+/* Only on desktop by default. On mobile devices and tablets width will be 100% */
 @include media-breakpoint-up(lg) {
     .frame-75-left {
         max-width: calc(75% - #{$grid-gutter-width} * 1 / 4) ;
