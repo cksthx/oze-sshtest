@@ -1,4 +1,9 @@
 #main-navi {
+    background: $white;
+    padding: 6px 15px;
+    @include media-breakpoint-up(md) {
+        padding: 10px 15px;
+    }
     @include media-breakpoint-up(sm) {
         &.navbar-expand {
             &-sm, &-md, &-lg, &-xl {
@@ -65,11 +70,20 @@
     }
 
     .navbar-brand.navbar-brand-backgroundimage {
-        width: 120px;
-        max-height: $navbar-brand-height;
+        width: 57px;
+        height: 56px;
+        padding: 0;
 		text-indent:-99999px;
-		background: url($logo-path) no-repeat;
+		background-image: url($logo-path);
+        background-repeat: no-repeat;
 		background-position: left center;
         background-size: contain;
+        @include media-breakpoint-up(md) {
+            width: 157px;
+            height: 80px;
+            margin-top: 3px;
+            margin-bottom: 3px;
+            background-image: url($logo-big-path);
+        }
 	}
 }
