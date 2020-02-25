@@ -35,3 +35,12 @@ config {
     # ===============
     absRefPrefix = auto
 }
+page {
+    10 = FLUIDTEMPLATE
+    10 {
+        variables {
+            RootId = TEXT
+            RootId.value = {$RootId}
+        }
+    }
+}

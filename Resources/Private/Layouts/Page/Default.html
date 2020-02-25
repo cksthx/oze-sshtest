@@ -2,7 +2,9 @@
     <header>
         <f:render partial="Menu/Navigation" arguments="{mainmenu: mainmenu, siteName: siteName}" />
         <f:render section="Keyvisual" />
-        <f:render partial="Menu/Breadcrumb" arguments="{breadcrumb: breadcrumb}" />
+        <f:if condition="({data.uid} != {RootId})">
+            <f:render partial="Menu/Breadcrumb" arguments="{breadcrumb: breadcrumb}" />
+        </f:if>
     </header>
 
     <main id="maincontent">
