@@ -1,0 +1,41 @@
+<f:layout name="Default" />
+
+<f:section name="headertitle">
+    <h1 class="sr-only sr-only-focusable">{data.title}</h1>
+</f:section>
+
+<f:section name="Keyvisual">
+    <f:if condition="{f:cObject(typoscriptObjectPath: 'lib.dynamicContent', data:'5')}">
+        <section role="banner" id="banner" class="{backendlayout}">
+            <div id="branding-header">
+                <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '5'}" />
+            </div>
+        </section>
+    </f:if>
+</f:section>
+
+<f:section name="Main">
+    <f:if condition="{backendlayout}=='static'">
+        <f:then>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7" id="content">
+                        <article>
+                            <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '0'}" />
+                        </article>
+                    </div>
+                    <f:if condition="{content_2}">
+                        <aside class="col-lg-4 offset-lg-1 marginale">
+                            <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '2'}" />
+                        </aside>
+                    </f:if>
+                </div>
+            </div>
+        </f:then>
+        <f:else>
+            <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '0'}" />
+        </f:else>
+    </f:if>
+
+    <f:render partial="SocialLinks" arguments="{pageUid: data.uid}" />
+</f:section>
