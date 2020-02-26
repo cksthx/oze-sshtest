@@ -9,6 +9,10 @@ page {
         style = EXT:project_configuration/Resources/Public/Css/style.css
         style.media = all
     }
+
+    includeJSFooterlibs {
+        navigation = EXT:project_configuration/Resources/Public/JavaScript/custom_navigation.js
+    }
 }
 
 # ==================

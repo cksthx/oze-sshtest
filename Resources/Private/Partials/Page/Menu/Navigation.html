@@ -5,9 +5,13 @@
         <f:link.page pageUid="1" title="{f:translate(key: 'LLL:EXT:base_configuration/Resources/Private/Language/menus.xlf:mainmenu.home', default: 'Home')}" class="navbar-brand navbar-brand-backgroundimage">
             {siteName}
         </f:link.page>
-        <button id="main-collapse-toggler" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-collapse" aria-controls="main-collapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+
+        <div class="nav-buttons">
+            <a class="nav-call d-lg-none" href="tel:0201-46909690"><i class="fas fa-phone-alt"></i></a>
+            <button id="main-collapse-toggler" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-collapse" aria-controls="main-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
 
         <div class="collapse navbar-collapse" id="main-collapse">
             <div class="w-100">
@@ -32,9 +36,23 @@
                         </f:for>
                     </ul>
                 </f:if>
+
+                <div class="frame frame-type-textmedia frame-layout-0 d-lg-none">
+                    <header>
+                        <h2>Praxisöffnungszeiten</h2>
+                    </header>
+                    <div class="ce-textpic ce-left ce-above">
+                        <div class="ce-bodytext">
+                            <p>Montag bis Freitag</p>
+                            <p>07:30 - 12:00</p>
+                            <p>Montag, Dienstag</p>
+                            <p>14:00 - 18:00</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+    </div>  
 </nav>
 
 <f:section name="Item">
