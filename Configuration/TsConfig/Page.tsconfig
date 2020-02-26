@@ -49,5 +49,9 @@ TCEFORM {
     }
 }
 
+# Gridelements: Section
+tx_gridelements.setup.section.config.rows.1.columns.1.allowedGridTypes = gridelements_pi1,teaserContainer,twoColumns,threeColumns,fourColumns,carousel,accordionTabs
+
+
 # Extensions
 # =====================
