@@ -180,8 +180,15 @@
         margin-top: 24px;
     }
 
-    .frame {
+    .opening-hours {
         @extend .container;
+        margin-bottom: 12px;
+    }
+    .frame-type-twoColumns {
+        h1, h2, h3, h4, h5, h6 {
+            color: $primary-lighter;
+        }
+        color: $white;
     }
 
 
@@ -223,6 +230,7 @@
             margin-top: 0;
         }
         .navbar-nav {
+            margin-bottom: 90px;
             .nav-link {
                 padding: 0.75rem 0;
                 color: $white;
