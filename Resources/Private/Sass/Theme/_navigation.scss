@@ -139,7 +139,10 @@
     }
     .nav-call-desktop {
         position: absolute;
-        right: 30px;
+        right: calc((100vw - #{map-get($container-max-widths, "lg")}) / 2 + #{$grid-gutter-width} / 2);
+        @include media-breakpoint-up(xl) {
+            right: calc((100vw - #{map-get($container-max-widths, "xl")}) / 2 + #{$grid-gutter-width} / 2);
+        }
         top: 10px;
         a {
             color: $primary-lighter;
@@ -151,7 +154,7 @@
     }
 
     .navbar-nav {
-        &>.nav-item:last-child {
+        &>.nav-item a:last-child {
             padding-right: 0;
         }
         .nav-link {
@@ -233,7 +236,6 @@
             }
             .nav-item {
                 position: relative;
-                // &+.nav-item {
                 &:not(:last-child) {
                     &:before {
                         content: '';
@@ -249,7 +251,8 @@
                         background-color: $primary-dark;
                     }
                 }
-                &.active a, &.show a, a:hover  {
+                &.active>a, &.show>a, &>a:hover  {
+                    background-color: $primary-dark;
                     color: $white;
                 }
             }
@@ -279,19 +282,14 @@
                 }
                 .dropdown-item {
                     padding: 0.75rem 0;
-                }
-
-                .dropdown-item {
-                    padding-left: 0;
-                    padding-right: 0;
                     color: $white;
                     &:hover, &:focus {
                         background-color: transparent;
-                        color: $primary-lighter;
+                        color: $white;
                     }
                     &.active, &:active {
-                        background-color: transparent;
-                        color: $primary-lighter;
+                        background-color: $primary-dark;
+                        color: $white;
                     }
                 }
 
