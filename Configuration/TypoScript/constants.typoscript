@@ -2,6 +2,9 @@
 # Project Configuration: TypoScript Constants
 # ===========================================
 
+# cat=project_configuration/page; type=string; label=ID des Inhaltselements für die Navigation
+CeOpeningTimesId =
+
 # Base constants
 @import 'EXT:base_configuration/Configuration/TypoScript/Constants/Site.typoscript'
 

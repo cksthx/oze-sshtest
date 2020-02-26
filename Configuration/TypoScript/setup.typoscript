@@ -31,11 +31,25 @@
 # set path with extension name and setup file here:
 # @import 'EXT:project_configuration/Configuration/TypoScript/Setup/Extensions/EXTENSION_NAME/setup.typoscript'
 
+
+# COMKOM° Typo3 Project Configuration: General Page Contents
+# ==========================================================
+# Opening times for Navigation.html
+# =========
+lib.opening-times = RECORDS
+lib.opening-times {
+    tables = tt_content
+    source = {$CeOpeningTimesId}
+    dontCheckPid = 1
+}
+
+# Site URL prefix
+# ===============
 config {
-    # Site URL prefix
-    # ===============
     absRefPrefix = auto
 }
+
+# add variables to fluidtemplate
 page {
     10 = FLUIDTEMPLATE
     10 {
