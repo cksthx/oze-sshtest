@@ -52,6 +52,17 @@ TCEFORM {
 # Gridelements: Section
 tx_gridelements.setup.section.config.rows.1.columns.1.allowedGridTypes = gridelements_pi1,teaserContainer,twoColumns,threeColumns,fourColumns,carousel,accordionTabs
 
+# Gridelements: Columns
+tx_gridelements.setup.twoColumns.config.rows.1.columns.1.allowedGridTypes = gridelements_pi1,teaserContainer,twoColumns,threeColumns,fourColumns,carousel,accordionTabs
+tx_gridelements.setup.twoColumns.config.rows.1.columns.2.allowedGridTypes < tx_gridelements.setup.twoColumns.config.rows.1.columns.1.allowedGridTypes
+tx_gridelements.setup.threeColumns.config.rows.1.columns.1.allowedGridTypes < tx_gridelements.setup.twoColumns.config.rows.1.columns.1.allowedGridTypes
+tx_gridelements.setup.threeColumns.config.rows.1.columns.2.allowedGridTypes < tx_gridelements.setup.twoColumns.config.rows.1.columns.1.allowedGridTypes
+tx_gridelements.setup.threeColumns.config.rows.1.columns.3.allowedGridTypes < tx_gridelements.setup.twoColumns.config.rows.1.columns.1.allowedGridTypes
+tx_gridelements.setup.fourColumns.config.rows.1.columns.1.allowedGridTypes < tx_gridelements.setup.twoColumns.config.rows.1.columns.1.allowedGridTypes
+tx_gridelements.setup.fourColumns.config.rows.1.columns.2.allowedGridTypes < tx_gridelements.setup.twoColumns.config.rows.1.columns.1.allowedGridTypes
+tx_gridelements.setup.fourColumns.config.rows.1.columns.3.allowedGridTypes < tx_gridelements.setup.twoColumns.config.rows.1.columns.1.allowedGridTypes
+tx_gridelements.setup.fourColumns.config.rows.1.columns.4.allowedGridTypes < tx_gridelements.setup.twoColumns.config.rows.1.columns.1.allowedGridTypes
+
 
 # Extensions
 # =====================
