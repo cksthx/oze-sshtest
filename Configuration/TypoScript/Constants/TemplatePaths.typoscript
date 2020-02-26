@@ -58,4 +58,10 @@ templatePaths {
         partialRootPath = EXT:base_textroundmedia/Resources/Private/Partials
         layoutRootPath = EXT:base_textroundmedia/Resources/Private/Layouts
     }
+
+    accordionTabs {
+        templateRootPath = EXT:base_accordiontabs/Resources/Private/Templates
+        partialRootPath = EXT:base_accordiontabs/Resources/Private/Partials
+        layoutRootPath = EXT:base_accordiontabs/Resources/Private/Layouts
+    }
 }
