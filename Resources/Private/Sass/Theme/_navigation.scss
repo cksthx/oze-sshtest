@@ -28,7 +28,8 @@
                 padding-top: 0.25rem;
             }
             &.show {
-                margin-bottom: 0.5rem;
+                padding: 20px 0;
+                margin-bottom: 0;
                 .link-list {
                     .nav {
                         flex-direction: column;
@@ -37,8 +38,8 @@
                             flex-direction: row; 
                             justify-content: flex-end;
                                 .nav-item {
-                                padding-left: 0.5rem;
-                                padding-right: 0.5rem;
+                                padding-left: 0.75rem;
+                                padding-right: 0.75rem;
                                 &:first-of-type {
                                     padding-left: 0;
                                 }
@@ -52,12 +53,12 @@
                 padding-right: 0;
                 color: $white;
                 &:hover, &:focus {
-                    background-color: $primary-dark;
-                    // color: rgba(0,0,0,0.7);
+                    background-color: transparent;
+                    color: $primary-lighter;
                 }
                 &.active, &:active {
-                    background-color: $primary-dark;
-                    // color: rgba(0,0,0,0.9);
+                    background-color: transparent;
+                    color: $primary-lighter;
                 }
             }
         }
@@ -136,20 +137,49 @@
             font-size: 24px;
         }
     }
-
-    .navbar-nav {
-        .nav-link {
-            color: $primary;
+    .nav-call-desktop {
+        position: absolute;
+        right: 30px;
+        top: 10px;
+        a {
+            color: $primary-lighter;
+            font-family: $headings-font-family;
+            &:hover {
+                color: $primary;
+            }
         }
     }
 
-    .nav-item a {
-        font-family: $headings-font-family;
-        font-weight: 700;
-        font-size: 1.25rem;
-        text-align: center;
+    .navbar-nav {
+        &>.nav-item:last-child {
+            padding-right: 0;
+        }
+        .nav-link {
+            color: $primary;
+            padding-right: 0.75rem;
+            padding-left: 0.75rem;
+        }
     }
 
+    .nav-item {
+        a {
+            font-family: $headings-font-family;
+            font-weight: 700;
+            font-size: 1.25rem;
+            text-align: center;
+        }
+        &.active a, &.show a, a:hover  {
+            color: $primary-lighter;
+        }
+    }
+
+    .navbar-collapse {
+        margin-top: 24px;
+    }
+
+    .frame {
+        @extend .container;
+    }
 
 
     @include media-breakpoint-down(md) {
@@ -186,15 +216,19 @@
             flex-direction: column;
             justify-content: space-between;
         }
+        .navbar-collapse {
+            margin-top: 0;
+        }
         .navbar-nav {
             .nav-link {
                 padding: 0.75rem 0;
                 color: $white;
                 &:hover, &:focus {
-                    background-color: $primary-dark;
+                    // background-color: $primary-dark;
+                    // background-color: transparent;
                 }
-                &.active, &:active {
-                    background-color: $primary-dark;
+                &.active, &:active, &.show {
+                    // background-color: $primary-dark;
                 }
             }
             .nav-item {
@@ -214,6 +248,9 @@
                         transform: translateX(-50%);
                         background-color: $primary-dark;
                     }
+                }
+                &.active a, &.show a, a:hover  {
+                    color: $white;
                 }
             }
         }
@@ -240,11 +277,26 @@
                         width: 100%;
                     }
                 }
-                &.show {
-                    margin-bottom: 0;
-                }
                 .dropdown-item {
                     padding: 0.75rem 0;
+                }
+
+                .dropdown-item {
+                    padding-left: 0;
+                    padding-right: 0;
+                    color: $white;
+                    &:hover, &:focus {
+                        background-color: transparent;
+                        color: $primary-lighter;
+                    }
+                    &.active, &:active {
+                        background-color: transparent;
+                        color: $primary-lighter;
+                    }
+                }
+
+                &.show {
+                    padding: 0;
                 }
             }
         }
