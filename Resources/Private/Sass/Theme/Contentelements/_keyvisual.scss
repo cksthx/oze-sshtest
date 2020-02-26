@@ -1,0 +1,11 @@
+.card-jumbotron {
+	@include media-breakpoint-up(md) {
+		min-height: 660px !important;
+	}
+	@include media-breakpoint-up(lg) {
+    		min-height: 400px !important;
+	}
+	@include media-breakpoint-up(xl) {
+    		min-height: 460px !important;
+	}
+}
