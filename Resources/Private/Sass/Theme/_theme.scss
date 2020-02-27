@@ -154,4 +154,19 @@ footer {
             margin-bottom: 20px;
         }
     }
+    &#contentinfo{
+        padding: 20px 0;
+        @include media-breakpoint-up(lg) {
+            padding: 45px 0 20px 0;
+        }
+    }
+    .footer-metasection {
+        margin-top: 20px;
+        @include media-breakpoint-up(lg) {
+            margin-top: 45px;
+        }
+        .copyright {
+            margin-bottom: 0;
+        }
+    }
 }
