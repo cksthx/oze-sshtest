@@ -136,3 +136,21 @@ blockquote {
 		}
 	}
 }
+
+// custom gutter width on xs
+//============================
+// @include media-breakpoint-only(xs) {
+// 	.container {
+// 		padding-right: $grid-gutter-width-mobile;
+//         padding-left: $grid-gutter-width-mobile;
+// 	}
+// 	.row {
+//         margin-right: -$grid-gutter-width-mobile;
+//         margin-left: -$grid-gutter-width-mobile;
+//     }
+//     .row > .col,
+//     .row > [class*="col-"] {
+//         padding-right: $grid-gutter-width-mobile;
+//         padding-left: $grid-gutter-width-mobile;
+//     }
+// }
