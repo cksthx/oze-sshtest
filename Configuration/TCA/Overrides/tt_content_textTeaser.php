@@ -57,14 +57,18 @@ $GLOBALS['TCA']['tt_content']['types']['textTeaser'] = array_replace_recursive(
 
 // Add crop variants
 $defaultCropSettingsTextTeaser = [
-    'title' => 'LLL:EXT:lang/Resources/Private/Language/locallang_wizards.xlf:imwizard.ratio.16_9',
+    'title' => 'Default',
     'allowedAspectRatios' => [
+        '3:2' => [
+            'title' => '3:2',
+            'value' => 3 / 2
+        ],
         '16:9' => [
             'title' => 'LLL:EXT:lang/Resources/Private/Language/locallang_wizards.xlf:imwizard.ratio.16_9',
             'value' => 16 / 9
         ],
     ],
-    'selectedRatio' => '16:9',
+    'selectedRatio' => '3:2',
     'cropArea' => [
         'x' => 0.0025,
         'y' => 0.0025,
