@@ -1,6 +1,9 @@
 // background colors
 //============================
-.tc-1 { background-color: $primary; }
+.tc-1 { 
+	background: $white;
+	background: $background-gradient; 
+}
 .tc-2 { background-color: $primary-light; }
 .tc-3 { background-color: $primary-lighter; }
 .tc-4 { background-color: $primary-lightest; }
