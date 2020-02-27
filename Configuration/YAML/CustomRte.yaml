@@ -80,7 +80,7 @@ buttons:
       disabled: false
     properties:
       class:
-        allowedClasses: 'internalLink,externalLink,folder,mail,download, btn btn-default, btn btn-primary'
+        allowedClasses: 'internalLink,externalLink,folder,mail,download, btn btn-default, btn btn-primary, btn btn-outline-primary, btn btn-read-more'
         title:
           readOnly: false
     queryParametersSelector:
@@ -121,6 +121,10 @@ classes:
       name: 'LLL:EXT:base_configuration/Resources/Private/Language/custom_rte.xlf:classes.btn.default'
     btn btn-primary:
       name: 'LLL:EXT:base_configuration/Resources/Private/Language/custom_rte.xlf:classes.btn.primary'
+    btn btn-outline-primary:
+      name: 'LLL:EXT:project_configuration/Resources/Private/Language/locallang.xlf:custom_rte.classes.btn.outline.primary'
+    btn btn-read-more:
+      name: 'LLL:EXT:project_configuration/Resources/Private/Language/locallang.xlf:custom_rte.classes.btn.read_more'
 
 classesAnchor:
   internalLink:

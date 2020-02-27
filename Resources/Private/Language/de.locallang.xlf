@@ -14,6 +14,14 @@
                 <source>Box, gray</source>
                 <target>Box, grau</target>
             </trans-unit>
+            <trans-unit id="custom_rte.classes.btn.outline.primary" xml:space="preserve">
+                <source>Button outline primary</source>
+                <target>Button outline primary</target>
+            </trans-unit>
+            <trans-unit id="custom_rte.classes.btn.read_more" xml:space="preserve">
+                <source>Button read more</source>
+                <target>Button read more</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>
