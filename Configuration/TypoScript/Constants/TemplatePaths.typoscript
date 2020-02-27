@@ -60,8 +60,8 @@ templatePaths {
     }
 
     accordionTabs {
-        templateRootPath = EXT:base_accordiontabs/Resources/Private/Templates
-        partialRootPath = EXT:base_accordiontabs/Resources/Private/Partials
-        layoutRootPath = EXT:base_accordiontabs/Resources/Private/Layouts
+        templateRootPath = EXT:project_configuration/Resources/Private/Templates/AccordionTabs
+        partialRootPath = EXT:project_configuration/Resources/Private/Partials/AccordionTabs
+        layoutRootPath = EXT:project_configuration/Resources/Private/Layouts/AccordionTabs
     }
 }
