@@ -1,0 +1,27 @@
+.frame-type-textTeaser, .frame-type-imageTeaser {
+	margin-top: 0 !important;
+	margin-bottom: $col-spacer !important;
+}
+
+.teaser.row {
+	margin-bottom: -$col-spacer;
+}
+
+.frame-type-textTeaser {
+	.card {
+		border-color: $gray-200;
+	}
+	.card-body {
+		color: $primary;
+		padding: 1rem 0.75rem;
+		p {
+			font-weight: 300;
+		}
+		h1, h2, h3, h4, h5, h6 {
+			@extend h5;
+		}
+		@include media-breakpoint-up(lg) {
+			padding: 1.5rem;
+		}
+	}
+}
