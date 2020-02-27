@@ -97,16 +97,55 @@
 footer {
     padding: 3rem 0 2rem;
     background-color: $primary-dark;
-    h2.footer-brand {
-        width: 275px;
-        height: 3.5rem;
-        text-indent: -99999px;
-        background: url($logo-white-path) no-repeat;
-        background-position: left top;
-        background-size: contain;
-        margin-bottom: 1.5rem;
+    color: white;
+    h1, h2, h3, h4, h5, h6 {
+        color: $white;
     }
-    .copyright {
-        margin-bottom: 0;
+    h6 {
+        font-size: 1.125rem;
+    }
+    span {
+        &.phone, &.fax, &.mail {
+            text-indent: -99999px;
+            display: inline-block;
+            &:before {
+                content: "·";
+                width: 1em;
+                float: left;
+                text-align: left;
+                font-weight: 400;
+                text-indent: 0;
+            }
+        }
+        &.phone:before { content: "T"; }
+        &.fax:before { content: "F"; }
+        &.mail:before { content: "E"; }
+    }
+    a {
+        font-weight: 400;
+        color: $primary-lighter;
+        background-image: none;
+        &:hover {
+            color: $primary-lightest;
+        }
+    }
+    .frame-type-menu_pages {
+        ul {
+            padding-left: 0;
+            li {
+                list-style-type: none;
+                margin-bottom: 0;
+                &:not(:last-child) {
+                    margin-bottom: 6px;
+                }
+            }
+        }
+    }
+    .doctors-shape {
+        background-image: url("/typo3conf/ext/project_configuration/Resources/Public/Images/silhouettes.png");
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+        min-height: 234px;
     }
 }
