@@ -1,6 +1,6 @@
 <f:spaceless>
     <header>
-        <f:render partial="Menu/Navigation" arguments="{mainmenu: mainmenu, siteName: siteName}" />
+        <f:render partial="Menu/Navigation" arguments="{mainmenu: mainmenu, opening-times: opening-times, siteName: siteName}" />
         <f:render section="Keyvisual" />
         <f:if condition="({data.uid} != {RootId})">
             <f:render partial="Menu/Breadcrumb" arguments="{breadcrumb: breadcrumb}" />

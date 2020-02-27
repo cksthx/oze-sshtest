@@ -34,14 +34,6 @@
 
 # COMKOM° Typo3 Project Configuration: General Page Contents
 # ==========================================================
-# Opening times for Navigation.html
-# =========
-lib.opening-times = RECORDS
-lib.opening-times {
-    tables = tt_content
-    source = {$CeOpeningTimesId}
-    dontCheckPid = 1
-}
 
 # Site URL prefix
 # ===============
@@ -56,6 +48,13 @@ page {
         variables {
             RootId = TEXT
             RootId.value = {$RootId}
+            # Opening times for Navigation.html
+            opening-times = RECORDS
+            opening-times {
+                tables = tt_content
+                source = {$CeOpeningTimesId}
+                dontCheckPid = 1 
+            }
         }
     }
 }
