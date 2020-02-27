@@ -42,9 +42,13 @@ TCEFORM {
         # Layout
         # ^^^^^
         layout {
-            // standard layouts: 0 (default), Layout1, Layout2, Layout3)
-            removeItems = 2,3
-            altLabels.1 = LLL:EXT:project_configuration/Resources/Private/Language/locallang.xlf:tce_forms.frame_class.altLabels.layout.1
+            types {
+                textmedia {
+                    // standard layouts: 0 (default), Layout1, Layout2, Layout3)
+                    removeItems = 2,3
+                    altLabels.1 = LLL:EXT:project_configuration/Resources/Private/Language/locallang.xlf:tce_forms.frame_class.altLabels.layout.1
+                }
+            }
         }
     }
 }
