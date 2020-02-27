@@ -40,9 +40,11 @@
                         </f:for>
                     </ul>
                 </f:if>
-                <div class="opening-hours">
-                    <f:cObject typoscriptObjectPath="lib.opening-times" />
-                </div>
+                <f:if condition="{lib.opening-times}">
+                    <div class="opening-hours">
+                        <f:cObject typoscriptObjectPath="lib.opening-times" />
+                    </div>
+                </f:if>
             </div>
         </div>
     </div>  
