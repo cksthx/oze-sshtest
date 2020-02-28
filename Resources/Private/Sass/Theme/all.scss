@@ -19,11 +19,14 @@ $logo-path: "/typo3conf/ext/project_configuration/Resources/Public/Images/logo.s
 @import "base_carousel/Resources/Private/Sass/carousel";
 @import "base_extendedsection/Resources/Private/Sass/style.scss";
 @import "base_gallery/Resources/Private/Sass/gallery";
-@import "base_section/Resources/Private/Sass/style.scss";
+// @import "base_section/Resources/Private/Sass/style.scss";
 @import "base_columns/Resources/Private/Sass/style.scss";
 @import "base_menus/Resources/Private/Sass/style.scss";
 @import "base_teaser/Resources/Private/Sass/style.scss";
 @import "base_textroundmedia/Resources/Private/Sass/style.scss";
+
+// Replace Base Content Elements
+@import "Contentelements/section";
 
 // Additions and theming
 @import "theme";

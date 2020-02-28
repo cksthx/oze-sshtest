@@ -1,0 +1,345 @@
+/* Modul: Section
+===============================================*/
+
+// Section: Dimension, Abstand, Ausrichtung
+
+.section {
+    position: relative;
+    overflow: hidden;
+    // overflow: visible;
+    &.tc-1, &.tc-2, &.tc-3 {
+        // * {
+            color: $white;
+        // }
+    }
+    &.tc-1 {
+        p>a {
+            color: $secondary;
+        }
+        .btn-primary {
+                @include button-outline-variant($white, $primary);
+            }
+        .btn-default {
+            color: $gray-900;
+        }
+        ul li:before {
+            color: $secondary !important;
+        }
+    }
+    &.tc-2 {
+        p>a {
+            color: $primary;
+        }
+        .btn-primary {
+                color: $white;
+            }
+        .btn-default {
+            color: $gray-900;
+        }
+        ul li:before {
+            color: $primary !important;
+        }
+    }
+    &.tc-3 {
+        p>a {
+            color: $secondary;
+        }
+        .btn-primary {
+            color: $white;
+        }
+        .btn-default {
+            color: $gray-900;
+        }
+        ul li:before {
+            color: $secondary !important;
+        }
+    }
+    .section-headline {
+        position: relative;
+    }
+}
+
+main {
+    .section {
+        padding:0;
+        border-radius: 0px;
+        .container {
+            .section {
+                padding: ($grid-gutter-width / 2) 0;
+                min-height: inherit;
+                .container {
+                    width:auto;
+                }
+            }
+        }
+    }
+}
+
+main {
+    .section { 
+        > .content {
+            position: relative;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            > .container {
+                > .contentmodule {
+                    position:relative;
+                    > .content {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        overflow: hidden;
+                        bottom: 0;
+                        top: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.picturefill-background { 
+    position:relative;
+    z-index:0;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+// "Hintergrundbild: Mobile Ansicht deaktivieren" Funktion
+.section > .picturefill-background {
+    &:before {
+        content: "";
+        display: block;
+        width: 100%;
+        padding-top:56%;
+    }
+    @include media-breakpoint-up(md) {
+        &:before {
+            content: none;
+        }
+        &:after {
+            position: absolute;
+            width: 100%;
+            content: "";
+            bottom: 0;
+            top: 0;
+        }
+    }
+}
+
+// Default background-color, if has image
+.has-image {
+    background-color: $primary;
+    @include media-breakpoint-up(md) {
+        background-color: transparent;
+    }
+}
+
+.section.has-image {
+    // @include media-breakpoint-up(md) {
+        color: $white !important;
+        blockquote {
+            color: $white;
+        }
+        .frame .ce-bodytext ul li:before {
+            color: $secondary;
+        }
+    // }
+    & > .picturefill-background {
+        display: block;
+        background-size: cover;
+        @include media-breakpoint-up(md) {
+            position:absolute;
+            left:0;
+            top:0;
+            width:100%;
+            height:100%;
+            z-index:0;
+            background-position: center center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+    }
+}
+
+%bgimg-left { background-position: center left; }
+%bgimg-right { background-position: center right; }
+%bgimg-fixed { background-position: center center; }
+%bgimg-top { background-position: top center; }
+%bgimg-top-left { background-position: top left; }
+%bgimg-top-right { background-position: top right; }
+%bgimg-bottom { background-position: bottom center; }
+%bgimg-bottom-left { background-position: bottom left; }
+%bgimg-bottom-right { background-position: bottom right; }
+
+
+main .section.has-image {
+    height:auto;
+    min-height:240px;
+    @include media-breakpoint-up(md) {
+        min-height:460px;
+    }
+    &.bgimg-left > .picturefill-background { @extend %bgimg-left; }
+    &.bgimg-right > .picturefill-background { @extend %bgimg-right; }
+    &.bgimg-fixed > .picturefill-background { @extend %bgimg-fixed; }
+    &.bgimg-top > .picturefill-background { @extend %bgimg-top; }
+    &.bgimg-top-left > .picturefill-background { @extend %bgimg-top-left; }
+    &.bgimg-top-right > .picturefill-background { @extend %bgimg-top-right; }
+    &.bgimg-bottom > .picturefill-background { @extend %bgimg-bottom; }
+    &.bgimg-bottom-left > .picturefill-background { @extend %bgimg-bottom-left; }
+    &.bgimg-bottom-right > .picturefill-background { @extend %bgimg-bottom-right; }
+    
+    @include media-breakpoint-up(lg) {
+        min-height:500px;
+        &.bgimg-fixed > .picturefill-background { background-attachment:fixed; }
+    }
+}
+
+.overlay-c1, .overlay-c2, .overlay-c3, .overlay-c4 {
+    &.section.picturefill-background > .overlay {
+        // Check
+        position: absolute;
+        width: 100%;
+        height:100%;
+        z-index:-1;
+    }
+}
+
+// Anfang
+// Aufeinander folgende sections gleicher Hintergrundfarbe verlieren oben ihren Abstand (padding-top)
+main {
+    background-color: $body-bg;
+    .section.standard:not(.slick-slide):not(.has-image) + .section.standard:not(.slick-slide):not(.has-image) > .content,
+    .section.tc-1:not(.slick-slide):not(.has-image) + .section.tc-1:not(.slick-slide):not(.has-image) > .content,
+    .section.tc-2:not(.slick-slide):not(.has-image) + .section.tc-2:not(.slick-slide):not(.has-image) > .content,
+    .section.tc-3:not(.slick-slide):not(.has-image) + .section.tc-3:not(.slick-slide):not(.has-image) > .content {
+        padding-top:0;
+    }
+    // .section > .content > .container .frame .ce-bodytext p:last-of-type:not(.lead) { margin-bottom: 0 !important; }
+}
+
+.section {
+    padding: 45px 0;
+}
+
+/* Space (Padding fuer das Section-Gridelement*/
+section, article {
+    &.section > .content {
+        padding-top: $section-spacer;
+        padding-bottom: $section-spacer;
+        @include media-breakpoint-up(md) {
+            padding-top: $section-spacer*1.5;
+            padding-bottom: $section-spacer*1.5;
+        }
+        @include media-breakpoint-up(lg) {
+            padding-top: $section-spacer*2;
+            padding-bottom: $section-spacer*2;
+        }
+    }
+    &.section.frame-padding-top-extra-small > .content {
+        padding-top: $section-spacer/4;
+        @include media-breakpoint-up(md) {
+            padding-top: $section-spacer/2;
+        }
+        @include media-breakpoint-up(lg) {
+            padding-top: $section-spacer;
+        }
+    }
+    &.section.frame-padding-top-small > .content {
+        padding-top: $section-spacer/2;
+        @include media-breakpoint-up(md) {
+            padding-top: $section-spacer;
+        }
+        @include media-breakpoint-up(lg) {
+            padding-top: $section-spacer*1.5;
+        }
+    }
+    // &.section.frame-padding-top-medium > .content entspricht section.section > .content, siehe oben
+    &.section.frame-padding-top-medium > .content {
+        padding-top: $section-spacer;
+        @include media-breakpoint-up(md) {
+            padding-top: $section-spacer*1.5;
+        }
+        @include media-breakpoint-up(lg) {
+            padding-top: $section-spacer*2;
+        }
+    }
+    &.section.frame-padding-top-large > .content {
+        padding-top: $section-spacer*1.5;
+        @include media-breakpoint-up(md) {
+            padding-top: $section-spacer*2;
+        }
+        @include media-breakpoint-up(lg) {
+            padding-top: $section-spacer*2.5;
+        }
+    }
+    &.section.frame-padding-top-extra-large > .content {
+        padding-top: $section-spacer*2;
+        @include media-breakpoint-up(md) {
+            padding-top: $section-spacer*2.5;
+        }
+        @include media-breakpoint-up(lg) {
+            padding-top: $section-spacer*3;
+        }
+    }
+    &.section.frame-padding-top-none > .content { 
+        padding-top: 0;
+    }
+
+    &.section.frame-padding-bottom-extra-small > .content {
+        padding-bottom: $section-spacer/4;
+        @include media-breakpoint-up(md) {
+            padding-bottom: $section-spacer/2;
+        }
+        @include media-breakpoint-up(lg) {
+            padding-bottom: $section-spacer;
+        }
+    }
+    &.section.frame-padding-bottom-small > .content {
+        padding-bottom: $section-spacer/2;
+        @include media-breakpoint-up(md) {
+            padding-bottom: $section-spacer;
+        }
+        @include media-breakpoint-up(lg) {
+            padding-bottom: $section-spacer*1.5;
+        }
+    }
+    // &.section.frame-padding-bottom-medium > .content entspricht section.section > .content, siehe oben
+    &.section.frame-padding-bottom-medium > .content {
+        padding-bottom: $section-spacer;
+        @include media-breakpoint-up(md) {
+            padding-bottom: $section-spacer*1.5;
+        }
+        @include media-breakpoint-up(lg) {
+            padding-bottom: $section-spacer*2;
+        }
+    }
+    &.section.frame-padding-bottom-large > .content {
+        padding-bottom: $section-spacer*1.5;
+        @include media-breakpoint-up(md) {
+            padding-bottom: $section-spacer*2;
+        }
+        @include media-breakpoint-up(lg) {
+            padding-bottom: $section-spacer*2.5;
+        }
+    }
+    &.section.frame-padding-bottom-extra-large > .content {
+        padding-bottom: $section-spacer*2;
+        @include media-breakpoint-up(md) {
+            padding-bottom: $section-spacer*2.5;
+        }
+        @include media-breakpoint-up(lg) {
+            padding-bottom: $section-spacer*3;
+        }
+    }
+    &.section.frame-padding-bottom-none > .content {
+        padding-bottom: 0;
+    }
+}
