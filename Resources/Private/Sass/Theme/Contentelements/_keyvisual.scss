@@ -144,6 +144,26 @@
 	        left: calc(-1 * ((100vw - #{map-get($container-max-widths, "xl")}) / 2 + #{$grid-gutter-width} / 2));
 	    }
     }
+    &.frame-33-right, &.frame-66-right, &.frame-75-right {
+    	padding: 18px 0 18px 16px;
+    	&:before {
+	    	@include media-breakpoint-up(md) {
+		    	width: calc((100vw - #{map-get($container-max-widths, "md")}) / 2 + #{$grid-gutter-width} / 2);
+		    	left: auto;
+		    	right: calc(-1 * ((100vw - #{map-get($container-max-widths, "md")}) / 2 + #{$grid-gutter-width} / 2));
+		    }
+	    	@include media-breakpoint-up(lg) {
+		    	width: calc((100vw - #{map-get($container-max-widths, "lg")}) / 2 + #{$grid-gutter-width} / 2);
+		        left: auto;
+		        right: calc(-1 * ((100vw - #{map-get($container-max-widths, "lg")}) / 2 + #{$grid-gutter-width} / 2));
+		    }
+		    @include media-breakpoint-up(xl) {
+		    	width: calc((100vw - #{map-get($container-max-widths, "xl")}) / 2 + #{$grid-gutter-width} / 2);
+		        left: auto;
+		        right: calc(-1 * ((100vw - #{map-get($container-max-widths, "xl")}) / 2 + #{$grid-gutter-width} / 2));
+		    }
+	    }
+    }
 }
 
 
