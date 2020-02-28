@@ -5,86 +5,67 @@
 // Jumbotron: dimensions, spacing, orientation
 
 .card-jumbotron {
-    border: none;
-    &> .card-img-overlay > .container {
-        padding-left:0;
-        padding-right:0;
-        left: -($grid-gutter-width / 2);
-        right: -($grid-gutter-width / 2);
-        @include media-breakpoint-up(sm) {
-            padding-left:($grid-gutter-width / 2);
-            padding-right:($grid-gutter-width / 2);
-            left: 0;
-            right: 0;
-        }
-    }
-    @include media-breakpoint-up(md) {
-        min-height:800px !important;
-    }
-    @include media-breakpoint-up(lg) {
-        min-height:600px !important;
-    }
-}
-
-.card-jumbotron {
-    &.tc-1, &.tc-2, &.tc-3, &.has-image {
-        >* {
-            color: $white;
-        }
-    }
+	border: none;
+	@include media-breakpoint-up(md) {
+		min-height: 660px !important;
+	}
+	@include media-breakpoint-up(lg) {
+    		min-height: 400px !important;
+	}
+	@include media-breakpoint-up(xl) {
+    		min-height: 460px !important;
+	}
     .card-img-overlay {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
+      //   display: flex;
+      //   flex-direction: column;
+      //   justify-content: flex-end;
+        padding: 0;
+        .container>.row {
+        	display: block;
+		    flex-wrap: wrap;
+		    margin-right: 0;
+		    margin-left: 0;
+        }
+        * {
+	        color: $white !important;
+	        @include media-breakpoint-up(md) {
+		        color: $primary !important;
+	        }
+	    }
     }
     &.has-image {
         @include media-breakpoint-up(md) {
             justify-content: flex-end;
         }  
         .card-img-overlay {
-            // padding-left: ($grid-gutter-width/2);
-            // padding-right: ($grid-gutter-width/2);
             position: relative;
-            // background-color: transparent;
-            // margin-bottom: 0;
-            // padding-top: 1rem;
-            .frame-type-extendedSectionTeaser {
-                margin-top: 1.25rem;
-                margin-bottom: 1.25rem !important;
-            }
-            @include media-breakpoint-up(md) {
-                // position: absolute;
-                // background-color:transparent;
-
-                .frame-type-extendedSectionTeaser {
-                    margin-top: 0;
-                    margin-bottom: 0;
-                }
-            }
         }
         @include media-breakpoint-up(md) {
             background-color: transparent;
         }
     }
 
-    .frame-type-buttons {
-        display: table;
-        margin-top: ($grid-gutter-width/6);
-        margin-bottom: 0 !important;
-    }
-    .frame-type-list.frame {
-        margin-bottom: 0 !important;
-    }
-    picture.first-match {
-        display: block;
-        &:after {
-            position: absolute;
-            width: 100%;
-            content: "";
-            bottom: 0;
-            top: 0;
-        }
-    }
+    // .frame-type-buttons {
+    //     display: table;
+    //     margin-top: ($grid-gutter-width/6);
+    //     margin-bottom: 0 !important;
+    // }
+    // .frame-type-list.frame {
+    //     margin-bottom: 0 !important;
+    // }
+
+
+
+    // picture.first-match {
+    //     display: block;
+    //     &:after {
+    //         position: absolute;
+    //         width: 100%;
+    //         content: "";
+    //         bottom: 0;
+    //         top: 0;
+    //     }
+    // }
 
     @include media-breakpoint-up(md) {
         .jumbotron-img {
@@ -129,46 +110,17 @@
 // Jumbotron Teasertext
 
 .frame-type-extendedSectionTeaser {
-    h2 {
-        margin-bottom: ($grid-gutter-width/3) * 2;
-    }
-    p, .lead {
-        font-size: 1.125rem;
-        margin-bottom: ($grid-gutter-width/3) * 2;
-        display: block;
-    }
-    a {
-        color: $gray-900;
-        &:hover {
-            color: lighten($gray-900, 10);
-        }
-    }
-    .category-title {
-        margin-bottom: ($grid-gutter-width/5);
-        display: block;
-    }
-    @include media-breakpoint-up(sm) {
-        h2 { font-size: 2.5rem; }
-        p, .lead { font-size: 1.1875rem; }
-    }
-    @include media-breakpoint-up(lg) {
-        h2 { font-size: 3.375rem; }
-        p, .lead { font-size: 1.625rem; }
-    }
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	.ce-bodytext {
+		h2:first-child {
+			@extend h4;
+		}
+	}
+	// @include media-breakpoint-up(md) {
+ //        background: $white;
+ //    } 
 }
-.card-jumbotron {
-    &.tc-1, &.tc-2, &.tc-3, &.has-image {
-        .frame-type-extendedSectionTeaser {
-            a {
-                color: $white;
-                &:hover {
-                    color: darken($white, 10);
-                }
-            }
-        }
-    }
- }
-
 
 // Modifications for Hero-Image-Template
 
@@ -212,177 +164,166 @@
 
 // Section and Jumbotron: colors of contentelemente
 
-.tc-1 .section-headline { background-color: $primary; }
-.tc-2 .section-headline { background-color: $secondary; }
-.tc-3 .section-headline { background-color: $tertiary; }
+// .tc-1 .section-headline { background-color: $primary; }
+// .tc-2 .section-headline { background-color: $secondary; }
+// .tc-3 .section-headline { background-color: $tertiary; }
 
-#branding-header .card-jumbotron {
-    &.overlay-c1, &.overlay-c2, &.overlay-c3, &.overlay-c4 {
-        z-index: inherit;
-        overflow: hidden;
-    }
-}
+// #branding-header .card-jumbotron {
+//     &.overlay-c1, &.overlay-c2, &.overlay-c3, &.overlay-c4 {
+//         z-index: inherit;
+//         overflow: hidden;
+//     }
+// }
 
-#branding-header .card-jumbotron {
-    &.overlay-c1  > picture.first-match:after {
-        background: transparent;
-        @include media-breakpoint-up(md) {
-            @include overlay-gradient-c1-bottom-to-top;
-        }
-        @include media-breakpoint-up(lg) {
-            @include overlay-gradient-c1-left-to-right;
-        }
-    }
-    &.overlay-c1.overlay-dark > picture.first-match:after {
-        background: transparent;
-        @include media-breakpoint-up(md) {
-            @include overlay-gradient-c1-bottom-to-top-overlay-dark;
-        }
-        @include media-breakpoint-up(lg) {
-            @include overlay-gradient-c1-left-to-right-overlay-dark;
-        }
-    }
-    &.overlay-c1.overlay-light > picture.first-match:after {
-        background: transparent;
-        @include media-breakpoint-up(md) {
-            @include overlay-gradient-c1-bottom-to-top-overlay-light;
-        }
-        @include media-breakpoint-up(lg) {
-            @include overlay-gradient-c1-left-to-right-overlay-light;
-        }
-    }
-    &.overlay-c2 > picture.first-match:after {
-        background: transparent;
-        @include media-breakpoint-up(md) {
-            @include overlay-gradient-c2-bottom-to-top;
-        }
-        @include media-breakpoint-up(lg) {
-            @include overlay-gradient-c2-left-to-right;
-        }
-    }
-    &.overlay-c2.overlay-dark > picture.first-match:after {
-        background: transparent;
-        @include media-breakpoint-up(md) {
-            @include overlay-gradient-c2-bottom-to-top-overlay-dark;
-        }
-        @include media-breakpoint-up(lg) {
-            @include overlay-gradient-c2-left-to-right-overlay-dark;
-        }
-    }
-    &.overlay-c2.overlay-light > picture.first-match:after {
-        background: transparent;
-        @include media-breakpoint-up(md) {
-            @include overlay-gradient-c2-bottom-to-top-overlay-light;
-        }
-        @include media-breakpoint-up(lg) {
-            @include overlay-gradient-c2-left-to-right-overlay-light;
-        }
-    }
-    &.overlay-c3 > picture.first-match:after {
-        background: transparent;
-        @include media-breakpoint-up(md) {
-            @include overlay-gradient-c1-bottom-to-top;
-        }
-        @include media-breakpoint-up(lg) {
-            @include overlay-gradient-c1-right-to-left;
-        }
-    }
-    &.overlay-c3.overlay-dark > picture.first-match:after {
-        background: transparent;
-        @include media-breakpoint-up(md) {
-            @include overlay-gradient-c1-bottom-to-top-overlay-dark;
-        }
-        @include media-breakpoint-up(lg) {
-            @include overlay-gradient-c1-right-to-left-overlay-dark;
-        }
-    }
-    &.overlay-c3.overlay-light > picture.first-match:after {
-        background: transparent;
-        @include media-breakpoint-up(md) {
-            @include overlay-gradient-c1-bottom-to-top-overlay-light;
-        }
-        @include media-breakpoint-up(lg) {
-            @include overlay-gradient-c1-right-to-left-overlay-light
-        }
-    }
-    &.overlay-c4 > picture.first-match:after {
-        background: transparent;
-        @include media-breakpoint-up(md) {
-            @include overlay-gradient-c2-bottom-to-top;
-        }
-        @include media-breakpoint-up(lg) {
-            @include overlay-gradient-c2-right-to-left;
-        }
-    }
-    &.overlay-c4.overlay-dark > picture.first-match:after {
-        background: transparent;
-        @include media-breakpoint-up(md) {
-            @include overlay-gradient-c2-bottom-to-top-overlay-dark;
-        }
-        @include media-breakpoint-up(lg) {
-            @include overlay-gradient-c2-right-to-left-overlay-dark;
-        }
-    }
-    &.overlay-c4.overlay-light > picture.first-match:after {
-        background: transparent;
-        @include media-breakpoint-up(md) {
-            @include overlay-gradient-c2-bottom-to-top-overlay-light;
-        }
-        @include media-breakpoint-up(lg) {
-            @include overlay-gradient-c2-right-to-left-overlay-light;
-        }
-    }
-}
-#banner.heroimage {
-    #branding-header .card-jumbotron {
-        &.overlay-c1 > picture.first-match:after {
-            @include overlay-gradient-c1-bottom-to-top;
-        }
-        &.overlay-c1.overlay-dark > picture.first-match:after {
-            @include overlay-gradient-c1-bottom-to-top-overlay-dark;
-        }
-        &.overlay-c1.overlay-light > picture.first-match:after {
-            @include overlay-gradient-c1-bottom-to-top-overlay-light;
-        }
-        &.overlay-c2 > picture.first-match:after {
-            @include overlay-gradient-c2-bottom-to-top;
-        }
-        &.overlay-c2.overlay-dark > picture.first-match:after {
-            @include overlay-gradient-c2-bottom-to-top-overlay-dark;
-        }
-        &.overlay-c2.overlay-light > picture.first-match:after {
-            @include overlay-gradient-c2-bottom-to-top-overlay-light;
-        }
-        &.overlay-c3 > picture.first-match:after {
-            @include overlay-gradient-c1-right-to-left;
-        }
-        &.overlay-c3.overlay-dark > picture.first-match:after {
-            @include overlay-gradient-c1-right-to-left-overlay-dark;
-        }
-        &.overlay-c3.overlay-light > picture.first-match:after {
-            @include overlay-gradient-c1-right-to-left-overlay-light;
-        }
-        &.overlay-c4 > picture.first-match:after {
-            @include overlay-gradient-c2-right-to-left;
-        }
-        &.overlay-c4.overlay-dark > picture.first-match:after {
-            @include overlay-gradient-c2-right-to-left-overlay-dark;
-        }
-        &.overlay-c4.overlay-light > picture.first-match:after {
-            @include overlay-gradient-c2-right-to-left-overlay-light;
-        }
-    }
-}
+// #branding-header .card-jumbotron {
+//     &.overlay-c1  > picture.first-match:after {
+//         background: transparent;
+//         @include media-breakpoint-up(md) {
+//             @include overlay-gradient-c1-bottom-to-top;
+//         }
+//         @include media-breakpoint-up(lg) {
+//             @include overlay-gradient-c1-left-to-right;
+//         }
+//     }
+//     &.overlay-c1.overlay-dark > picture.first-match:after {
+//         background: transparent;
+//         @include media-breakpoint-up(md) {
+//             @include overlay-gradient-c1-bottom-to-top-overlay-dark;
+//         }
+//         @include media-breakpoint-up(lg) {
+//             @include overlay-gradient-c1-left-to-right-overlay-dark;
+//         }
+//     }
+//     &.overlay-c1.overlay-light > picture.first-match:after {
+//         background: transparent;
+//         @include media-breakpoint-up(md) {
+//             @include overlay-gradient-c1-bottom-to-top-overlay-light;
+//         }
+//         @include media-breakpoint-up(lg) {
+//             @include overlay-gradient-c1-left-to-right-overlay-light;
+//         }
+//     }
+//     &.overlay-c2 > picture.first-match:after {
+//         background: transparent;
+//         @include media-breakpoint-up(md) {
+//             @include overlay-gradient-c2-bottom-to-top;
+//         }
+//         @include media-breakpoint-up(lg) {
+//             @include overlay-gradient-c2-left-to-right;
+//         }
+//     }
+//     &.overlay-c2.overlay-dark > picture.first-match:after {
+//         background: transparent;
+//         @include media-breakpoint-up(md) {
+//             @include overlay-gradient-c2-bottom-to-top-overlay-dark;
+//         }
+//         @include media-breakpoint-up(lg) {
+//             @include overlay-gradient-c2-left-to-right-overlay-dark;
+//         }
+//     }
+//     &.overlay-c2.overlay-light > picture.first-match:after {
+//         background: transparent;
+//         @include media-breakpoint-up(md) {
+//             @include overlay-gradient-c2-bottom-to-top-overlay-light;
+//         }
+//         @include media-breakpoint-up(lg) {
+//             @include overlay-gradient-c2-left-to-right-overlay-light;
+//         }
+//     }
+//     &.overlay-c3 > picture.first-match:after {
+//         background: transparent;
+//         @include media-breakpoint-up(md) {
+//             @include overlay-gradient-c1-bottom-to-top;
+//         }
+//         @include media-breakpoint-up(lg) {
+//             @include overlay-gradient-c1-right-to-left;
+//         }
+//     }
+//     &.overlay-c3.overlay-dark > picture.first-match:after {
+//         background: transparent;
+//         @include media-breakpoint-up(md) {
+//             @include overlay-gradient-c1-bottom-to-top-overlay-dark;
+//         }
+//         @include media-breakpoint-up(lg) {
+//             @include overlay-gradient-c1-right-to-left-overlay-dark;
+//         }
+//     }
+//     &.overlay-c3.overlay-light > picture.first-match:after {
+//         background: transparent;
+//         @include media-breakpoint-up(md) {
+//             @include overlay-gradient-c1-bottom-to-top-overlay-light;
+//         }
+//         @include media-breakpoint-up(lg) {
+//             @include overlay-gradient-c1-right-to-left-overlay-light
+//         }
+//     }
+//     &.overlay-c4 > picture.first-match:after {
+//         background: transparent;
+//         @include media-breakpoint-up(md) {
+//             @include overlay-gradient-c2-bottom-to-top;
+//         }
+//         @include media-breakpoint-up(lg) {
+//             @include overlay-gradient-c2-right-to-left;
+//         }
+//     }
+//     &.overlay-c4.overlay-dark > picture.first-match:after {
+//         background: transparent;
+//         @include media-breakpoint-up(md) {
+//             @include overlay-gradient-c2-bottom-to-top-overlay-dark;
+//         }
+//         @include media-breakpoint-up(lg) {
+//             @include overlay-gradient-c2-right-to-left-overlay-dark;
+//         }
+//     }
+//     &.overlay-c4.overlay-light > picture.first-match:after {
+//         background: transparent;
+//         @include media-breakpoint-up(md) {
+//             @include overlay-gradient-c2-bottom-to-top-overlay-light;
+//         }
+//         @include media-breakpoint-up(lg) {
+//             @include overlay-gradient-c2-right-to-left-overlay-light;
+//         }
+//     }
+// }
+// #banner.heroimage {
+//     #branding-header .card-jumbotron {
+//         &.overlay-c1 > picture.first-match:after {
+//             @include overlay-gradient-c1-bottom-to-top;
+//         }
+//         &.overlay-c1.overlay-dark > picture.first-match:after {
+//             @include overlay-gradient-c1-bottom-to-top-overlay-dark;
+//         }
+//         &.overlay-c1.overlay-light > picture.first-match:after {
+//             @include overlay-gradient-c1-bottom-to-top-overlay-light;
+//         }
+//         &.overlay-c2 > picture.first-match:after {
+//             @include overlay-gradient-c2-bottom-to-top;
+//         }
+//         &.overlay-c2.overlay-dark > picture.first-match:after {
+//             @include overlay-gradient-c2-bottom-to-top-overlay-dark;
+//         }
+//         &.overlay-c2.overlay-light > picture.first-match:after {
+//             @include overlay-gradient-c2-bottom-to-top-overlay-light;
+//         }
+//         &.overlay-c3 > picture.first-match:after {
+//             @include overlay-gradient-c1-right-to-left;
+//         }
+//         &.overlay-c3.overlay-dark > picture.first-match:after {
+//             @include overlay-gradient-c1-right-to-left-overlay-dark;
+//         }
+//         &.overlay-c3.overlay-light > picture.first-match:after {
+//             @include overlay-gradient-c1-right-to-left-overlay-light;
+//         }
+//         &.overlay-c4 > picture.first-match:after {
+//             @include overlay-gradient-c2-right-to-left;
+//         }
+//         &.overlay-c4.overlay-dark > picture.first-match:after {
+//             @include overlay-gradient-c2-right-to-left-overlay-dark;
+//         }
+//         &.overlay-c4.overlay-light > picture.first-match:after {
+//             @include overlay-gradient-c2-right-to-left-overlay-light;
+//         }
+//     }
+// }
 
 
-.card-jumbotron {
-	@include media-breakpoint-up(md) {
-		min-height: 660px !important;
-	}
-	@include media-breakpoint-up(lg) {
-    		min-height: 400px !important;
-	}
-	@include media-breakpoint-up(xl) {
-    		min-height: 460px !important;
-	}
-}
