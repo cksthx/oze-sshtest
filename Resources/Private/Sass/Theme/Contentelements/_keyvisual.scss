@@ -110,6 +110,7 @@
 // Jumbotron Teasertext
 
 .frame-type-extendedSectionTeaser {
+	position: relative;
 	margin-top: 1rem;
 	margin-bottom: 1rem;
 	.ce-bodytext {
@@ -117,10 +118,37 @@
 			@extend h4;
 		}
 	}
-	// @include media-breakpoint-up(md) {
- //        background: $white;
- //    } 
+	@include media-breakpoint-up(md) {
+        background: $white;
+        padding: 18px 16px 18px 0;
+        margin-bottom: 58px;
+    }
+
+    &:before {
+    	@include media-breakpoint-up(md) {
+	    	content: '';
+	    	display: block;
+	    	background: $white;
+	    	position: absolute;
+	    	top: 0;
+	    	bottom: 0;
+	    	width: calc((100vw - #{map-get($container-max-widths, "md")}) / 2 + #{$grid-gutter-width} / 2);
+	    	left: calc(-1 * ((100vw - #{map-get($container-max-widths, "md")}) / 2 + #{$grid-gutter-width} / 2));
+	    }
+    	@include media-breakpoint-up(lg) {
+	    	width: calc((100vw - #{map-get($container-max-widths, "lg")}) / 2 + #{$grid-gutter-width} / 2);
+	        left: calc(-1 * ((100vw - #{map-get($container-max-widths, "lg")}) / 2 + #{$grid-gutter-width} / 2));
+	    }
+	    @include media-breakpoint-up(xl) {
+	    	width: calc((100vw - #{map-get($container-max-widths, "xl")}) / 2 + #{$grid-gutter-width} / 2);
+	        left: calc(-1 * ((100vw - #{map-get($container-max-widths, "xl")}) / 2 + #{$grid-gutter-width} / 2));
+	    }
+    }
 }
+
+
+
+
 
 // Modifications for Hero-Image-Template
 
