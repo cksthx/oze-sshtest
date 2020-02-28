@@ -16,8 +16,9 @@ $logo-path: "/typo3conf/ext/project_configuration/Resources/Public/Images/logo.s
 @import "utilities";
 
 //Content Elements
+@import "Contentelements/overlay";
 @import "base_carousel/Resources/Private/Sass/carousel";
-@import "base_extendedsection/Resources/Private/Sass/style.scss";
+// @import "base_extendedsection/Resources/Private/Sass/style.scss";
 @import "base_gallery/Resources/Private/Sass/gallery";
 // @import "base_section/Resources/Private/Sass/style.scss";
 @import "base_columns/Resources/Private/Sass/style.scss";
@@ -27,6 +28,7 @@ $logo-path: "/typo3conf/ext/project_configuration/Resources/Public/Images/logo.s
 
 // Replace Base Content Elements
 @import "Contentelements/section";
+@import "Contentelements/keyvisual";
 
 // Additions and theming
 @import "theme";
@@ -34,6 +36,5 @@ $logo-path: "/typo3conf/ext/project_configuration/Resources/Public/Images/logo.s
 //Content Elements Modifications
 @import "Contentelements/textmedia";
 @import "Contentelements/columns";
-@import "Contentelements/keyvisual";
 @import "Contentelements/teaser";
 @import "Contentelements/accordion";
