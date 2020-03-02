@@ -6,12 +6,17 @@
 
 .container.sw-btn {
     position: absolute;
-    bottom:0.5rem;
+    // bottom: 0.5rem;
+    top:: calc(66.667vw - 30px);
     left: 0;
     right: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include media-breakpoint-up(md) {
+    	top: auto;
+    	bottom: 16px;
+    }
     .carousel-button-next, .carousel-button-prev {
         position: static;
         height: auto;
