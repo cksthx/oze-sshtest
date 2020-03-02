@@ -6,19 +6,7 @@
 
 .card-jumbotron {
 	border: none;
-	@include media-breakpoint-up(md) {
-		min-height: 660px !important;
-	}
-	@include media-breakpoint-up(lg) {
-    		min-height: 400px !important;
-	}
-	@include media-breakpoint-up(xl) {
-    		min-height: 460px !important;
-	}
     .card-img-overlay {
-      //   display: flex;
-      //   flex-direction: column;
-      //   justify-content: flex-end;
         padding: 0;
         .container>.row {
         	display: block;
@@ -34,39 +22,21 @@
 	    }
     }
     &.has-image {
-        @include media-breakpoint-up(md) {
-            justify-content: flex-end;
-        }  
         .card-img-overlay {
             position: relative;
         }
         @include media-breakpoint-up(md) {
+            justify-content: flex-end;
             background-color: transparent;
+            min-height: 660px !important;
+        }
+        @include media-breakpoint-up(lg) {
+                min-height: 400px !important;
+        }
+        @include media-breakpoint-up(xl) {
+                min-height: 460px !important;
         }
     }
-
-    // .frame-type-buttons {
-    //     display: table;
-    //     margin-top: ($grid-gutter-width/6);
-    //     margin-bottom: 0 !important;
-    // }
-    // .frame-type-list.frame {
-    //     margin-bottom: 0 !important;
-    // }
-
-
-
-    // picture.first-match {
-    //     display: block;
-    //     &:after {
-    //         position: absolute;
-    //         width: 100%;
-    //         content: "";
-    //         bottom: 0;
-    //         top: 0;
-    //     }
-    // }
-
     @include media-breakpoint-up(md) {
         .jumbotron-img {
             position: absolute;
@@ -208,6 +178,60 @@
         }
     }
 }
+
+// Modifications for subpages withoud keyvisual 
+
+#site-info {
+    background: $primary;
+    .card-img-overlay {
+        position: static;
+    }
+    .frame-type-extendedSectionTeaser {
+        background: transparent;
+        padding: 12px 0;
+        margin: 0;
+        &:before {
+            content: none;
+        }
+        .ce-textpic {
+            overflow: visible;
+        }
+        .ce-bodytext {
+            overflow: visible;
+            h2 {
+                @extend h1;
+                margin-bottom: 0;
+                color: $white !important;
+            }
+        }
+    }
+    &.has-image {
+        .frame-type-extendedSectionTeaser {
+            .ce-textpic {
+                overflow: visible;
+            }
+            .ce-bodytext {
+                overflow: visible;
+                h2 {
+                    @extend h1;
+                    margin-bottom: 0;
+                    color: $white !important;
+                }
+            }
+            @include media-breakpoint-up(md) {
+                display: inline-block;
+                background: $primary;
+                padding: 12px 32px 12px 0;
+                margin-bottom: 58px;
+                &:before {
+                    content: '';
+                    background: $primary;
+                }
+            }
+        }
+    }
+}
+
 
 // Section and Jumbotron: colors of contentelemente
 
