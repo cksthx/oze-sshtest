@@ -6,11 +6,54 @@
 
 <f:section name="Keyvisual">
     <f:if condition="{f:cObject(typoscriptObjectPath: 'lib.dynamicContent', data:'5')}">
-        <section role="banner" id="banner" class="{backendlayout}">
-            <div id="branding-header">
-                <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '5'}" />
-            </div>
-        </section>
+        <f:then>
+            <section role="banner" id="banner" class="{backendlayout}">
+                <div id="branding-header">
+                    <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '5'}" />
+                </div>
+            </section>
+        </f:then>
+        <f:else>
+            <f:if condition="{pageimage}">
+                <f:then>
+                    <section id="site-info" class="card card-jumbotron has-image bgimg-center">
+                        <f:for each="{pageimage}" as="image">
+                            <f:render partial="PageKeyImage" arguments="{image: image}" />
+                        </f:for>
+                        <div class="card-img-overlay">
+                            <div class="container ">
+                                <div id="c108" class="frame frame-default frame-type-extendedSectionTeaser frame-layout-0">
+                                    <div class="ce-row row ce-textpic ce-nowrap ce-right ce-intext">
+                                        <div class="ce-column col-12">
+                                            <div class="ce-bodytext">
+                                                <h2>{data.title}</h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </f:then>
+                <f:else>
+                    <section id="site-info" class="card card-jumbotron">
+                        <div class="card-img-overlay">
+                            <div class="container ">
+                                <div id="c108" class="frame frame-default frame-type-extendedSectionTeaser frame-layout-0">
+                                    <div class="ce-row row ce-textpic ce-nowrap ce-right ce-intext">
+                                        <div class="ce-column col-12">
+                                            <div class="ce-bodytext">
+                                                <h2>{data.title}</h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </f:else>
+            </f:if>
+        </f:else>
     </f:if>
 </f:section>
 

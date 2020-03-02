@@ -1,0 +1,18 @@
+<picture class="first-match keyimage">
+    <source data-srcset="{f:render(partial: 'Media/Rendering/SourceSet', arguments: {image: image, cropVariant: 'default', width: 640, height: 426}) -> cc:format.classes()}" media="(max-width: 320px)">
+    <source data-srcset="{f:render(partial: 'Media/Rendering/SourceSet', arguments: {image: image, cropVariant: 'default', width: 1150, height: 766}) -> cc:format.classes()}" media="(min-width: 321px) AND (max-width: 575px)" />
+    <source data-srcset="{f:render(partial: 'Media/Rendering/SourceSet', arguments: {image: image, cropVariant: 'default', width: 1534, height: 1022}) -> cc:format.classes()}" media="(min-width: 576px) AND (max-width: 767px)" />
+    <source data-srcset="{f:render(partial: 'Media/Rendering/SourceSet', arguments: {image: image, cropVariant: 'medium', height: 1320}) -> cc:format.classes()}" media="(min-width: 768px) AND (max-width: 991px)" />
+    <f:if condition="{data.layout} != '1'">
+        <f:then>
+            <source data-srcset="{f:render(partial: 'Media/Rendering/SourceSet', arguments: {image: image, cropVariant: 'desktop', height: 400, double: 1}) -> cc:format.classes()}" media="(min-width: 992px) AND (max-width: 1199px)">
+            <source data-srcset="{f:render(partial: 'Media/Rendering/SourceSet', arguments: {image: image, cropVariant: 'desktop', height: 460, double: 1}) -> cc:format.classes()}" media="(min-width: 1200px)">
+            <img data-src="{f:render(partial: 'Media/Rendering/SourceSet', arguments: {image: image, cropVariant: 'desktop', height: '920'}) -> cc:format.classes()}" class="lazyload img-fluid jumbotron-img" alt="{image.alternative}" title="{image.title}"/>
+        </f:then>
+        <f:else>
+            <source data-srcset="{f:render(partial: 'Media/Rendering/SourceSet', arguments: {image: image, cropVariant: 'desktopfixed', width: 1200, double: 1}) -> cc:format.classes()}" media="(min-width: 992px) AND (max-width: 1199px)">
+            <source data-srcset="{f:render(partial: 'Media/Rendering/SourceSet', arguments: {image: image, cropVariant: 'desktopfixed', width: 1800, double: 1}) -> cc:format.classes()}" media="(min-width: 1200px)">
+            <img data-src="{f:render(partial: 'Media/Rendering/SourceSet', arguments: {image: image, cropVariant: 'desktopfixed', width: 1800}) -> cc:format.classes()}" class="lazyload img-fluid jumbotron-img-fixed" alt="{image.alternative}" title="{image.title}"/>
+        </f:else>
+    </f:if>
+</picture>
