@@ -182,9 +182,17 @@
 // Modifications for subpages withoud keyvisual 
 
 #site-info {
+    background: $primary;
+    .card-img-overlay {
+        position: static;
+    }
     .frame-type-extendedSectionTeaser {
-        margin-top: 0.75rem;
-        margin-bottom: 0.75rem;
+        background: transparent;
+        padding: 12px 0;
+        margin: 0;
+        &:before {
+            content: none;
+        }
         .ce-textpic {
             overflow: visible;
         }
@@ -196,13 +204,29 @@
                 color: $white !important;
             }
         }
-        @include media-breakpoint-up(md) {
-            display: inline-block;
-            background: $primary;
-            padding: 12px 32px 12px 0;
-            margin-bottom: 58px;
-            &:before {
+    }
+    &.has-image {
+        .frame-type-extendedSectionTeaser {
+            .ce-textpic {
+                overflow: visible;
+            }
+            .ce-bodytext {
+                overflow: visible;
+                h2 {
+                    @extend h1;
+                    margin-bottom: 0;
+                    color: $white !important;
+                }
+            }
+            @include media-breakpoint-up(md) {
+                display: inline-block;
                 background: $primary;
+                padding: 12px 32px 12px 0;
+                margin-bottom: 58px;
+                &:before {
+                    content: '';
+                    background: $primary;
+                }
             }
         }
     }
