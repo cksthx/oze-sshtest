@@ -1,0 +1,82 @@
+# =================================
+# COMKOM° Typo3 Base Configuration: Open Graph
+# =================================
+page {
+    meta {
+        og:type.attribute = property
+        og:type = article
+
+        overrideg:title.attribute = property
+        og:title.field = subtitle // nav_title // title
+	    og:title.wrap = |
+
+        og:url.attribute = property
+        og:url.stdWrap.cObject = TEXT
+        og:url.stdWrap.cObject.typolink {
+            parameter.data = TSFE:id
+            forceAbsoluteUrl = 1
+            returnLast=url
+        }
+
+        og:site_name.attribute = property
+        og:site_name = {$CompanyName}
+
+         //load image from Resources
+        og:image.attribute = property
+        og:image.stdWrap.cObject = FILES
+        og:image.stdWrap.cObject {
+            references {
+                table = pages
+                uid.data = page:uid
+                fieldName = media
+                data = levelfield:-1, media, 
+            }
+            maxItems = 1
+            renderObj = TEXT
+            renderObj {
+                typolink {
+                    parameter.stdWrap{
+                        cObject = IMG_RESOURCE
+                        cObject{
+                            file.import.data = file:current:uid
+                            file.treatIdAsReference = 1
+                            file.height = 1080c
+                            file.width = 1920c
+                        }
+                    }
+                    returnLast = url
+                    forceAbsoluteUrl = 1
+                }
+            }
+             stdWrap.wrap = |
+
+            //if no image in page resources, load dummy image
+            stdWrap.ifEmpty.cObject = IMG_RESOURCE
+            stdWrap.ifEmpty.cObject {
+                file = {$DummyImage}
+                file {
+                    width = 1920c
+                    height = 1080c
+                }
+            }
+        }
+
+        og:image:width.attribute = property
+        og:image:width = 1920
+        
+        og:image:height.attribute = property
+        og:image:height = 1080
+
+        og:description.attribute = property
+        og:description.stdWrap.cObject = TEXT
+        og:description.stdWrap.cObject.data = levelfield:2, description, slide
+
+        og:locale.attribute = property
+        og:locale.stdWrap.cObject = TEXT
+        og:locale.stdWrap.cObject.value = de_DE
+
+        og:author.attribute = property
+        og:author = {$page.meta.author}
+        og:author.override.field = author
+    }
+}
