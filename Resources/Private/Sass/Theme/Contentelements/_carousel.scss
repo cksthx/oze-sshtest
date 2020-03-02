@@ -1,12 +1,5 @@
-.carousel .card-jumbotron {
-    @include media-breakpoint-up(md) {
-        display: flex;
-    }
-}
-
-.container.sw-btn {
+.sw-btn {
     position: absolute;
-    // bottom: 0.5rem;
     top:: calc(66.667vw - 30px);
     left: 0;
     right: 0;
@@ -17,19 +10,72 @@
     	top: auto;
     	bottom: 16px;
     }
+    .carousel-pagination {
+    	width: 100%;
+    }
     .carousel-button-next, .carousel-button-prev {
-        position: static;
-        height: auto;
+        position: absolute;
         transform: none;
+        top: -330px;
+        height: 73px;
+    	width: 20px;
+    	opacity: 0;
+    	pointer-events: none;
+    	transition: opacity 0.3s ease-in-out;
+    	@include media-breakpoint-up(lg) {
+    		top: -200px;
+    	}
+    	@include media-breakpoint-up(xl) {
+    		top: -230px;
+    	}
+    	&:before {
+        	display: block;
+    		height: 73px;
+    		width: 20px;
+    	}
     }
     .carousel-button-next {
-        right: 0;
+        right: -2vw;
+        &:before {
+        	content: url("data:image/svg+xml,%3Csvg width='20' height='73' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 1.816L3.652.184 20.02 36.79 3.647 72.827.005 71.173l15.627-34.397z' fill='%2386C2EB' fill-rule='nonzero'/%3E%3C/svg%3E");
+        }
     }
     .carousel-button-prev {
-        left: 0;
+        left: -2vw;
+        &:before {
+        	content: url("data:image/svg+xml,%3Csvg width='20' height='73' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20.02 1.816L16.368.184 0 36.79l16.373 36.037 3.642-1.654L4.388 36.776z' fill='%2386C2EB' fill-rule='nonzero'/%3E%3C/svg%3E");
+        }
     }
     .slick-dots {
+    	margin: 0 auto;
         position: static;
+        li {
+			height: 10px;
+	    	width: 10px;
+			margin: 0 2px;
+			button {
+				height: 10px;
+	    		width: 10px;
+	    		padding: 0;
+				&:before {
+					height: 10px;
+	    			width: 10px;
+	    			line-height: 10px;
+					color: $primary-lighter;
+					opacity: 0.7;
+				}
+			}
+			&.slick-active {
+				button {
+					&:before {
+						top: 1px;
+						font-size: 10px;
+						color: $primary-light;
+						opacity: 0.7;
+					}
+				}
+			}
+		}
     }
 }
 
@@ -37,31 +83,17 @@
     margin-bottom: 0;
 }
 
-.slick-dots {
-	li {
-		height: 10px;
-    	width: 10px;
-		margin: 0 2px;
-		button {
-			height: 10px;
-    		width: 10px;
-    		padding: 0;
-			&:before {
-				height: 10px;
-    			width: 10px;
-    			line-height: 10px;
-				color: $primary-lighter;
-				opacity: 0.7;
-			}
-		}
-		&.slick-active {
-			button {
-				&:before {
-					top: 1px;
-					font-size: 10px;
-					color: $primary-light;
-					opacity: 0.7;
-				}
+.carousel {
+	.card-jumbotron {
+	    @include media-breakpoint-up(md) {
+	        display: flex;
+	    }
+	}
+    &:hover {
+		.carousel-button-next, .carousel-button-prev {
+			@include media-breakpoint-up(md) {
+				pointer-events: all;
+				opacity: 1;
 			}
 		}
 	}
