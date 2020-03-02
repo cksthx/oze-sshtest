@@ -123,7 +123,10 @@
         padding: 18px 16px 18px 0;
         margin-bottom: 58px;
     }
-
+    @include media-breakpoint-up(lg) {
+        max-width: calc(50% - 24px * 1 / 2);
+        margin-right: auto;
+    }
     &:before {
     	@include media-breakpoint-up(md) {
 	    	content: '';
@@ -165,10 +168,6 @@
 	    }
     }
 }
-
-
-
-
 
 // Modifications for Hero-Image-Template
 
