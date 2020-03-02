@@ -17,7 +17,7 @@ $logo-path: "/typo3conf/ext/project_configuration/Resources/Public/Images/logo.s
 
 //Content Elements
 @import "Contentelements/overlay";
-@import "base_carousel/Resources/Private/Sass/carousel";
+// @import "base_carousel/Resources/Private/Sass/carousel";
 // @import "base_extendedsection/Resources/Private/Sass/style.scss";
 @import "base_gallery/Resources/Private/Sass/gallery";
 // @import "base_section/Resources/Private/Sass/style.scss";
@@ -38,3 +38,4 @@ $logo-path: "/typo3conf/ext/project_configuration/Resources/Public/Images/logo.s
 @import "Contentelements/columns";
 @import "Contentelements/teaser";
 @import "Contentelements/accordion";
+@import "Contentelements/carousel";

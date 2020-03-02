@@ -1,0 +1,68 @@
+.carousel .card-jumbotron {
+    @include media-breakpoint-up(md) {
+        display: flex;
+    }
+}
+
+.container.sw-btn {
+    position: absolute;
+    // bottom: 0.5rem;
+    top:: calc(66.667vw - 30px);
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include media-breakpoint-up(md) {
+    	top: auto;
+    	bottom: 16px;
+    }
+    .carousel-button-next, .carousel-button-prev {
+        position: static;
+        height: auto;
+        transform: none;
+    }
+    .carousel-button-next {
+        right: 0;
+    }
+    .carousel-button-prev {
+        left: 0;
+    }
+    .slick-dots {
+        position: static;
+    }
+}
+
+.slick-dotted.slick-slider {
+    margin-bottom: 0;
+}
+
+.slick-dots {
+	li {
+		height: 10px;
+    	width: 10px;
+		margin: 0 2px;
+		button {
+			height: 10px;
+    		width: 10px;
+    		padding: 0;
+			&:before {
+				height: 10px;
+    			width: 10px;
+    			line-height: 10px;
+				color: $primary-lighter;
+				opacity: 0.7;
+			}
+		}
+		&.slick-active {
+			button {
+				&:before {
+					top: 1px;
+					font-size: 10px;
+					color: $primary-light;
+					opacity: 0.7;
+				}
+			}
+		}
+	}
+}
