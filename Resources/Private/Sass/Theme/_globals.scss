@@ -86,6 +86,12 @@ table.table {
 		font-weight: 600;
 		color: $primary;
 	}
+	caption {
+		padding: 0;
+		caption-side: top;
+		@extend h6;
+
+	}
 }
 
 // fig-caption 
