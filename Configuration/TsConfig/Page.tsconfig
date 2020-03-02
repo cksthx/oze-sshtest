@@ -48,6 +48,12 @@ TCEFORM {
                     removeItems = 2,3
                     altLabels.1 = LLL:EXT:project_configuration/Resources/Private/Language/locallang.xlf:tce_forms.frame_class.altLabels.layout.1
                 }
+                textTeaser {
+                    removeItems = 1, 2, 3, primary, secondary, tertiary, quaternary
+                    addItems {
+                        teaser-display-1 = LLL:EXT:project_configuration/Resources/Private/Language/locallang.xlf:contentElement.textTeaser.teaser-display-1
+                    }
+                }
             }
         }
     }

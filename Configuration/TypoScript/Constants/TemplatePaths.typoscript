@@ -48,9 +48,9 @@ templatePaths {
     }
             
     teaser {
-        templateRootPath = EXT:base_teaser/Resources/Private/Templates
-        partialRootPath = EXT:base_teaser/Resources/Private/Partials
-        layoutRootPath = EXT:base_teaser/Resources/Private/Layouts
+        templateRootPath = EXT:project_configuration/Resources/Private/Templates/Teaser
+        partialRootPath = EXT:project_configuration/Resources/Private/Partials/Teaser
+        layoutRootPath = EXT:project_configuration/Resources/Private/Layouts/Teaser
     }
             
     textRoundMedia {

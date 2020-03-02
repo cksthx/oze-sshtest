@@ -22,6 +22,10 @@
                 <source>Button read more</source>
                 <target>Button read more</target>
             </trans-unit>
+            <trans-unit id="contentElement.textTeaser.teaser-display-1" xml:space="preserve">
+                <source>Display Teaser</source>
+                <target>Display Teaser</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

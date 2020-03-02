@@ -17,6 +17,9 @@
             <trans-unit id="custom_rte.classes.btn.read_more" xml:space="preserve">
                 <source>Button read more</source>
             </trans-unit>
+            <trans-unit id="contentElement.textTeaser.teaser-display-1">
+                <source>Display Teaser</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>

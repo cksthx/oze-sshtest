@@ -1,0 +1,38 @@
+<f:layout name="Teaser" />
+
+<f:section name="Main">
+	<f:link.typolink parameter="{data.header_link}" class="teaser-hover">
+        <f:if condition="{data.layout} != 'teaser-display-1'">
+            <f:then>
+                <article class="card{f:if(condition: data.layout, then: ' {data.layout}')}">
+                    <f:if condition="{gallery.count.files} > 0 && {gallery.position.vertical} != 'below'">
+                        <f:render partial="TextTeaserImage" arguments="{gallery: gallery}" />
+                    </f:if>
+                    <f:if condition="{0: data.bodytext, 1: data.header} != {0: '', 1: ''}">
+                        <div class="card-body">
+                            <f:render partial="TeaserBody" arguments="{_all}" />
+                        </div>
+                    </f:if>
+                    <f:if condition="{gallery.count.files} > 0 && {gallery.position.vertical} == 'below'">
+                        <f:render partial="TextTeaserImage" arguments="{gallery: gallery}" />
+                    </f:if>
+                </article>
+            </f:then>
+            <f:else>
+                <article class="card{f:if(condition: data.layout, then: ' {data.layout}')}">
+                    <f:if condition="{gallery.count.files} > 0 && {gallery.position.vertical} != 'below'">
+                        <f:render partial="TextTeaserImageDisplay1" arguments="{gallery: gallery}" />
+                    </f:if>
+                    <f:if condition="{0: data.bodytext, 1: data.header} != {0: '', 1: ''}">
+                        <div class="card-body">
+                            <f:render partial="TeaserBody" arguments="{_all}" />
+                        </div>
+                    </f:if>
+                    <f:if condition="{gallery.count.files} > 0 && {gallery.position.vertical} == 'below'">
+                        <f:render partial="TextTeaserImageDisplay1" arguments="{gallery: gallery}" />
+                    </f:if>
+                </article>
+            </f:else>
+        </f:if>
+	</f:link.typolink>
+</f:section>
