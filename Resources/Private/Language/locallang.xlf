@@ -20,6 +20,9 @@
             <trans-unit id="contentElement.textTeaser.teaser-default">
                 <source>Default</source>
             </trans-unit>
+            <trans-unit id="contentElement.textTeaser.teaser-display-1">
+                <source>Display Teaser</source>
+            </trans-unit>
             <trans-unit id="contentElement.textTeaser.teaser-display-1-mobile-tablet">
                 <source>Display Teaser (mobile, tablet)</source>
             </trans-unit>

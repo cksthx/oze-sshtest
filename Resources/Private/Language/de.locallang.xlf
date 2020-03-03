@@ -26,6 +26,10 @@
                 <source>Default</source>
                 <target>Standard</target>
             </trans-unit>
+            <trans-unit id="contentElement.textTeaser.teaser-display-1" xml:space="preserve">
+                <source>Display Teaser</source>
+                <target>Display Teaser</target>
+            </trans-unit>
             <trans-unit id="contentElement.textTeaser.teaser-display-1-mobile-tablet" xml:space="preserve">
                 <source>Display Teaser (mobile, tablet)</source>
                 <target>Display Teaser (mobile, tablet)</target>
