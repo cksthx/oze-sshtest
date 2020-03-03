@@ -57,18 +57,48 @@ $GLOBALS['TCA']['tt_content']['types']['textTeaser'] = array_replace_recursive(
 
 // Add crop variants
 $defaultCropSettingsTextTeaser = [
-    'title' => 'Default',
+    'title' => 'LLL:EXT:project_configuration/Resources/Private/Language/locallang.xlf:contentElement.textTeaser.teaser-default',
     'allowedAspectRatios' => [
-        '3:2' => [
-            'title' => '3:2',
-            'value' => 3 / 2
-        ],
         '16:9' => [
             'title' => 'LLL:EXT:lang/Resources/Private/Language/locallang_wizards.xlf:imwizard.ratio.16_9',
             'value' => 16 / 9
         ],
     ],
-    'selectedRatio' => '3:2',
+    'selectedRatio' => '16:9',
+    'cropArea' => [
+        'x' => 0.0025,
+        'y' => 0.0025,
+        'width' => 0.995,
+        'height' => 0.995,
+    ],
+];
+
+$CropSettingsTextTeaserDisplay1MobileTablet = [
+    'title' => 'LLL:EXT:project_configuration/Resources/Private/Language/locallang.xlf:contentElement.textTeaser.teaser-display-1-mobile-tablet',
+    'allowedAspectRatios' => [
+        '16:9' => [
+            'title' => 'LLL:EXT:lang/Resources/Private/Language/locallang_wizards.xlf:imwizard.ratio.16_9',
+            'value' => 16 / 9
+        ],
+    ],
+    'selectedRatio' => '16:9',
+    'cropArea' => [
+        'x' => 0.0025,
+        'y' => 0.0025,
+        'width' => 0.995,
+        'height' => 0.995,
+    ],
+];
+
+$CropSettingsTextTeaserDisplay1Desktop = [
+    'title' => 'LLL:EXT:project_configuration/Resources/Private/Language/locallang.xlf:contentElement.textTeaser.teaser-display-1-desktop',
+    'allowedAspectRatios' => [
+        '3:1' => [
+            'title' => '3:1',
+            'value' => 3 / 1
+        ],
+    ],
+    'selectedRatio' => '3:1',
     'cropArea' => [
         'x' => 0.0025,
         'y' => 0.0025,
@@ -78,3 +108,5 @@ $defaultCropSettingsTextTeaser = [
 ];
 
 $GLOBALS['TCA']['tt_content']['types']['textTeaser']['columnsOverrides']['assets']['config']['overrideChildTca']['columns']['crop']['config']['cropVariants']['default'] = $defaultCropSettingsTextTeaser;
+$GLOBALS['TCA']['tt_content']['types']['textTeaser']['columnsOverrides']['assets']['config']['overrideChildTca']['columns']['crop']['config']['cropVariants']['display1-mobile-tablet'] = $CropSettingsTextTeaserDisplay1MobileTablet;
+$GLOBALS['TCA']['tt_content']['types']['textTeaser']['columnsOverrides']['assets']['config']['overrideChildTca']['columns']['crop']['config']['cropVariants']['display1-desktop'] = $CropSettingsTextTeaserDisplay1Desktop;

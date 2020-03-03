@@ -1,9 +1,9 @@
 <picture class="first-match">
-    <source data-srcset="{f:render( partial: 'Media/Rendering/SourceSet', arguments: {image: image, cropVariant: 'display1', width: 640} ) -> cc:format.classes()}" media="(max-width: 320px)">
-    <source data-srcset="{f:render( partial: 'Media/Rendering/SourceSet', arguments: {image: image, cropVariant: 'display1', width: 1150} ) -> cc:format.classes()}" media="(min-width: 321px) AND (max-width: 575px)">
-    <source data-srcset="{f:render( partial: 'Media/Rendering/SourceSet', arguments: {image: image, cropVariant: 'display1', width: 1534} ) -> cc:format.classes()}" media="(min-width: 576px) AND (max-width: 767px)">
-    <source data-srcset="{f:render( partial: 'Media/Rendering/SourceSet', arguments: {image: image, cropVariant: 'display1', width: 1392} ) -> cc:format.classes()}" media="(min-width: 768px) AND (max-width: 991px)">
-    <source data-srcset="{f:render( partial: 'Media/Rendering/SourceSet', arguments: {image: image, cropVariant: 'display1', width: 936, double: 1} ) -> cc:format.classes()}" media="(min-width: 992px) AND (max-width: 1199px)">
-    <source data-srcset="{f:render( partial: 'Media/Rendering/SourceSet', arguments: {image: image, cropVariant: 'display1', width: 1116, double: 1} ) -> cc:format.classes()}" media="(min-width: 1200px)">
-    <img data-src="{f:render( partial: 'Media/Rendering/SourceSet', arguments: {image: image, cropVariant: 'display1', width: 1116} ) -> cc:format.classes()}" class="lazyload img-fluid{f:if(condition: img_position, then: ' {img_position}')}" alt="{image.alternative}" title="{image.title}"/>
+    <source data-srcset="{f:render( partial: 'Media/Rendering/SourceSet', arguments: {image: image, cropVariant: 'display1-mobile-tablet', width: 640} ) -> cc:format.classes()}" media="(max-width: 320px)">
+    <source data-srcset="{f:render( partial: 'Media/Rendering/SourceSet', arguments: {image: image, cropVariant: 'display1-mobile-tablet', width: 1150} ) -> cc:format.classes()}" media="(min-width: 321px) AND (max-width: 575px)">
+    <source data-srcset="{f:render( partial: 'Media/Rendering/SourceSet', arguments: {image: image, cropVariant: 'display1-mobile-tablet', width: 1534} ) -> cc:format.classes()}" media="(min-width: 576px) AND (max-width: 767px)">
+    <source data-srcset="{f:render( partial: 'Media/Rendering/SourceSet', arguments: {image: image, cropVariant: 'display1-mobile-tablet', width: 1392} ) -> cc:format.classes()}" media="(min-width: 768px) AND (max-width: 991px)">
+    <source data-srcset="{f:render( partial: 'Media/Rendering/SourceSet', arguments: {image: image, cropVariant: 'display1-desktop', width: 936, double: 1} ) -> cc:format.classes()}" media="(min-width: 992px) AND (max-width: 1199px)">
+    <source data-srcset="{f:render( partial: 'Media/Rendering/SourceSet', arguments: {image: image, cropVariant: 'display1-desktop', width: 1116, double: 1} ) -> cc:format.classes()}" media="(min-width: 1200px)">
+    <img data-src="{f:render( partial: 'Media/Rendering/SourceSet', arguments: {image: image, cropVariant: 'display1-desktop', width: 1116} ) -> cc:format.classes()}" class="lazyload img-fluid{f:if(condition: img_position, then: ' {img_position}')}" alt="{image.alternative}" title="{image.title}"/>
 </picture>
