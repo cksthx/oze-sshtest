@@ -12,12 +12,12 @@ renderables:
       nextButtonLabel: 'Nächster Schritt'
     type: Page
     identifier: page-1
-    label: 'Ihre Anfrage'
+    label: ''
     renderables:
       -
-        type: GridRow
-        identifier: gridrow-1
-        label: 'Grid: Zeile'
+        type: Fieldset
+        identifier: fieldset-1
+        label: 'Get in Touch'
         renderables:
           -
             defaultValue: ''
@@ -42,27 +42,6 @@ renderables:
                 identifier: NotEmpty
           -
             defaultValue: ''
-            type: Textarea
-            identifier: textarea-1
-            label: Nachricht
-            properties:
-              fluidAdditionalAttributes:
-                required: required
-              gridColumnClassAutoConfiguration:
-                viewPorts:
-                  xs:
-                    numbersOfColumnsToUse: '12'
-                  sm:
-                    numbersOfColumnsToUse: '12'
-                  md:
-                    numbersOfColumnsToUse: '6'
-                  lg:
-                    numbersOfColumnsToUse: '6'
-            validators:
-              -
-                identifier: NotEmpty
-          -
-            defaultValue: ''
             type: Email
             identifier: email-1
             label: E-Mail
@@ -82,5 +61,26 @@ renderables:
             validators:
               -
                 identifier: EmailAddress
+              -
+                identifier: NotEmpty
+          -
+            defaultValue: ''
+            type: Textarea
+            identifier: textarea-1
+            label: Nachricht
+            properties:
+              fluidAdditionalAttributes:
+                required: required
+              gridColumnClassAutoConfiguration:
+                viewPorts:
+                  xs:
+                    numbersOfColumnsToUse: '12'
+                  sm:
+                    numbersOfColumnsToUse: '12'
+                  md:
+                    numbersOfColumnsToUse: '6'
+                  lg:
+                    numbersOfColumnsToUse: '6'
+            validators:
               -
                 identifier: NotEmpty
