@@ -24,4 +24,35 @@
 			padding: 1.5rem;
 		}
 	}
+	.teaser-display-1 {
+		position: relative;
+		border: none;
+		margin-right: -$grid-gutter-width/2;
+		margin-left: -$grid-gutter-width/2;
+		.above {
+			margin-top: 24px;
+		}
+		.below {
+			margin-bottom: 24px;
+		}
+		.card-body {
+			position: absolute;
+			bottom: 0;
+			padding: 18px 14px;
+			right: $grid-gutter-width/2;
+			left: $grid-gutter-width/2;
+			background: $primary;
+			h1, h2, h3, h4, h5, h6 {
+				@extend h4;
+			}
+			* {
+		        color: $white !important;
+		    }
+		}
+		.above+.card-body {
+			bottom: auto;
+		    top: 0;
+		}
+	}
 }
+
