@@ -28,17 +28,20 @@
 @import 'EXT:base_configuration/Configuration/TsConfig/Page/LibBackendLayouts.tsconfig'
 
 mod.web_layout.BackendLayouts {
-    static < lib.backendLayouts.static
+    #static < lib.backendLayouts.static
     flex < lib.backendLayouts.flex
-    heroimage < lib.backendLayouts.heroimage
+    #heroimage < lib.backendLayouts.heroimage
 }
 
 # TCEFORM
 # ========
 TCEFORM {
     tt_content {
-        # appearance tab: content element layout
-        # ---------------------------------------
+        # headlines
+        # ---------
+        header_layout {
+            removeItems = 5, 6
+        }
         # Layout
         # ^^^^^
         layout {
@@ -54,13 +57,35 @@ TCEFORM {
                         teaser-display-1 = LLL:EXT:project_configuration/Resources/Private/Language/locallang.xlf:contentElement.textTeaser.teaser-display-1
                     }
                 }
+                imageTeaser {
+                    removeItems = 1, 2, 3, primary, secondary, tertiary, quaternary
+                }
+                extendedSectionImage {
+                    removeItems = 1, 2, 3
+                }
+            }
+        }
+        # Frame
+        # ^^^^
+        frame_class {
+            types {
+                textmedia {
+                    removeItems = 50-left, 50-right, 33-left, 33-right, 66-left, 66-right, 75-left, 75-right, none, no-gutters
+                }
+                extendedSectionTeaser {
+                    removeItems = 50-left, 50-right, 33-left, 33-right, 66-left, 66-right, 75-left, 75-right, none, no-gutters
+                }
             }
         }
     }
 }
 
 # Gridelements: Section
+tx_gridelements.setup.section.flexformDS = FILE:EXT:project_configuration/Configuration/FlexForms/section.xml
 tx_gridelements.setup.section.config.rows.1.columns.1.allowedGridTypes = gridelements_pi1,teaserContainer,twoColumns,threeColumns,fourColumns,carousel,accordionTabs
+
+# Gridelements: ExtendedSection
+tx_gridelements.setup.extendedSection.flexformDS = FILE:EXT:project_configuration/Configuration/FlexForms/extended_section.xml
 
 # Gridelements: Columns
 tx_gridelements.setup.twoColumns.config.rows.1.columns.1.allowedGridTypes = gridelements_pi1,teaserContainer,twoColumns,threeColumns,fourColumns,carousel,accordionTabs
