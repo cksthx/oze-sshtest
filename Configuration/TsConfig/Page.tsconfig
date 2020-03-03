@@ -82,6 +82,7 @@ TCEFORM {
 
 # Gridelements: Section
 tx_gridelements.setup.section.flexformDS = FILE:EXT:project_configuration/Configuration/FlexForms/section.xml
+tx_gridelements.setup.section.config.rows.1.columns.1.allowed.CType =  form_formframework,gridelements_pi1,textmedia,uploads,textRoundMedia,textTeaser,imageTeaser,menuDirectory,menuList,list,div,shortcut,menu_sitemap,html
 tx_gridelements.setup.section.config.rows.1.columns.1.allowedGridTypes = gridelements_pi1,teaserContainer,twoColumns,threeColumns,fourColumns,carousel,accordionTabs
 
 # Gridelements: ExtendedSection
