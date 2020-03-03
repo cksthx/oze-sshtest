@@ -215,7 +215,10 @@
 
 /* Frame spacing */
 /* Frames except for the last one inside of each parent get spaced below. */
-.frame+.frame {
+.frame+.frame,
+.teaser.row+.frame,
+.frame+.teaser.row,
+.teaser.row+.teaser.row {
     margin-top: $frame-spacer;
 }
 
