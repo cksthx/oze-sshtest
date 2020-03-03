@@ -25,6 +25,7 @@
 @import 'EXT:base_accordiontabs/Configuration/TypoScript/setup.typoscript'
 
 # Project configurations
+@import 'EXT:project_configuration/Configuration/TypoScript/Setup/Form.typoscript'
 @import 'EXT:project_configuration/Configuration/TypoScript/Setup/Page.typoscript'
 
 # extensions
