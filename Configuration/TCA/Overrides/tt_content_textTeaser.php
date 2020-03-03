@@ -59,12 +59,12 @@ $GLOBALS['TCA']['tt_content']['types']['textTeaser'] = array_replace_recursive(
 $defaultCropSettingsTextTeaser = [
     'title' => 'LLL:EXT:project_configuration/Resources/Private/Language/locallang.xlf:contentElement.textTeaser.teaser-default',
     'allowedAspectRatios' => [
-        '16:9' => [
-            'title' => 'LLL:EXT:lang/Resources/Private/Language/locallang_wizards.xlf:imwizard.ratio.16_9',
-            'value' => 16 / 9
+        '3:2' => [
+            'title' => '3:2',
+            'value' => 3 / 2
         ],
     ],
-    'selectedRatio' => '16:9',
+    'selectedRatio' => '3:2',
     'cropArea' => [
         'x' => 0.0025,
         'y' => 0.0025,
