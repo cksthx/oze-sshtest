@@ -1,2 +1,2 @@
-plugin.tx_form.settings.yamlConfigurations.100 = EXT:project_configuration/Configuration/Form/ozeFormSetup.yaml
-module.tx_form.settings.yamlConfigurations.100 = EXT:project_configuration/Configuration/Form/ozeFormSetup.yaml
+plugin.tx_form.settings.yamlConfigurations.100 = EXT:project_configuration/Configuration/Form/contactFormSetup.yaml
+module.tx_form.settings.yamlConfigurations.100 = EXT:project_configuration/Configuration/Form/contactFormSetup.yaml
