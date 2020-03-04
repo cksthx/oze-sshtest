@@ -140,8 +140,8 @@ page {
                         #disabled = 1
                     }
                     textmedia {
-                        #keepItems = 2,10,17,18,25,26
-                        #removeItems = 1,2,3,4,9,10
+                        #keepItems = 0,1,2,8,9,10,17,18,25,26
+                        removeItems = 
                     }
                 }
                 #disableNoMatchingValueElement = 1
