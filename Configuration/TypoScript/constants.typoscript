@@ -11,6 +11,7 @@ CeOpeningTimesId =
 # Project constants
 @import 'EXT:project_configuration/Configuration/TypoScript/Constants/TemplatePaths.typoscript'
 
+
 CompanyName = Orthopädisches Zentrum Essen
 CompanyEmail = info@oze-essen.de
 CompanyClaim =
@@ -34,6 +35,10 @@ RootId = 1
 
 page.meta.robots = noindex,nofollow
 config.debug = 0
+
+
+# Extensions constants
+@import 'EXT:project_configuration/Configuration/TypoScript/Constants/Extensions/AdvancedMailDoubleOptin.typoscript'
 
 [applicationContext = Development]
 page.meta.robots = noindex,nofollow

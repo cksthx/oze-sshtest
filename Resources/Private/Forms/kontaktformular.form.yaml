@@ -5,6 +5,18 @@ type: Form
 identifier: kontaktformular
 label: Kontaktformular
 prototypeName: standard
+finishers:
+  -
+    options:
+      givenName: ''
+      familyName: '{text-1}'
+      email: '{email-1}'
+      message: '{textarea-1}'
+      validationPid: '37'
+      format: html
+      translation:
+        language: ''
+    identifier: DoubleOptIn
 renderables:
   -
     renderingOptions:
