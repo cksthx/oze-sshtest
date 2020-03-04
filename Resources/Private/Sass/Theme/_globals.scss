@@ -147,6 +147,30 @@ blockquote {
 	}
 }
 
+// icon classes 
+//============================
+span {
+    &.phone, &.fax, &.mail {
+        text-indent: -99999px;
+        display: inline-block;
+        &:before {
+            content: "·";
+            width: 1em;
+            float: left;
+            text-align: left;
+            font-weight: 400;
+            text-indent: 0;
+            font-family: 'Font Awesome 5 Free';
+    		font-weight: 900;
+    		color: $primary;
+    		margin-right: 10px;
+        }
+    }
+    &.phone:before { content: "\f879"; }
+    &.fax:before { content: "\f1ac"; }
+    &.mail:before { content: "\f0e0"; }
+}
+
 // custom gutter width on xs
 //============================
 // @include media-breakpoint-only(xs) {
