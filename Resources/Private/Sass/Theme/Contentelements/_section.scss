@@ -343,3 +343,12 @@ section, article {
         padding-bottom: 0;
     }
 }
+.section:last-child > .content {
+    padding-bottom: $section-spacer*2;
+    @include media-breakpoint-up(md) {
+        padding-bottom: $section-spacer*3;
+    }
+    @include media-breakpoint-up(lg) {
+        padding-bottom: $section-spacer*4;
+    }
+}
