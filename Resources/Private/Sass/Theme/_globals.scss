@@ -151,6 +151,7 @@ blockquote {
 //============================
 span {
     &.phone, &.fax, &.mail {
+    	width: 24px;
         text-indent: -99999px;
         display: inline-block;
         &:before {
