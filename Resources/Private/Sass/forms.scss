@@ -1,5 +1,25 @@
+.form-control {
+    &:focus {
+        background-color: rgba(255,255,255,.2);
+    }
+}
 textarea.form-control {
-    height: 8.26em;
+    height: 9.1em;
+}
+.form-group {
+    input, textarea, label {
+        color: #000;
+    }
+    input, textarea {
+        background-color: rgba(255,255,255,.2);
+        border-width: 1px;
+        border-color: #000;
+        border-radius: 0;
+        padding:1.5em;
+    }
+    input {
+        padding:1.5em;
+    }
 }
 @media (min-width: 1200px) {
     form#kontaktformular-114 {
@@ -20,6 +40,11 @@ textarea.form-control {
             width: 100%;
             float: left;
             margin-top: 0.5em;
+            text-align: center;
+            .form-navigation {
+                display: inline-block;
+            }
         }
     }
+    
 }
