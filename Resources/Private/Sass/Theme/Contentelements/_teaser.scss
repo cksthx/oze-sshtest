@@ -5,6 +5,9 @@
 
 .teaser.row {
 	margin-bottom: -$col-spacer;
+	.frame-type-textTeaser, .frame-type-imageTeaser {
+		max-width: none;
+	}
 }
 
 .frame-type-textTeaser {
