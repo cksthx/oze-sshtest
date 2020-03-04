@@ -17,7 +17,7 @@
 @import 'EXT:base_carousel/Configuration/TypoScript/setup.typoscript'
 @import 'EXT:base_columns/Configuration/TypoScript/setup.typoscript'
 @import 'EXT:base_extendedsection/Configuration/TypoScript/setup.typoscript'
-@import 'EXT:base_gallery/Configuration/TypoScript/setup.typoscript'
+// @import 'EXT:base_gallery/Configuration/TypoScript/setup.typoscript'
 @import 'EXT:base_menus/Configuration/TypoScript/setup.typoscript'
 @import 'EXT:base_section/Configuration/TypoScript/setup.typoscript'
 @import 'EXT:base_teaser/Configuration/TypoScript/setup.typoscript'
