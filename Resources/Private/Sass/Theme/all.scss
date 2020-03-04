@@ -29,6 +29,7 @@ $logo-path: "/typo3conf/ext/project_configuration/Resources/Public/Images/logo.s
 // Replace Base Content Elements
 @import "Contentelements/section";
 @import "Contentelements/keyvisual";
+@import "Contentelements/carousel";
 
 // Additions and theming
 @import "theme";
@@ -38,4 +39,3 @@ $logo-path: "/typo3conf/ext/project_configuration/Resources/Public/Images/logo.s
 @import "Contentelements/columns";
 @import "Contentelements/teaser";
 @import "Contentelements/accordion";
-@import "Contentelements/carousel";
