@@ -100,9 +100,10 @@ footer {
     color: white;
     h1, h2, h3, h4, h5, h6 {
         color: $white;
-    }
-    h6 {
         font-size: 1.125rem;
+        @include media-breakpoint-up(md) {
+            font-size: 1.25rem;
+        }
     }
     span {
         &.phone, &.fax, &.mail {
