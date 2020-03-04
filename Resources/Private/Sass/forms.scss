@@ -1,3 +1,25 @@
-fieldset.form-group {
-    legend { display: none; }
+textarea.form-control {
+    height: 8.26em;
+}
+@media (min-width: 1200px) {
+    form#kontaktformular-114 {
+        float: left;
+        > .row {
+            width: 1140px / 2 - 24px;
+            float: right;
+            margin: 0;
+            > [class*="col-"] {
+                margin: 0;
+                padding: 0;
+            }
+        }
+        > .row:nth-of-type(2) {
+            float: left;
+        }
+        .actions {
+            width: 100%;
+            float: left;
+            margin-top: 0.5em;
+        }
+    }
 }

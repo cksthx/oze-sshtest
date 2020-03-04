@@ -1,2 +1,19 @@
-fieldset.form-group legend {
-  display: none; }
+textarea.form-control {
+  height: 8.26em; }
+
+@media (min-width: 1200px) {
+  form#kontaktformular-114 {
+    float: left; }
+    form#kontaktformular-114 > .row {
+      width: 546px;
+      float: right;
+      margin: 0; }
+      form#kontaktformular-114 > .row > [class*="col-"] {
+        margin: 0;
+        padding: 0; }
+    form#kontaktformular-114 > .row:nth-of-type(2) {
+      float: left; }
+    form#kontaktformular-114 .actions {
+      width: 100%;
+      float: left;
+      margin-top: 0.5em; } }
