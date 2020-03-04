@@ -100,9 +100,10 @@ footer {
     color: white;
     h1, h2, h3, h4, h5, h6 {
         color: $white;
-    }
-    h6 {
         font-size: 1.125rem;
+        @include media-breakpoint-up(md) {
+            font-size: 1.25rem;
+        }
     }
     span {
         &.phone, &.fax, &.mail {
@@ -138,7 +139,7 @@ footer {
         }
     }
     .doctors-shape {
-        background-image: url("/typo3conf/ext/project_configuration/Resources/Public/Images/silhouettes.png");
+        background-image: url("/typo3conf/ext/project_configuration/Resources/Public/Images/silhouettes.svg");
         background-size: contain;
         background-position: center center;
         background-repeat: no-repeat;
