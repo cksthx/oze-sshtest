@@ -70,10 +70,10 @@ TCEFORM {
         frame_class {
             types {
                 textmedia {
-                    removeItems = 50-left, 50-right, 33-left, 33-right, 66-left, 66-right, 75-left, 75-right, none, no-gutters
+                    removeItems = none, no-gutters
                 }
                 extendedSectionTeaser {
-                    removeItems = 50-left, 50-right, 33-left, 33-right, 66-left, 66-right, 75-left, 75-right, none, no-gutters
+                    removeItems = none, no-gutters
                 }
             }
         }
