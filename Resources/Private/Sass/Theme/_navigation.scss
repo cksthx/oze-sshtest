@@ -147,8 +147,13 @@
         a {
             color: $primary-lighter;
             font-family: $headings-font-family;
+            font-size: 1.25rem;
             &:hover {
                 color: $primary;
+            }
+            .fas {
+                font-size: 20px;
+                padding-right: 9px;
             }
         }
     }
