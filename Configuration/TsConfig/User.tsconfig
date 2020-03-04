@@ -9,6 +9,7 @@
 
 // Example Usergroup (id 3) for Chiefeditors
 [usergroup = 4]
+    @import 'EXT:project_configuration/Configuration/TsConfig/User/Editor.tsconfig'
     @import 'EXT:project_configuration/Configuration/TsConfig/User/ChiefEditor.tsconfig'
 [END]
 
