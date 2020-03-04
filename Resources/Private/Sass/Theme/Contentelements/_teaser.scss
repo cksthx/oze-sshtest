@@ -16,6 +16,13 @@
 		padding: 1rem 0.75rem;
 		p {
 			font-weight: 300;
+			font-size: 1.125rem;
+		}
+		.lead {
+			font-size: 1.125rem;
+			@include media-breakpoint-up(md) {
+				font-size: 1.25rem;
+			}
 		}
 		h1, h2, h3, h4, h5, h6 {
 			@extend h5;
@@ -45,6 +52,17 @@
 			background: $primary;
 			h1, h2, h3, h4, h5, h6 {
 				@extend h4;
+			}
+			p {
+				font-weight: 400;
+				font-size: 1rem;
+			}
+			.lead {
+				font-weight: 300;
+				font-size: 1.125rem;
+				@include media-breakpoint-up(md) {
+					font-size: 1.25rem;
+				}
 			}
 			* {
 		        color: $white !important;
