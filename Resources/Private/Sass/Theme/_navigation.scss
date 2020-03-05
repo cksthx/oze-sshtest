@@ -185,12 +185,15 @@
     }
 
     .navbar-collapse {
-        margin-top: 30px;
+        margin-top: 24px;
     }
 
     .opening-hours {
         @extend .container;
-        margin-bottom: 12px;
+        margin-bottom: 130px;
+        @include media-breakpoint-up(lg) {
+            display: none;
+        }
     }
     .frame-type-twoColumns {
         h1, h2, h3, h4, h5, h6 {
@@ -348,9 +351,9 @@
 }
 
 @include media-breakpoint-down(md) {
-    .bottom-0 {
-        // bottom: 0;
-    }
+    // .bottom-0 {
+    //     // bottom: 0;
+    // }
     body.nav-open {
         overflow: hidden;
     }
