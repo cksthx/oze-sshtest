@@ -209,7 +209,6 @@
         }
         &.nav-open {
             background-color: $primary;
-            overflow-y: auto;
             .navbar-brand {
                 opacity: 0;
                 pointer-events: none;
@@ -218,7 +217,6 @@
                 background: transparent;
                 &:before, &:after {
                     background: $white;
-                    // width: 30px;
                 }
                 &:before {
                     transform: translateY(0) rotate(45deg);
@@ -229,27 +227,18 @@
             }
         }
         .w-100 {
-            min-height: calc(100vh - 106px);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            height: calc(100vh - 106px);
+            // display: flex;
+            // flex-direction: column;
+            // justify-content: space-between;
+            overflow-y: auto;
+
         }
         .navbar-collapse {
             margin-top: 0;
         }
         .navbar-nav {
             margin-bottom: 90px;
-            .nav-link {
-                // padding: 0.75rem 0;
-                // color: $white;
-                &:hover, &:focus {
-                    // background-color: $primary-dark;
-                    // background-color: transparent;
-                }
-                &.active, &:active, &.show {
-                    // background-color: $primary-dark;
-                }
-            }
             .nav-item {
                 position: relative;
                 a.nav-link {
@@ -317,10 +306,6 @@
                     .dropdown-item {
                         padding: 0.75rem 0;
                         color: $white;
-                        // &:hover, &:focus {
-                        //     background-color: transparent;
-                        //     color: $white;
-                        // }
                         &.active, &:active {
                             background-color: $primary-dark;
                             // color: $white;
@@ -332,25 +317,11 @@
 
                     &.show {
                         padding: 0;
-                        // a, a.nav-link {
-                        //     &:before {
-                        //         background-color: red;
-                        //     }
-                        // }
                     }
-                    // .nav-item {
-                    //     position: relative;
-                    //     &:last-child {
-                    //         a {
-                    //             &:before {
-                    //                 background-color: transparent;
-                    //             }
-                    //         }
-                    //     }
-                    // }
                 }
             }
         }
+
         &.navbar-expand {
             &-sm, &-md, &-lg, &-xl {
                 &>.container {
@@ -361,6 +332,7 @@
                 }
             }
         }
+
         .navbar-brand.navbar-brand-backgroundimage {
             margin-left: $grid-gutter-width/2;
         }
@@ -368,28 +340,16 @@
             margin-right: $grid-gutter-width/2;
         }
     }
-
-    // Add padding on sides
-    // @include media-breakpoint-up(sm) {
-    //     &.navbar-expand {
-    //         &-sm, &-md, &-lg, &-xl {
-    //             &>.container {
-    //                 padding-left: ($grid-gutter-width/2) ;
-    //                 padding-right: ($grid-gutter-width/2) ;
-    //             }
-    //         }
-    //     }
-    // }
     @include media-breakpoint-down(sm) {
         .w-100 {
-            min-height: calc(100vh - 68px);
+            height: calc(100vh - 68px);
         }
     }
 }
 
 @include media-breakpoint-down(md) {
     .bottom-0 {
-        bottom: 0;
+        // bottom: 0;
     }
     body.nav-open {
         overflow: hidden;
