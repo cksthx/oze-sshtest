@@ -19,3 +19,10 @@ $ext_config_path = 'EXT:project_configuration/Configuration/';
 # Custom definition for rte
 # =========================
 $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['custom'] = 'EXT:project_configuration/Configuration/YAML/CustomRte.yaml';
+
+# Custom Login
+# =========================
+$GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['backend'] = [
+    "loginLogo" => "EXT:project_configuration/Resources/Public/Images/oze_logo_backend.svg",
+    "loginHighlightColor" => "#0073A5"
+];
