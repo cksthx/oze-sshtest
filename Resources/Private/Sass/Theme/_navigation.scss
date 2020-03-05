@@ -175,6 +175,9 @@
             font-weight: 700;
             font-size: 1.25rem;
             text-align: center;
+            &:focus {
+                outline: none;
+            }
         }
         &.active a, &.show a, a:hover  {
             color: $primary-lighter;
