@@ -1,9 +1,9 @@
 plugin.tx_advancedmaildoubleoptin_doubleoptin {
     persistence {
-        storagePid = 38
-        subjectToUser = Mein Betreff
-        subjectToHostValidation = Betreff nach Bestätigung: an den Kunden
-        subjectToHostDelete = Betreff nach Löschung: an den Kunden
+        storagePid = 37
+        subjectToUser = Unser Betreff
+        subjectToHostValidation = Betreff nach Bestätigung: geht an OZE
+        subjectToHostDelete = Betreff nach Löschung: geht an OZE
         hostName = {$CompanyName}
         hostMail = {$CompanyEmail}
     }
