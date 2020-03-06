@@ -217,8 +217,13 @@
 /* Frames except for the last one inside of each parent get spaced below. */
 .frame+.frame,
 .teaser.row+.frame,
+.accordion+.frame,
 .frame+.teaser.row,
-.teaser.row+.teaser.row {
+.teaser.row+.teaser.row,
+.accordion+.teaser.row,
+.frame+.accordion,
+.teaser.row+.accordion,
+.accordion+.accordion {
     margin-top: $frame-spacer;
 }
 
