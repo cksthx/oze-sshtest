@@ -32,7 +32,7 @@
 # extensions
 # =======
 # set path with extension name and setup file here:
-# @import 'EXT:project_configuration/Configuration/TypoScript/Setup/Extensions/EXTENSION_NAME/setup.typoscript'
+@import 'EXT:project_configuration/Configuration/TypoScript/Setup/Extensions/AdvancedMailDoubleOptin.typoscript'
 
 
 # COMKOM° Typo3 Project Configuration: General Page Contents
