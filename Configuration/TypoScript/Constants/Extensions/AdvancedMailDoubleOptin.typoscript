@@ -1,4 +1,9 @@
 plugin.tx_advancedmaildoubleoptin_doubleoptin {
+    view {
+        templateRootPaths = EXT:project_configuration/Resources/Private/Extensions/AdvancedMailDoubleOptIn/Templates
+        partialRootPaths =
+        layoutRootPaths =
+    }
     persistence {
         storagePid = 37
         subjectToUser = Unser Betreff
