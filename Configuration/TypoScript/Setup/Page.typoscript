@@ -12,7 +12,7 @@ page {
 
     includeJSFooterlibs {
         navigation = EXT:project_configuration/Resources/Public/JavaScript/custom_navigation.js
-        navigation = EXT:project_configuration/Resources/Public/JavaScript/scrolltop.js
+        scrolltop = EXT:project_configuration/Resources/Public/JavaScript/scrolltop.js
     }
     
     # to use partials from contentelements (Media/Rendering/SourceSet)
