@@ -13,15 +13,15 @@
     ],
     "require": {
         "typo3/cms-core": "^9.5",
-        "comkom/base-configuration": "^2.0",
-        "comkom/base-carousel": "^2.0",
-        "comkom/base-extendedsection": "^2.0",
-        "comkom/base-menus": "^2.0",
-        "comkom/base-teaser": "^2.0",
-        "comkom/base-columns": "^2.0",
-        "comkom/base-gallery": "^2.0",
-        "comkom/base-textroundmedia": "^2.0",
-        "comkom/base-section": "^2.0"
+        "comkom/base-configuration": "dev-dev",
+        "comkom/base-carousel": "dev-dev",
+        "comkom/base-extendedsection": "dev-dev",
+        "comkom/base-menus": "dev-dev",
+        "comkom/base-teaser": "dev-dev",
+        "comkom/base-columns": "dev-dev",
+        "comkom/base-gallery": "dev-dev",
+        "comkom/base-textroundmedia": "dev-dev",
+        "comkom/base-section": "dev-dev"
     },
     "replace": {
         "project_configuration": "self.version",
