@@ -4,20 +4,21 @@
 		&>.card-header {
 			background-color: $white;
 			padding: 12px;
+			padding: 0;
 			border-bottom: 1px solid $gray-400;
 			transition: background-color 0.3s ease-in-out;
 			h2 {
 				font-size: initial;
 			}
 			.btn {
+				display: block;
+				width: 100%;
 				padding: 0;
+				padding: 12px;
+				text-align: left;
 				border: none;
 				font-family: $font-family-sans-serif;
 				// transition: color 0.3s ease-in-out;
-				&:hover, &:focus {
-					text-decoration: none;
-					color: $primary;
-				}
 				&:after {
 					content: '';
 					display: block;
@@ -29,6 +30,17 @@
 					position: absolute;
 					right: 12px;
 					top: 16px;
+				}
+				&:hover {
+					text-decoration: none;
+					background-color: $primary-lighter;
+					color: $white;
+					&.collapsed:after {
+						background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 0v6h6v2H8v6H6V8H0V6h6V0h2z' fill='%23FFFFFF' fill-rule='evenodd'/%3E%3C/svg%3E%0A");
+					}
+				}
+				&:focus {
+					text-decoration: none;
 				}
 				&.collapsed {
 					&:after {
@@ -42,8 +54,9 @@
 		}
 		&.active {
 			&>.card-header {
-				background-color: $primary-lighter;
+				// background-color: $primary-lighter;
 				.btn {
+					background-color: $primary-lighter;
 					color: $white;
 				}
 			}
