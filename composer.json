@@ -1,8 +1,8 @@
 {
     "name": "comkom/project-configuration",
     "type": "typo3-cms-extension",
-    "description": "Basic configuration for any project",
-    "version": "2.0",
+    "description": "Configuration for OZE TYPO3-Website",
+    "version": "2.0.0",
     "authors": [        
         {
             "name": "Team COMKOM°",
