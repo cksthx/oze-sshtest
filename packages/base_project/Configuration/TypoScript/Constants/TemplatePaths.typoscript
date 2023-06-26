@@ -1,0 +1,21 @@
+# ====================
+# PAGE
+# ====================
+page {
+    fluidtemplate {
+        layoutRootPath = EXT:base_project/Resources/Private/Layouts/Page/
+        partialRootPath = EXT:base_project/Resources/Private/Partials/Page/
+        templateRootPath = EXT:base_project/Resources/Private/Templates/Page/
+    }
+}
+
+# ====================
+# FLUID STYLED CONTENT
+# ====================
+styles {
+    templates {
+        layoutRootPath = EXT:base_project/Resources/Private/Layouts/ContentElements/
+        partialRootPath = EXT:base_project/Resources/Private/Partials/ContentElements/
+        templateRootPath = EXT:base_project/Resources/Private/Templates/ContentElements/
+    }
+}

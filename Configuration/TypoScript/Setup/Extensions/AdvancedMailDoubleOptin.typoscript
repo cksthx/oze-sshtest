@@ -1,7 +1,0 @@
-// plugin.tx_advancedmaildoubleoptin_doubleoptin {
-//     view {
-//         templateRootPaths.20 = EXT:project_configuration/Resources/Private/Extensions/AdvancedMailDoubleOptIn/Templates
-//         partialRootPaths.20 = EXT:project_configuration/Resources/Private/Extensions/AdvancedMailDoubleOptIn/Partials
-//         layoutRootPaths.20 = EXT:project_configuration/Resources/Private/Extensions/AdvancedMailDoubleOptIn/Layouts
-//     }
-// }

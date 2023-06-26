@@ -1,0 +1,30 @@
+$themeColor: $gray-800;
+$colors: ('white': #ffffff, 'black': #000000);
+
+.card-carousel {
+    &.equal-height {
+        .card-carousel-item {
+            height: auto;
+            > .card { height: 100%; }
+        }
+    }
+}
+.swiper-container.equal-height {
+    .swiper-slide {
+        height: auto;
+        > .section, > .card-jumbotron { height: 100%; }
+    }
+}
+body.backendlayout-heroimage {
+    main#maincontent {
+        #keyvisual {
+            .swiper-container {
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 0;
+                bottom: 0;
+            }
+        }
+    }
+}

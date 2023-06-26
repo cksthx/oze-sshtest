@@ -1,0 +1,152 @@
+# Load default processing options
+imports:
+    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Processing.yaml" }
+    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Base.yaml" }
+    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml" }
+
+# Add configuration for the editor
+# For complete documentation see http://docs.ckeditor.com/#!/api/CKEDITOR.config
+editor:
+  externalPlugins:
+        typo3link:
+            additionalAttributes:
+                - params
+  config:
+    contentsCss: ["EXT:rte_ckeditor/Resources/Public/Css/contents.css", "EXT:base_configuration/Resources/Public/Css/rte.css", "EXT:base_project/Resources/Public/Css/rte.css"]
+
+    stylesSet:
+      # Block level styles
+      - { name: "LLL:EXT:base_configuration/Resources/Private/Language/rte.xlf:stylesset.display_1", element: "p", attributes: { "class": "h3 text-display-1" }}
+      - { name: "LLL:EXT:base_configuration/Resources/Private/Language/rte.xlf:stylesset.lead", element: "p", attributes: { "class": "lead" }}
+      - { name: "LLL:EXT:base_configuration/Resources/Private/Language/rte.xlf:stylesset.small.paragraph", element: "p", attributes: { "class": "small" }}
+
+      # Table styles
+      - { name: "LLL:EXT:base_configuration/Resources/Private/Language/rte.xlf:stylesset.table.default",   element: "table", attributes: { "class": "table" }}
+      - { name: "LLL:EXT:base_configuration/Resources/Private/Language/rte.xlf:stylesset.table.striped", element: "table", attributes: { "class": "table table-striped" }}
+      - { name: "LLL:EXT:base_configuration/Resources/Private/Language/rte.xlf:stylesset.table.bordered", element: "table", attributes: { "class": "table table-bordered" }}
+
+      # Inline styles
+      - { name: "LLL:EXT:base_configuration/Resources/Private/Language/rte.xlf:custom_rte.stylesset.category", element: "span", attributes: { "class": "category-title" }}
+      - { name: "LLL:EXT:base_configuration/Resources/Private/Language/rte.xlf:custom_rte.stylesset.phone", element: "span", attributes: { "class": "phone" }}
+      - { name: "LLL:EXT:base_configuration/Resources/Private/Language/rte.xlf:custom_rte.stylesset.fax", element: "span", attributes: { "class": "fax" }}
+      - { name: "LLL:EXT:base_configuration/Resources/Private/Language/rte.xlf:custom_rte.stylesset.mail", element: "span", attributes: { "class": "mail" }}
+      - { name: "LLL:EXT:base_configuration/Resources/Private/Language/rte.xlf:stylesset.small", element: "span", attributes: { "class": "small" }}
+      - { name: "LLL:EXT:base_configuration/Resources/Private/Language/rte.xlf:classes.btn.primary", element: "a", attributes: { 'class': 'btn btn-type-0' }}
+
+      # List styles
+      - { name: "LLL:EXT:base_configuration/Resources/Private/Language/rte.xlf:stylesset.ulLead", element: "ul", attributes: { "class": "list-group ul-lead" } }
+      - { name: "LLL:EXT:base_configuration/Resources/Private/Language/rte.xlf:stylesset.olLead", element: "ol", attributes: { "class": "list-group list-group-numbered ol-lead" } }
+
+      # Blockquote styles
+      - { name: 'LLL:EXT:base_configuration/Resources/Private/Language/rte.xlf:stylesset.cite', element: 'cite', attributes: { } }
+      - { name: 'LLL:EXT:base_configuration/Resources/Private/Language/rte.xlf:stylesset.blockquote.footer', element: 'footer', attributes: { "class": "blockquote-footer" } }
+
+    format_tags: "p;h1;h2;h3;h4"
+
+    toolbarGroups:
+      - { name: styles, groups: [ format, styles ] }
+      - { name: basicstyles, groups: [ basicstyles ] }
+      - { name: paragraph, groups: [ list, indent, blocks, align ] }
+      - { name: links, groups: [ links ] }
+      - { name: clipboard, groups: [ clipboard, cleanup, undo ] }
+      - { name: editing, groups: [ spellchecker ] }
+      - { name: insert, groups: [ insert ] }
+      - { name: tools, groups: [ table, specialchar ] }
+      - { name: document, groups: [ mode ] }
+
+    justifyClasses:
+      - text-left
+      - text-center
+      - text-right
+      - text-justify
+
+    extraPlugins:
+      - justify
+
+    removePlugins:
+      - image
+
+    removeButtons:
+      - Anchor
+      - Underline
+      - Strike
+
+buttons:
+  link:
+    relAttribute:
+      enabled: false
+    targetSelector:
+      disabled: false
+    properties:
+      class:
+        allowedClasses: 'internalLink, externalLink, folder, mail, download, btn btn-type-0, btn btn-type-1'
+        title:
+          readOnly: false
+    queryParametersSelector:
+      enabled: 1
+    page:
+      properties:
+        class:
+          default: 'internalLink'
+    url:
+      properties:
+        class:
+          default: 'externalLink'
+    folder:
+      properties:
+        class:
+          default: 'folder'
+    file:
+      properties:
+        class:
+          default: 'download'
+    mail:
+      properties:
+        class:
+          default: 'mail'
+
+classes:
+    internalLink:
+      name: 'LLL:EXT:base_configuration/Resources/Private/Language/rte.xlf:classes.internalLink'
+    externalLink:
+      name: 'LLL:EXT:base_configuration/Resources/Private/Language/rte.xlf:classes.externalLink'
+    folder:
+      name: 'LLL:EXT:base_configuration/Resources/Private/Language/rte.xlf:classes.folder'
+    download:
+      name: 'LLL:EXT:base_configuration/Resources/Private/Language/rte.xlf:classes.download'
+    mail:
+      name: 'LLL:EXT:base_configuration/Resources/Private/Language/rte.xlf:classes.mail'
+    btn btn-type-0:
+      name: 'LLL:EXT:base_configuration/Resources/Private/Language/rte.xlf:classes.btn.default'
+    btn btn-type-1:
+      name: 'LLL:EXT:base_configuration/Resources/Private/Language/rte.xlf:classes.btn.type-1'
+
+classesAnchor:
+  internalLink:
+    class: 'internalLink'
+    type: 'page'
+    target: '_self'
+  externalLink:
+    class: 'externalLink'
+    type: 'url'
+    target: '_blank'
+  folder:
+    class: 'folder'
+    type: 'folder'
+    target: '_blank'
+  download:
+    class: 'download'
+    type: 'file'
+    target: '_blank'
+  mail:
+    class: 'mail'
+    type: 'mail'
+    target: '_blank'
+  internalButtonType0:
+    class: 'btn btn-type-0'
+    type: 'page'
+    target: '_self'
+  externalButtonType1:
+    class: 'btn btn-type-1'
+    type: 'url'
+    target: '_blank'

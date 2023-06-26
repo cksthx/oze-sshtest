@@ -1,0 +1,25 @@
+{
+    "name": "comkom/base-project",
+    "type": "typo3-cms-extension",
+    "description": "COMKOM Base Project Extension",
+    "homepage": "https://comkom.de",
+    "license": "GPL-2.0-or-later",
+    "keywords": [
+        "TYPO3 CMS"
+    ],
+    "require": {
+        "typo3/cms-core": "^10.4 || ^11.5",
+        "typo3/cms-rte-ckeditor": "^10.4 || ^11.5",
+        "typo3/cms-fluid-styled-content": "^10.4 || ^11.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Comkom\\BaseProject\\": "Classes/"
+        }
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "base_project"
+        }
+    }
+}

@@ -1,0 +1,33 @@
+# =============================
+# PageTS for Base Configuration
+# =============================
+@import 'EXT:base_configuration/Configuration/TsConfig/Page/RTE.tsconfig'
+@import 'EXT:base_configuration/Configuration/TsConfig/Page/TCEFORM.tsconfig'
+@import 'EXT:base_configuration/Configuration/TsConfig/Page/TCEMAIN.tsconfig'
+@import 'EXT:base_configuration/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts.tsconfig'
+@import 'EXT:base_configuration/Configuration/TsConfig/Page/Mod/WebLayout/ContentElement/Elements.tsconfig'
+
+# Extensions:
+# ===========
+# Hauer-Heinrich - Video Extender
+@import 'EXT:base_project/Extensions/hh_video_extender/Configuration/TsConfig/Page/TCEFORM.tsconfig'
+
+
+# ================================
+# PageTS for Base Content Elements
+# ================================
+@import 'EXT:base_contentelements/Configuration/TsConfig/Page/ContentElement/Element/SectionBackgroundImage.tsconfig'
+@import 'EXT:base_contentelements/Configuration/TsConfig/Page/ContentElement/Element/ExtendedSectionImage.tsconfig'
+@import 'EXT:base_contentelements/Configuration/TsConfig/Page/ContentElement/Element/ExtendedSectionTeaser.tsconfig'
+@import 'EXT:base_contentelements/Configuration/TsConfig/Page/ContentElement/Element/Button.tsconfig'
+@import 'EXT:base_contentelements/Configuration/TsConfig/Page/ContentElement/Element/Blockquote.tsconfig'
+@import 'EXT:base_contentelements/Configuration/TsConfig/Page/ContentElement/Element/Card.tsconfig'
+@import 'EXT:base_contentelements/Configuration/TsConfig/Page/ContentElement/Element/NavPagesAndSubPages.tsconfig'
+
+# =======================
+# PageTS for Base Project
+# =======================
+@import 'EXT:base_project/Configuration/TsConfig/Page/RTE.tsconfig'
+@import 'EXT:base_project/Configuration/TsConfig/Page/TCEFORM.tsconfig'
+@import 'EXT:base_project/Configuration/TsConfig/Page/TCEMAIN.tsconfig'
+@import 'EXT:base_project/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts.tsconfig'

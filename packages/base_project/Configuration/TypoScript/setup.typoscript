@@ -1,0 +1,20 @@
+# ============
+# BASE PROJECT
+# ============
+@import 'EXT:base_project/Configuration/TypoScript/Setup/all.typoscript'
+@import 'EXT:base_project/Configuration/TypoScript/Setup/Page.typoscript'
+
+# ======
+# HELPER
+# ======
+@import 'EXT:base_project/Configuration/TypoScript/Helper/PreviewRendererCE.typoscript'
+
+# ==========
+# EXTENSIONS
+# ==========
+# Hauer-Heinrich - Video Extender
+@import 'EXT:base_project/Extensions/hh_video_extender/Configuration/TypoScript/setup.typoscript'
+
+[applicationContext == "Development" || "Production/Staging"]
+page.meta.robots = noindex,nofollow
+[END]

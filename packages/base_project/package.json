@@ -1,0 +1,13 @@
+{
+  "name": "comkom-base-project",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "https://reviermarke@bitbucket.org/zenoussi/startsmart.git"
+  },
+  "homepage": "https://comkom.de",
+  "author": "Team COMKOM°",
+  "license": "GPL-2.0-or-later",
+  "dependencies": {
+  }
+}

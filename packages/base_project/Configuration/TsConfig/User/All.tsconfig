@@ -1,0 +1,13 @@
+# ============================================
+# Project Configuration: Example User TsConfig
+# ============================================
+
+// Example Usergroup (id 2) for Editors
+[usergroup("2")]
+    @import 'EXT:base_project/Configuration/TsConfig/User/Editor.tsconfig'
+[END]
+
+// Example Usergroup (id 3) for Chiefeditors
+[usergroup("4")]
+    @import 'EXT:base_project/Configuration/TsConfig/User/ChiefEditor.tsconfig'
+[END]

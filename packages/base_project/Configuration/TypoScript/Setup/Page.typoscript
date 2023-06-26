@@ -1,0 +1,45 @@
+# =========================================
+# PAGE
+# =========================================
+page = PAGE
+page {
+    meta {
+        description.data = levelfield:-1, description, slide
+        keywords.data = levelfield:-1, keywords, slide
+    }
+
+    includeCSSLibs {
+        typekit = https://use.typekit.net/srd7qmb.css
+        typekit.external = 1
+    }
+
+    includeCSS {
+        style = EXT:base_theme/Resources/Public/Css/style.min.css
+        style.media = all
+        style.disableCompression = true
+    }
+
+    includeJSLibs {
+
+    }
+
+    includeJS {
+
+    }
+
+    includeJSFooterlibs {
+        
+    }
+
+    includeJSFooter {
+        project = EXT:base_theme/Resources/Public/JavaScript/project.js
+        project.disableCompression = true
+    }
+}
+[applicationContext == "Development"]
+page {
+    includeCSS {
+        style = EXT:base_theme/Resources/Public/Css/style.css
+    }
+}
+[END]

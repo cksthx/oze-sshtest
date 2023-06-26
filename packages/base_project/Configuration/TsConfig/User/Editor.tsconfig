@@ -1,0 +1,188 @@
+# ========================================================
+# Project Configuration: Example User TSconfig for editors
+# ========================================================
+
+# options
+# =======
+// clear page cache
+options.clearCache.pages = 1
+// upload-fields in the element browser are put in the top of the window
+options.uploadFieldsInTopOfEB = 1
+// define number of chosen files in element browser if uploading from desktop
+#options.folderTree.uploadFieldsInLinkBrowser = 0
+// if set, the user cannot create news folders
+options.folderTree.hideCreateFolder = 0
+// a createFolders option appears in the element browser
+options.createFoldersInEB = 1
+// set duration of preview links in workspace
+options.workspaces.previewLinkTTLHours = 240
+
+options.pageTree.showPageIdWithTitle = 0
+options.pageTree.showNavTitle = 0
+options.clearCache.all = 0
+
+options.file_list.thumbnail.width = 184
+options.file_list.thumbnail.height = 184
+
+# admin panel
+# ===========
+admPanel.hide = 1
+
+# setup
+# =====
+// User tools - User settings: File upload directly in Doc-module is not set
+setup.default.edit_docModuleUpload = 0
+setup.override.edit_docModuleUpload = 0
+
+# override page defaults for editor usergroup
+# ===========================================
+page {
+    TCEFORM {
+        pages {
+            layout {
+                disabled = 1
+            }
+            backend_layout {
+                removeItems = pagets__2_columns
+            }
+            backend_layout_next_level {
+                removeItems = pagets__2_columns
+            }
+        }
+        tt_content {
+            pi_flexform {
+                menu_pages.cards.disabled = 1
+                menu_subpages.cards.disabled = 1
+                section.appearance.layout.removeItems = 1,2,3
+                extendedSection.appearance.layout.removeItems = 1,2,3
+                cardGroup.appearance.layout.removeItems = 1,2,3
+            }
+            CType {
+                removeItems = textpic,image,table
+            }
+            layout {
+                types {
+                    textmedia {
+                        disabled = 1
+                    }
+                    header {
+                        disabled = 1
+                    }
+                    uploads {
+                        disabled = 0
+                    }
+                    extendedSectionTeaser {
+                        disabled = 1
+                    }
+                    extendedSectionImage {
+                        disabled = 1
+                    }
+                    menu_section {
+                        disabled = 1
+                    }
+                    menu_pages {
+                        default = 0
+                        removeItems = 1,2,3
+                    }
+                    menu_subpages {
+                        default = 0
+                        removeItems = 1,2,3
+                    }
+                    div {
+                        disabled = 1
+                    }
+                    button {
+                        disabled = 1
+                    }
+                }
+            }
+            frame_class {
+                types {
+                    extendedSectionTeaser {
+                        removeItems = none, ruler-before, ruler-after, indent, indent-left, indent-right, 33-left, 50-left, 66-left, 75-left, 33-right, 66-right, 75-right, no-gutters
+                    }
+                }
+            }
+            header_layout {
+                removeItems = 2,5
+                types {
+                    extendedSectionTeaser {
+                        removeItems = 5,6
+                    }
+                    card {
+                        removeItems = 0,1,2,4,5,6
+                    }
+                }
+            }
+            header_style {
+                removeItems = 5
+                types {
+                    card {
+                        removeItems = 1,2,3,4,5
+                    }
+                }
+            }
+            header_link {
+                types {
+                }
+            }
+            // Disable imageheight and imagewidth for textpic and image
+            // to avoid incorrect rendering in frontend
+            imageheight.disabled = 1
+            imagewidth.disabled = 1
+            imagewidth {
+                types {
+                    textmedia {
+                        disabled = 0
+                    }
+                }
+            }
+            imageborder.disabled = 1
+            imagecols {
+                # Standard-Cols: 1,2,3,4,5,6,7,8,
+                types {
+                    sectionBackgroundImage {
+                        removeItems = 3,4,5,6,7,8
+                    }
+                    extendedSectionTeaser {
+                        removeItems = 2,3,4,5,6,7,8
+                    }
+                }
+            }
+            imageorient {
+                types {
+                    sectionBackgroundImage {
+                        disabled = 1
+                    }
+                }
+                #disableNoMatchingValueElement = 1
+            }
+            accessibility_bypass {
+                types {
+                    menu_section {
+                        disabled = 0
+                    }
+                    menu_pages {
+                        disabled = 0
+                    }
+                    menu_subpages {
+                        disabled = 0
+                    }
+                }
+            }
+            accessibility_bypass_text {
+                types {
+                    menu_section {
+                        disabled = 0
+                    }
+                    menu_pages {
+                        disabled = 0
+                    }
+                    menu_subpages {
+                        disabled = 0
+                    }
+                }
+            }
+        }
+    }
+}

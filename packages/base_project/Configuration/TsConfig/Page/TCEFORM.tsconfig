@@ -1,0 +1,12 @@
+# ===================================
+# COMKOM° Typo3 Base Project: TCEFORM
+# ===================================
+
+TCEFORM {
+    pages {
+
+    }
+    tt_content {
+
+    }
+}

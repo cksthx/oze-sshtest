@@ -1,0 +1,36 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+<f:section name="Header">
+    <f:switch expression="{backendlayout}">
+        <f:defaultCase>
+            <f:render partial="Navigation/Navigation" arguments="{dataUid: data.uid, mainmenu: mainmenu, languageNavigation: languageNavigation, headermetanavigation: headermetanavigation, settings: settings, hasExtendedSectionImage: hasExtendedSectionImage}" />
+        </f:defaultCase>
+    </f:switch>
+</f:section>
+<f:section name="Main">
+    <f:switch expression="{backendlayout}">
+        <f:case value="backendlayout-2_columns">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7" id="content">
+                        <article>
+                            <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '0'}" />
+                        </article>
+                    </div>
+                    <aside class="col-lg-4 offset-lg-1 marginale">
+                        <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '2'}" />
+                    </aside>
+                </div>
+            </div>
+        </f:case>
+        <f:defaultCase>
+            <article>
+                <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '5'}" />
+                <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '0'}" />
+            </article>
+        </f:defaultCase>
+    </f:switch>
+</f:section>
+</html>
+
+

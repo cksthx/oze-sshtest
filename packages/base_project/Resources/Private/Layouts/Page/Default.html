@@ -1,0 +1,32 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:if condition="{imageExtendedSection}">{f:variable(name: 'hasExtendedSectionImage', value: 1)}</f:if>
+<f:spaceless>
+<ol class="accessibility-menu visually-hidden-focusable">
+    <li class="visually-hidden-focusable">
+        <f:link.page title="{f:translate(key: 'LLL:EXT:base_configuration/Resources/Private/Language/navigations.xlf:accessibility.to_navigation_main')}" section="main-collapse" absolute="true">
+            <f:translate key="LLL:EXT:base_configuration/Resources/Private/Language/navigations.xlf:accessibility.to_navigation_main"/>
+        </f:link.page>
+    </li>
+    <li class="visually-hidden-focusable">
+        <f:link.page title="{f:translate(key: 'LLL:EXT:base_configuration/Resources/Private/Language/navigations.xlf:accessibility.to_content_main')}" section="maincontent" absolute="true">
+            <f:translate key="LLL:EXT:base_configuration/Resources/Private/Language/navigations.xlf:accessibility.to_content_main"/>
+        </f:link.page>
+    </li>
+</ol>
+<header id="banner" class="{backendlayout}{f:if(condition: hasExtendedSectionImage, then: ' navbar-has-image')}">
+    <f:render section="Header" />
+</header>
+<main id="maincontent">
+    <!--TYPO3SEARCH_begin-->
+    <f:render section="Main" />
+    <!--TYPO3SEARCH_end-->
+</main>
+<footer id="footer" class="section has-content">
+    <f:if condition="{data.uid} != {settings.rootPageId.value}">
+        <f:render partial="Navigation/Breadcrumb" arguments="{breadcrumb: breadcrumb, leveluplink: leveluplink}"></f:render>
+    </f:if>
+    <f:render partial="Footer" arguments="{settings: settings, footermetanavigation: footermetanavigation, pageUid: data.uid}" />
+</footer>
+<f:render partial="StructuredDataLdJson" arguments="{settings: settings, data: data, files: files, backendlayout: backendlayout, breadcrumb: breadcrumb}" />
+</f:spaceless>
+</html>

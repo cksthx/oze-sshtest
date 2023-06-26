@@ -1,0 +1,8 @@
+# PreviewRenderer CE
+# ==================
+plugin.ceConfiguration {
+    settings {
+        elements = card,sectionBackgroundImage,imageTeaser,extendedSectionImage,extendedSectionTeaser,textTeaser,textRoundMedia,gallery
+        elements_with_subheader = textTeaser,textRoundMedia,textmedia,card
+    }
+}

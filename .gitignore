@@ -1,14 +1,27 @@
 .DS_Store
 
-# yarn files
+/var
+/vendor
 
+/config/sites/*/config.yaml
+
+/public/*
+!/public/typo3conf
+/public/typo3conf/*
+/public/typo3conf/AdditionalConfiguration.php
+
+# yarn/npm files
 node_modules/
 yarn-error.log
-yarn.lock
 
-# Domain Configuration
-Configuration/TypoScript/Constants/Domain_local.typoscript
+package-lock.json
 
 !.keep
 
-/Build
+/packages/*
+!/packages/base_project
+!/packages/base_theme
+/packages/base_theme/Resources/Public/*
+!/packages/base_theme/Resources/Public/Icons/
+
+/old_project_configuration/*

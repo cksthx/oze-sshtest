@@ -1,0 +1,44 @@
+# ============
+# DEPENDENCIES
+# ============
+@import 'EXT:fluid_styled_content/Configuration/TypoScript/setup.typoscript'
+
+# ===============================
+# FLUID STYLED CONTENT: OVERRIDES
+# ===============================
+@import 'EXT:base_configuration/Configuration/TypoScript/ContentElement/Menus.typoscript'
+@import 'EXT:base_configuration/Configuration/TypoScript/ContentElement/Bullets.typoscript'
+
+# ======
+# HELPER
+# ======
+@import 'EXT:base_configuration/Configuration/TypoScript/Helper/ContentElement.typoscript'
+@import 'EXT:base_configuration/Configuration/TypoScript/Helper/DynamicContent.typoscript'
+
+# ==================
+# BASE CONFIGURATION
+# ==================
+@import 'EXT:base_configuration/Configuration/TypoScript/Setup/Navigations.typoscript'
+@import 'EXT:base_configuration/Configuration/TypoScript/Setup/Page.typoscript'
+@import 'EXT:base_configuration/Configuration/TypoScript/Setup/FluidTemplate.typoscript'
+@import 'EXT:base_configuration/Configuration/TypoScript/Setup/Config.typoscript'
+@import 'EXT:base_configuration/Configuration/TypoScript/Setup/Rte.typoscript'
+@import 'EXT:base_configuration/Configuration/TypoScript/Setup/OpenGraph.typoscript'
+@import 'EXT:base_configuration/Configuration/TypoScript/Setup/Twitter.typoscript'
+
+# ====================
+# BASE CONTENTELEMENTS
+# ====================
+@import 'EXT:base_contentelements/Configuration/TypoScript/ContentElement/Element/SectionBackgroundImage.typoscript'
+@import 'EXT:base_contentelements/Configuration/TypoScript/ContentElement/Element/ExtendedSectionImage.typoscript'
+@import 'EXT:base_contentelements/Configuration/TypoScript/ContentElement/Element/ExtendedSectionTeaser.typoscript'
+@import 'EXT:base_contentelements/Configuration/TypoScript/ContentElement/Element/Button.typoscript'
+@import 'EXT:base_contentelements/Configuration/TypoScript/ContentElement/Element/Columns.typoscript'
+@import 'EXT:base_contentelements/Configuration/TypoScript/ContentElement/Element/Section.typoscript'
+@import 'EXT:base_contentelements/Configuration/TypoScript/ContentElement/Element/ExtendedSection.typoscript'
+@import 'EXT:base_contentelements/Configuration/TypoScript/ContentElement/Element/Carousel.typoscript'
+@import 'EXT:base_contentelements/Configuration/TypoScript/ContentElement/Element/Accordion.typoscript'
+@import 'EXT:base_contentelements/Configuration/TypoScript/ContentElement/Element/Blockquote.typoscript'
+@import 'EXT:base_contentelements/Configuration/TypoScript/ContentElement/Element/Card.typoscript'
+@import 'EXT:base_contentelements/Configuration/TypoScript/ContentElement/Element/CardGroup.typoscript'
+@import 'EXT:base_contentelements/Configuration/TypoScript/ContentElement/Element/NavPagesAndSubPages.typoscript'

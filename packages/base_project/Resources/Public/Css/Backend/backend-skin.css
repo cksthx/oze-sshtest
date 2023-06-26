@@ -1,0 +1,14 @@
+/* ############ */
+/* Login Screen */
+
+.card-login {
+    border: 0;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.18);
+    /* box-shadow: 12px 12px 20px #fff, -12px -12px 20px #fff; */
+    border-radius: 35px;
+}
+.card-login .input-login {
+    border-color: #ffffff;
+}

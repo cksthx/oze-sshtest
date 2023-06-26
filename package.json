@@ -1,11 +1,43 @@
 {
-    "name": "project-configuration",
-    "version": "1.0.1",
-    "description": "Basic configuration for Project",
-    "homepage": "http://www.comkom.de",
-    "author": {
-        "name": "Paul Greinke",
-        "email": "paulgreinke@comkom.de"
+    "name": "comkom-start-smart",
+    "description": "",
+    "repository": {
+        "type": "git",
+        "url": ""
     },
-    "private": true
+    "homepage": "https://comkom.de",
+    "author": "Team COMKOM°",
+    "version": "1.0.0",
+    "license": "GPL-2.0-or-later",
+    "dependencies": {
+        "@popperjs/core": "^2.11.5",
+        "bootstrap": "^5.1.3",
+        "bootstrap-icons": "^1.8.1",
+        "fslightbox": "^3.3.1",
+        "gsap": "npm:@gsap/shockingly",
+        "imagesloaded": "^5.0.0",
+        "lazysizes": "^5.3.2",
+        "masonry-layout": "^4.2.2",
+        "registry-auth-token": "^5.0.1",
+        "swiper": "^9.2"
+    },
+    "devDependencies": {
+        "autoprefixer": "^10.4.4",
+        "grunt": "^1.5.2",
+        "grunt-contrib-copy": "^1.0.0",
+        "grunt-contrib-cssmin": "^5.0.0",
+        "grunt-contrib-imagemin": "^4.0.0",
+        "grunt-contrib-uglify": "^5.1.0",
+        "grunt-contrib-watch": "^1.1.0",
+        "grunt-postcss": "^0.9.0",
+        "grunt-sass": "^3.1.0",
+        "grunt-svgmin": "^7.0",
+        "node-sass": "^8.0",
+        "yarn-upgrade-all": "^0.7.1"
+    },
+    "scripts": {
+        "build": "./node_modules/.bin/grunt",
+        "css": "./node_modules/.bin/grunt css",
+        "watch": "./node_modules/.bin/grunt watch"
+    }
 }

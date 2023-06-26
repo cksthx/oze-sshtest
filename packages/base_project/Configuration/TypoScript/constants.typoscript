@@ -1,0 +1,86 @@
+comkomBase {
+    mediaQueryXSmallMax = 575
+    mediaQuerySmallMin = 576
+    mediaQuerySmallMax = 767
+    mediaQueryMediumMin = 768
+    mediaQueryMediumMax = 991
+    mediaQueryLargeMin = 992
+    mediaQueryLargeMax = 1199
+    mediaQueryXLargeMin = 1200
+    mediaQueryXLargeMax = 1399
+    mediaQueryXXLargeMin = 1400
+    spaceClassExtraSmall = mt-1 mt-md-2 mt-lg-3 mt-xl-4 mt-xxl-5
+    spaceClassSmall = mt-2 mt-md-3 mt-lg-4 mt-xl-5 mt-xxl-6
+    spaceClassMedium = mt-3 mt-md-4 mt-lg-5 mt-xl-6 mt-xxl-7
+    spaceClassLarge = mt-4 mt-md-5 mt-lg-6 mt-xl-7 mt-xxl-8
+    spaceClassExtraLarge = mt-5 mt-md-6 mt-lg-7 mt-xl-8 mt-xxl-9
+    spaceClassGridGutterWidth = mt-3 mt-lg-4 mt-xl-5 mt-xxl-6
+    spaceClassExtraSmallAfter = mb-1 mb-md-2 mb-lg-3 mb-xl-4 mb-xxl-5
+    spaceClassSmallAfter = mb-2 mb-md-3 mb-lg-4 mb-xl-5 mb-xxl-6
+    spaceClassMediumAfter = mb-3 mb-md-4 mb-lg-5 mb-xl-6 mb-xxl-7
+    spaceClassLargeAfter = mb-4 mb-md-5 mb-lg-6 mb-xl-7 mb-xxl-8
+    spaceClassExtraLargeAfter = mb-5 mb-md-6 mb-lg-7 mb-xl-8 mb-xxl-9
+    spaceClassGridGutterWidthAfter = mb-3 mb-lg-4 mb-xl-5 mb-xxl-6
+    gutterClasses = g-3 g-lg-4 g-xl-5 g-xxl-6
+    accordionIconsize = 120
+
+    # Navbars can use .navbar-expand classes to determine when their content collapses behind a button.
+    # Options: -sm|-md|-lg|-xl|-xxl 
+    navbarExpandAt = -xl
+}
+
+# Base configuration constants
+@import 'EXT:base_configuration/Configuration/TypoScript/Constants/Site.typoscript'
+
+# EXTENSIONS
+# ==========
+# Hauer-Heinrich - Video Extender
+@import 'EXT:base_project/Extensions/hh_video_extender/Configuration/TypoScript/constants.typoscript'
+
+# Project constants
+@import 'EXT:base_project/Configuration/TypoScript/Constants/TemplatePaths.typoscript'
+
+# cat=base_project/page; type=string; label=Company Name
+CompanyName = COMKOM° Digital Media
+
+# cat=base_project/page; type=string; label=Company Name Short
+CompanyNameShort = COMKOM
+
+# cat=base_project/page; type=string; label=Company Logo
+CompanyLogo = EXT:base_project/Resources/Public/Images/logo.svg
+
+DummyImage = EXT:base_theme/Resources/Public/Images/preview-image.png
+DummyAccordionImage = EXT:base_theme/Resources/Public/Images/info-circle-fill.svg
+
+# Copyright
+# =========
+# cat=base_project/page; type=string; label=Copy Text
+CopyText = · COMKOM° Digital Media
+
+# Rootpage
+# ========
+# cat=base_project/page; type=string; label=Root page ID
+RootPageId = 1
+
+# Navigation
+# ==========
+# cat=base_project/page; type=string; label=Hauptnavigations Tiefe
+navDepth = 1
+
+# cat=base_project/page; type=string; label=Facebook App-ID
+Facebook_app_id =
+
+# cat=base_project/page; type=string; label=Twitter @username
+Twitter_site =
+
+# cat=base_project/page; type=string; label=Google Site Verification Code
+googleSiteVerification =
+
+# cat=base_project/page; type=string; label=ID der Header Metanavigation
+Headermetanavigation = 0
+
+# cat=base_project/page; type=string; label=ID der Footer Metanavigation
+Footermetanavigation = 0
+
+# cat=base_project/page; type=string; label=ID des Kategorie-Systemordners
+CategorySysFolder =

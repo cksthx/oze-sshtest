@@ -1,9 +1,0 @@
-<picture class="first-match keyimage">
-    <source data-srcset="{f:render(partial: 'Media/Rendering/SourceSet', arguments: {image: image, cropVariant: 'mobile', width: 640, height: 426}) -> cc:format.classes()}" media="(max-width: 320px)">
-    <source data-srcset="{f:render(partial: 'Media/Rendering/SourceSet', arguments: {image: image, cropVariant: 'mobile', width: 1150, height: 766}) -> cc:format.classes()}" media="(min-width: 321px) AND (max-width: 575px)" />
-    <source data-srcset="{f:render(partial: 'Media/Rendering/SourceSet', arguments: {image: image, cropVariant: 'mobile', width: 1534, height: 1022}) -> cc:format.classes()}" media="(min-width: 576px) AND (max-width: 767px)" />
-    <source data-srcset="{f:render(partial: 'Media/Rendering/SourceSet', arguments: {image: image, cropVariant: 'medium', height: 1320}) -> cc:format.classes()}" media="(min-width: 768px) AND (max-width: 991px)" />
-    <source data-srcset="{f:render(partial: 'Media/Rendering/SourceSet', arguments: {image: image, cropVariant: 'desktop', height: 400, double: 1}) -> cc:format.classes()}" media="(min-width: 992px) AND (max-width: 1199px)">
-    <source data-srcset="{f:render(partial: 'Media/Rendering/SourceSet', arguments: {image: image, cropVariant: 'desktop', height: 460, double: 1}) -> cc:format.classes()}" media="(min-width: 1200px)">
-    <img data-src="{f:render(partial: 'Media/Rendering/SourceSet', arguments: {image: image, cropVariant: 'desktop', height: '920'}) -> cc:format.classes()}" class="lazyload uk img-fluid jumbotron-img" alt="{image.alternative}" title="{image.title}"/>
-</picture>
