@@ -8,9 +8,11 @@ page {
         keywords.data = levelfield:-1, keywords, slide
     }
 
-    includeCSSLibs {
-        typekit = https://use.typekit.net/srd7qmb.css
-        typekit.external = 1
+    headerData {
+        10 = FLUIDTEMPLATE
+        10 {
+            file = EXT:base_project/Resources/Private/Partials/Page/HeaderData.html
+        }
     }
 
     includeCSS {
