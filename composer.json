@@ -17,6 +17,7 @@
         {"type": "path", "url": "./packages/base_theme/"}
     ],
     "require": {
+        "plan2net/webp": "*",
         "b13/container": "^2.0",
         "comkom/base-configuration": "^3.2.0",
         "comkom/base-contentelements": "^3.2.0",

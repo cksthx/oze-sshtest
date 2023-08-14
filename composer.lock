@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "68afa4b90264ef427788120817098fdd",
+    "content-hash": "6bda4cae9f27250b4ccfcbb2ffec4f18",
     "packages": [
         {
             "name": "b13/container",
@@ -2126,6 +2126,62 @@
                 "source": "https://github.com/phpstan/phpdoc-parser/tree/1.23.1"
             },
             "time": "2023-08-03T16:32:59+00:00"
+        },
+        {
+            "name": "plan2net/webp",
+            "version": "4.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/plan2net/webp.git",
+                "reference": "e5e00dd6a0a4ad7f7c1eaa2bded9e2b47fd9a70e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/plan2net/webp/zipball/e5e00dd6a0a4ad7f7c1eaa2bded9e2b47fd9a70e",
+                "reference": "e5e00dd6a0a4ad7f7c1eaa2bded9e2b47fd9a70e",
+                "shasum": ""
+            },
+            "require": {
+                "ext-gd": "*",
+                "php": ">=7.2.0",
+                "typo3/cms-core": "^10.4|^11.5"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "extension-key": "webp"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Plan2net\\Webp\\": "Classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Wolfgang Klinger",
+                    "role": "Lead Developer"
+                },
+                {
+                    "name": "Martin Kutschker",
+                    "role": "reStructuredText Documentation"
+                },
+                {
+                    "name": "Team Wonderland",
+                    "role": "Support and review"
+                }
+            ],
+            "description": "Creates WebP copies for images (TYPO3 CMS)",
+            "homepage": "https://www.plan2.net/",
+            "support": {
+                "issues": "https://github.com/plan2net/webp/issues",
+                "source": "https://github.com/plan2net/webp/tree/4.2.0"
+            },
+            "time": "2022-12-22T14:14:07+00:00"
         },
         {
             "name": "psr/cache",
