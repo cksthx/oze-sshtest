@@ -45,10 +45,10 @@ set('shared_dirs', [
 
 # Shared files
 set('shared_files', [
-   // '{{typo3_webroot}}/.htaccess',
-   // '{{typo3_webroot}}/typo3conf/LocalConfiguration.php',
+   '{{typo3_webroot}}/.htaccess',
+   '{{typo3_webroot}}/typo3conf/LocalConfiguration.php',
    // '{{typo3_webroot}}/typo3conf/scheduler.sh',
-   // 'config/sites/comkom-start-smart/config.yaml',
+   'config/sites/comkom-start-smart/config.yaml',
    // '{{typo3_webroot}}/typo3conf/AdditionalConfiguration.php',
    '{{typo3_webroot}}/favicon.ico'
 ]);
