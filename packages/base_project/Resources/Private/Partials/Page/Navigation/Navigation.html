@@ -1,0 +1,150 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<nav id="main-navi" class="navbar navbar-expand{settings.navbarExpandAt} navbar-light fixed-top">
+    <h2 class="visually-hidden"><f:translate key="LLL:EXT:base_configuration/Resources/Private/Language/navigations.xlf:mainnavigation.title" default="Main Navigation"/></h2>
+    <div class="container">
+        <f:if condition="{dataUid} != {settings.rootPageId.value}">
+            <f:then>
+                <f:link.page pageUid="{settings.rootPageId.value}" title="{f:translate(key: 'LLL:EXT:base_configuration/Resources/Private/Language/navigations.xlf:mainnavigation.home', default: 'Home')}" class="navbar-brand navbar-brand-backgroundimage">{settings.companyNameShort}</f:link.page>
+            </f:then>
+            <f:else>
+                <div class="navbar-brand navbar-brand-backgroundimage">{settings.companyNameShort}</div>
+            </f:else>
+        </f:if>
+        <div class="nav-buttons">
+            <a class="nav-call d-lg-none" href="tel:0201-46909690">{settings.companyNameShort}</a>
+            <button id="main-collapse-toggler" class="navbar-toggler hamburger--squeeze" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarLight" aria-controls="main-collapse">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"><f:translate key="LLL:EXT:base_configuration/Resources/Private/Language/navigations.xlf:mainnavigation.toggler" default="Main Navigation Toggler"/></span>
+                </span>
+            </button>
+        </div>
+        <div class="offcanvas offcanvas-top" id="offcanvasNavbarLight" aria-labelledby="<f:translate key="LLL:EXT:base_configuration/Resources/Private/Language/navigations.xlf:mainnavigation.toggler" default="Main Navigation Toggler"/>">
+            <div class="offcanvas-header">
+                <div class="container">
+                    <f:if condition="{dataUid} != {settings.rootPageId.value}">
+                        <f:then>
+                            <f:link.page pageUid="{settings.rootPageId.value}" title="{f:translate(key: 'LLL:EXT:base_configuration/Resources/Private/Language/navigations.xlf:mainnavigation.home', default: 'Home')}" class="navbar-brand navbar-brand-backgroundimage">{settings.companyNameShort}</f:link.page>
+                        </f:then>
+                        <f:else>
+                            <div class="navbar-brand navbar-brand-backgroundimage">{settings.companyNameShort}</div>
+                        </f:else>
+                    </f:if>
+                    <button id="main-collapse-close" class="navbar-toggler hamburger--squeeze" type="button" data-bs-dismiss="offcanvas" aria-expanded="true" aria-labelledby="<f:translate key="LLL:EXT:base_configuration/Resources/Private/Language/navigations.xlf:mainnavigation.close" default="Close Main Navigation"/>">
+                        <span class="hamburger-box">
+                            <span class="hamburger-inner"><f:translate key="LLL:EXT:base_configuration/Resources/Private/Language/navigations.xlf:mainnavigation.close" default="Close Main Navigation"/></span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <div class="offcanvas-body">
+                <div class="container">
+                    <a class="btn btn-call-desktop d-none d-lg-inline-block position-absolute" href="tel:0201-46909690" role="button">0201-46909690</a>
+                    <f:if condition="{mainmenu}">
+                        <ul class="navbar-nav" id="main-menu">
+                            <f:for each="{mainmenu}" as="menuitem">
+                                <li class="nav-item{f:if(condition: menuitem.active, then:' active')}{f:if(condition: item.active, then: ' active-sub') -> f:for(each:'{menuitem.children}', as: 'item')}{f:if(condition: menuitem.children, then: ' dropdown')}" data-doctype="{menuitem.data.doktype}">
+                                    <f:if condition="{menuitem.children}">
+                                        <f:then>
+                                            <f:render section="Item" arguments="{item: menuitem}"/>
+                                        </f:then>
+                                        <f:else>
+                                            <f:if condition="{menuitem.current}!=1">
+                                                <f:then>
+                                                    <a class="nav-link{f:if(condition: menuitem.active, then:' active')}{f:if(condition: menuitem.current, then:' current')}" title="{menuitem.title}" href="{menuitem.link}" target="{f:if(condition: menuitem.target, then: menuitem.target, else: '_self')}">{menuitem.title}</a>
+                                                </f:then>
+                                                <f:else>
+                                                    <span class="nav-link{f:if(condition: menuitem.active, then:' active')}{f:if(condition: menuitem.current, then:' current')}">{menuitem.title}</span>
+                                                </f:else>
+                                            </f:if>
+                                        </f:else>
+                                    </f:if>
+                                </li>
+                            </f:for>
+                        </ul>
+                    </f:if>
+                    <f:if condition="{opening-hours}">
+                        <div class="opening-hours d-lg-none">
+                            <f:format.raw>{opening-hours}</f:format.raw>
+                        </div>
+                    </f:if>
+                    <f:if condition="{headermetanavigation}">
+                        <ul class="navbar-nav" id="header-metanavigation">
+                            <f:for each="{headermetanavigation}" as="item">
+                                <li class="nav-item{f:if(condition:item.active, then:' active')}" data-doctype="{item.data.doktype}">
+                                    <a class="nav-link{f:if(condition:item.active, then:' active')}{f:if(condition:item.current, then:' current')}" href="{item.link}" title="{item.data.title}" target="{f:if(condition: item.target, then: item.target, else: '_self')}">{item.title}</a>
+                                </li>
+                            </f:for>
+                        </ul>
+                    </f:if>
+                </div>
+            </div>
+            <f:if condition="{languageNavigation}">
+                <div class="offcanvas-footer">
+                    <div class="dropdown" id="language-navigation">
+                        <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                            <ul class="navbar-nav">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"><f:translate key="LLL:EXT:base_configuration/Resources/Private/Language/navigations.xlf:languagenavigation.toggler" default="Language navigation"/></a>
+                                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                                        <f:for each="{languageNavigation}" as="item">
+                                            <li>
+                                                <f:if condition="{item.available}">
+                                                    <f:then>
+                                                        <a class="dropdown-item {f:if(condition: item.active, then: 'active')}" href="{item.link}">{item.navigationTitle}</a>
+                                                    </f:then>
+                                                    <f:else>
+                                                        <span class="dropdown-item{f:if(condition: item.available, else: ' disabled')}">{item.navigationTitle}</span>
+                                                    </f:else>
+                                                </f:if>
+                                            </li>
+                                        </f:for>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </f:if>
+        </div>
+    </div>
+</nav>
+
+<f:section name="Item">
+    <a class="nav-link dropdown-toggle{f:if(condition: item.active, then:' active')}{f:if(condition: item.current, then:' current')}" title="{item.title}" href="#" target="{f:if(condition: item.target, then: item.target, else: '_self')}" role="button" data-bs-toggle="dropdown" data-bs-target="#navbarDropdown-{item.data.uid}" aria-expanded="false">{item.title}</a>
+    <div id="navbarDropdown-{item.data.uid}" class="dropdown-menu" aria-labelledby="navbarDropdown-{item.data.uid}">
+        <div class="container">
+            <ul class="nav">
+                <f:if condition="{item.data.doktype}==1">
+                    <f:render section="Overview" arguments="{item: item}"/>
+                </f:if>
+                <f:for each="{item.children}" as="subitem">
+                    <li class="nav-item{f:if(condition:item.active, then:' active')}">
+                        <f:if condition="{subitem.current}!=1">
+                            <f:then>
+                                <a href="{subitem.link}" target="{f:if(condition: subitem.target, then: subitem.target, else: '_self')}" class="dropdown-item{f:if(condition: subitem.active, then: ' active')}{f:if(condition: subitem.current, then:' current')}" title="{subitem.title}">{subitem.title}</a>
+                            </f:then>
+                            <f:else>
+                                <span class="dropdown-item{f:if(condition: subitem.active, then: ' active')}{f:if(condition: subitem.current, then:' current')}">{subitem.title}</span>
+                            </f:else>
+                        </f:if>
+                    </li>
+                </f:for>
+            </ul>
+        </div>
+    </div>
+</f:section>
+
+<f:section name="Overview">
+    <li class="nav-item info-text{f:if(condition: item.active, then: ' active')}">
+        <f:if condition="{item.current}!=1">
+            <f:then>
+                <a href="{item.link}" class="dropdown-item"><f:translate key="LLL:EXT:base_configuration/Resources/Private/Language/navigations.xlf:mainnavigation.overview" default="Overview" /></a>
+            </f:then>
+            <f:else>
+                <span class="dropdown-item current active"><f:translate key="LLL:EXT:base_configuration/Resources/Private/Language/navigations.xlf:mainnavigation.overview" default="Overview" /></span>
+            </f:else>
+        </f:if>
+    </li>
+    <li><hr class="dropdown-divider"></li>
+</f:section>
+</html>

@@ -1,0 +1,25 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<div class="container">
+    <div class="row g-1">
+        <div class="col-12 col-lg-2 order-1"><f:cObject typoscriptObjectPath="lib.dynamicContentSlide" data="{colPos: '10'}" /></div>
+        <div class="col-6 col-lg-3 order-3 order-lg-4"><f:cObject typoscriptObjectPath="lib.dynamicContentSlide" data="{colPos: '12'}" /></div>
+        <div class="col-6 col-lg-3 order-2 order-lg-3"><f:cObject typoscriptObjectPath="lib.dynamicContentSlide" data="{colPos: '11'}" /></div>
+        <div class="col-12 col-lg-4 order-4 order-lg-2"><div class="doctors-shape"></div></div>
+    </div>
+    <div class="footer-metasection">
+        <f:if condition="{footermetanavigation}">
+            <ul class="nav footer-metanavigation">
+                <f:for each="{footermetanavigation}" as="item">
+                    <li class="nav-item{f:if(condition:item.active, then:' active')}{f:if(condition:item.current, then:' current')}">
+                        <a class="nav-link{f:if(condition:item.active, then:' active')}" href="{item.link}" title="{item.data.title}">{item.title}</a>
+                    </li>
+                </f:for>
+            </ul>
+        </f:if>
+        <p class="copyright">&copy; {f:format.date(date:'now', format:'Y')} {settings.copyText.value}<br>Alle Rechte vorbehalten.</p>
+    </div>
+    <f:link.page class="g-1 top-link" title="{f:translate(key: 'LLL:EXT:base_configuration/Resources/Private/Language/locallang.xlf:page.actions.totop', default: 'To top')}" section="page-{pageUid}" absolute="true">
+        <f:translate key="LLL:EXT:base_configuration/Resources/Private/Language/locallang.xlf:page.actions.totop" />
+    </f:link.page>
+</div>
+</html>

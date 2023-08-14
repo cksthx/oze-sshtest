@@ -25,3 +25,4 @@ package-lock.json
 !/packages/base_theme/Resources/Public/Icons/
 
 /old_project_configuration/*
+/old_project_configuration

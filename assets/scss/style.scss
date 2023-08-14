@@ -1,3 +1,125 @@
+/* open-sans-300 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../Fonts/open-sans-v35-latin/open-sans-v35-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* open-sans-300italic - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Open Sans';
+    font-style: italic;
+    font-weight: 300;
+    src: url('../Fonts/open-sans-v35-latin/open-sans-v35-latin-300italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* open-sans-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../Fonts/open-sans-v35-latin/open-sans-v35-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* open-sans-italic - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Open Sans';
+    font-style: italic;
+    font-weight: 400;
+    src: url('../Fonts/open-sans-v35-latin/open-sans-v35-latin-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* open-sans-500 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../Fonts/open-sans-v35-latin/open-sans-v35-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* open-sans-500italic - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Open Sans';
+    font-style: italic;
+    font-weight: 500;
+    src: url('../Fonts/open-sans-v35-latin/open-sans-v35-latin-500italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* open-sans-600 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../Fonts/open-sans-v35-latin/open-sans-v35-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* open-sans-600italic - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Open Sans';
+    font-style: italic;
+    font-weight: 600;
+    src: url('../Fonts/open-sans-v35-latin/open-sans-v35-latin-600italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* open-sans-700 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../Fonts/open-sans-v35-latin/open-sans-v35-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* open-sans-700italic - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Open Sans';
+    font-style: italic;
+    font-weight: 700;
+    src: url('../Fonts/open-sans-v35-latin/open-sans-v35-latin-700italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* open-sans-800 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 800;
+    src: url('../Fonts/open-sans-v35-latin/open-sans-v35-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* open-sans-800italic - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Open Sans';
+    font-style: italic;
+    font-weight: 800;
+    src: url('../Fonts/open-sans-v35-latin/open-sans-v35-latin-800italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* open-sans-condensed-300 - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Open Sans Condensed';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../Fonts/open-sans-condensed-v14-latin/open-sans-condensed-v14-latin-300.woff2') format('woff2');
+}
+/* open-sans-condensed-300italic - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Open Sans Condensed';
+    font-style: italic;
+    font-weight: 300;
+    src: url('../Fonts/open-sans-condensed-v14-latin/open-sans-condensed-v14-latin-300italic.woff2') format('woff2');
+}
+/* open-sans-condensed-700 - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Open Sans Condensed';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../Fonts/open-sans-condensed-v14-latin/open-sans-condensed-v14-latin-700.woff2') format('woff2');
+}
+
 // =============
 // = Bootstrap =
 // =============
@@ -66,8 +188,8 @@
 @import "public/typo3conf/ext/base_configuration/Resources/Private/Scss/Frontend/Theme/globals";
 
 @import "public/typo3conf/ext/base_configuration/Resources/Private/Scss/Frontend/Theme/burger-animation";
-@import "public/typo3conf/ext/base_configuration/Resources/Private/Scss/Frontend/Theme/navigation";
-@import "public/typo3conf/ext/base_configuration/Resources/Private/Scss/Frontend/Theme/language-navigation";
+@import "public/typo3conf/ext/base_project/Resources/Private/Scss/Frontend/Theme/navigation";
+// @import "public/typo3conf/ext/base_configuration/Resources/Private/Scss/Frontend/Theme/language-navigation";
 @import "public/typo3conf/ext/base_configuration/Resources/Private/Scss/Frontend/Theme/breadcrumb";
 @import "public/typo3conf/ext/base_configuration/Resources/Private/Scss/Frontend/Theme/sociallinks";
 
@@ -88,3 +210,5 @@
 // Additions and theming
 @import "public/typo3conf/ext/base_configuration/Resources/Private/Scss/Frontend/Theme/custom-fluid_styled_content";
 @import "public/typo3conf/ext/base_configuration/Resources/Private/Scss/Frontend/Theme/theme";
+
+@import "public/typo3conf/ext/base_project/Resources/Private/Scss/Frontend/Theme/_child.scss";

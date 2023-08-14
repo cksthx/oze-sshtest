@@ -13,6 +13,7 @@ module.exports = function(grunt) {
             sass: 'assets/scss/',
             css: '<%= paths.resources %>Public/Css/',
             fonts: '<%= paths.resources %>Public/Fonts/',
+            icons: '<%= paths.resources %>Public/Icons/',
             img: '<%= paths.resources %>Public/Images/',
             js: '<%= paths.resources %>Public/JavaScript/'
         },
@@ -21,6 +22,40 @@ module.exports = function(grunt) {
             ' * Copyright 2017-<%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
             ' * Licensed under the <%= pkg.license %> license\n' +
             ' */\n',
+        copy: {
+            bootstrapiconsfonts: { 
+                expand: true,
+                src: '**',
+                cwd: 'node_modules/bootstrap-icons/font/fonts/',
+                dest: '<%= paths.fonts %>',
+
+                mode: true
+            },
+            fonts: {
+                expand: true,
+                src: '**',
+                cwd: 'assets/fonts/',
+                dest: '<%= paths.fonts %>',
+
+                mode: true
+            },
+            icons: {
+                expand: true,
+                src: '**',
+                cwd: 'assets/icons/',
+                dest: '<%= paths.icons %>',
+
+                mode: true
+            },
+            css: {
+                expand: true,
+                src: '**',
+                cwd: 'assets/css/',
+                dest: '<%= paths.css %>',
+
+                mode: true
+            },
+        },
         uglify: {
             all: {
                 options: {
@@ -202,6 +237,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-svgmin');
+    grunt.loadNpmTasks('grunt-contrib-copy');
 
     /**
      * Grunt update task
@@ -209,7 +245,7 @@ module.exports = function(grunt) {
     grunt.registerTask('css', ['sass', 'cssmin']);
     grunt.registerTask('images', ['imagemin', 'svgmin']);
     grunt.registerTask('js', ['uglify']);
-    grunt.registerTask('build', ['js', 'css', 'imagemin', 'svgmin']);
+    grunt.registerTask('build', ['js', 'css', 'imagemin', 'svgmin', 'copy']);
     grunt.registerTask('default', ['build']);
 
 };

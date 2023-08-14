@@ -26,7 +26,7 @@ comkomBase {
 
     # Navbars can use .navbar-expand classes to determine when their content collapses behind a button.
     # Options: -sm|-md|-lg|-xl|-xxl 
-    navbarExpandAt = -xl
+    navbarExpandAt = -lg
 }
 
 # Base configuration constants
@@ -41,13 +41,13 @@ comkomBase {
 @import 'EXT:base_project/Configuration/TypoScript/Constants/TemplatePaths.typoscript'
 
 # cat=base_project/page; type=string; label=Company Name
-CompanyName = COMKOM° Digital Media
+CompanyName = Orthopädisches Zentrum Essen
 
 # cat=base_project/page; type=string; label=Company Name Short
-CompanyNameShort = COMKOM
+CompanyNameShort = OZE
 
 # cat=base_project/page; type=string; label=Company Logo
-CompanyLogo = EXT:base_project/Resources/Public/Images/logo.svg
+CompanyLogo = EXT:base_theme/Resources/Public/Images/oze_logo.svg
 
 DummyImage = EXT:base_theme/Resources/Public/Images/preview-image.png
 DummyAccordionImage = EXT:base_theme/Resources/Public/Images/info-circle-fill.svg
@@ -55,7 +55,7 @@ DummyAccordionImage = EXT:base_theme/Resources/Public/Images/info-circle-fill.sv
 # Copyright
 # =========
 # cat=base_project/page; type=string; label=Copy Text
-CopyText = · COMKOM° Digital Media
+CopyText = · Orthopädisches Zentrum Essen
 
 # Rootpage
 # ========
@@ -65,7 +65,7 @@ RootPageId = 1
 # Navigation
 # ==========
 # cat=base_project/page; type=string; label=Hauptnavigations Tiefe
-navDepth = 1
+navDepth = 2
 
 # cat=base_project/page; type=string; label=Facebook App-ID
 Facebook_app_id =
@@ -84,3 +84,6 @@ Footermetanavigation = 0
 
 # cat=base_project/page; type=string; label=ID des Kategorie-Systemordners
 CategorySysFolder =
+
+# cat=base_project/page; type=string; label=ID des Inhaltselements für die Navigation
+CeOpeningHoursId =

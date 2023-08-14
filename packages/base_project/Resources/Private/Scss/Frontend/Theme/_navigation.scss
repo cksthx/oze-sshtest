@@ -1,0 +1,227 @@
+.accessibility-menu {
+    position: absolute;
+    top: 0;
+    background-color: var(--bs-body-bg);
+    z-index: 10000;
+    li { padding: 1rem; }
+}
+.offcanvas.offcanvas-top {
+    --bs-offcanvas-color: #{$white};
+    --bs-heading-color: #{$primary-lighter};
+    height: 100%;
+    .offcanvas-header {
+        padding-top: var(--navbar-padding-y);
+        padding-bottom: var(--navbar-padding-y);
+
+        .navbar-brand.navbar-brand-backgroundimage {
+            background: url("/typo3conf/ext/base_theme/Resources/Public/Images/oze_logo_small_white.svg") no-repeat !important;
+            background-position: left center !important;
+            background-size: contain !important;
+            @include media-breakpoint-up(md) {
+                background: url("/typo3conf/ext/base_theme/Resources/Public/Images/oze_logo_white.svg") no-repeat !important;
+            }
+        }
+
+        .hamburger-box {
+            .hamburger-inner {
+                &::before, &::after {
+                    opacity: 1;
+                    background-color: $white;
+                }
+            }
+        }
+
+        > .container {
+            display: flex;
+            flex-wrap: inherit;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+    .offcanvas-body {
+        display: flex;      
+        @include media-breakpoint-up(lg) {
+            > .container {
+                display: flex;
+                // align-items: center;
+                justify-content: flex-end;
+            }
+        }
+    }
+}
+#main-navi {    
+    padding: 0;
+    #main-menu {
+        @include media-breakpoint-up(lg) {
+            margin-left: -20px;
+            margin-right: -20px;
+        }
+        .nav-item {
+            @include media-breakpoint-down(lg) {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                align-items: stretch;
+                text-align: center;
+            }
+        }
+    }
+    .dropdown { position: static; }
+    .dropdown-menu {
+        &[data-bs-popper] {
+            right: 0;
+            margin-top: 0;
+        }
+        --bs-dropdown-border-width: 0;
+        --bs-dropdown-box-shadow: none;
+        --bs-dropdown-bg: #{$primary};
+        --bs-dropdown-color: #{$white};
+        --bs-dropdown-padding-y: 1rem;
+        .nav {
+            margin-left: calc(var(--bs-dropdown-item-padding-x) * -1);
+            margin-right: calc(var(--bs-dropdown-item-padding-x) * -1);
+            justify-content: flex-end;
+            @include media-breakpoint-down(lg) {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        .dropdown-item {
+            font-family: $headings-font-family;
+            font-size: var(--bs-nav-link-font-size);
+            font-weight: var(--bs-nav-link-font-weight);
+            color: $white;
+            &:hover, &:focus, &.active.current {
+                color: $primary-lighter;
+                background-color: transparent;
+            }
+        }
+    }
+    .navbar-brand {
+        padding: 0;
+        font-size: calc(var(--logo-scale) * 1em);
+        font-weight: $font-weight-normal;
+        margin-right: 0;
+    }
+    .nav-link {
+        font-family: $headings-font-family;
+        text-transform: uppercase;
+        letter-spacing: 0.025em;
+
+        // positioning the menu
+        @include media-breakpoint-up(lg) {
+            line-height: 1;
+            padding-top: 25px;
+            padding-bottom: 0;
+        }
+
+        
+    }
+
+    // mobile colors
+    @include media-breakpoint-down(lg) {
+        .nav-item:not(:last-child) {
+            .nav-link::before {
+                content: '';
+                display: block;
+                position: absolute;
+                height: 2px;
+                width: 30px;
+                bottom: -2px;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: $primary-dark;
+            }
+        }
+        .nav-link {
+            --bs-nav-link-color: #{$white};
+            // --bs-nav-link-hover-color: var(--bs-navbar-hover-color);
+            --bs-nav-link-disabled-color: var(--bs-navbar-disabled-color);
+            position: relative;
+            &.show {
+                background-color: $primary-dark;
+            }
+        }
+        .dropdown-menu {
+            &.show {
+                background-color: $primary-light;
+            }
+            .dropdown-item {
+                &:hover, &:focus, &.active.current {
+                    color: $primary-dark;
+                }
+            }
+        }
+    }
+
+    &.navbar-light {
+        background-color: $white;
+        .navbar-toggler { border: none; }
+        > .container {
+            padding-top: var(--navbar-padding-y);
+            padding-bottom: var(--navbar-padding-y);
+        }
+    }
+    .navbar-brand.navbar-brand-backgroundimage {
+        width: calc(var(--logo-width) / 16 * 1em);
+        height: calc(var(--logo-height) / 16 * 1em);
+        text-indent:-99999px;
+        background: url("/typo3conf/ext/base_theme/Resources/Public/Images/oze_logo.svg") no-repeat;
+        background-position: left center;
+        background-size: contain;
+        transform: translate3d(0px, 1px, 0px);
+        @include media-breakpoint-up(md) {
+            background: url("/typo3conf/ext/base_theme/Resources/Public/Images/oze_logo_big.svg") no-repeat;
+        }
+    }
+    &.navbar[class*='navbar-expand-'] {
+        @include media-breakpoint-up(lg) {
+            &#main-navi {
+                .offcanvas {
+                    flex-direction: row;
+                    justify-content: flex-end;
+                    align-items: center;
+                }
+            }
+        }
+    }
+}
+body.backendlayout-heroimage:not(.scrolled-up) {
+    @include media-breakpoint-up(lg) {
+        .backendlayout-heroimage.navbar-has-image {
+            #main-navi {
+                background-color: transparent;
+            }
+            #main-navi .navbar-brand, .navbar-nav .nav-link {
+                color: $white;
+            }
+            #main-navi .navbar-brand.navbar-brand-backgroundimage {
+                background: url("/typo3conf/ext/base_project/Resources/Public/Images/logo-white.svg") no-repeat;
+            }
+        }
+    }
+}
+// Animation
+body {
+    padding-top: calc(((var(--logo-height) * var(--logo-scale)) / 16 * 1em) + (var(--navbar-padding-y) * 2));
+    &.scrolled-down, &.scrolled-up {
+        header#banner {
+            #main-navi {
+                position: fixed;
+                top: 0;
+                right: 0;
+                left: 0;
+                z-index: 1030;
+            }
+        }
+    }
+    &.scrolled-down {
+        header#banner {
+            #main-navi {
+                top: -7.5em;
+                max-height: 0;
+                overflow: hidden;
+            }
+        }
+    }
+}

@@ -1,16 +1,8 @@
-hosts:
-  staging:
-    hostname: stage-startsmart.made-by-comkom.de
-    branch: dev
-    remote_user: p615504
-    identityFile: ~
-    http_user: p615504
-    deploy_path: /home/www/p615504/html/stage-startsmart
-
-  production:
-    hostname: live-startsmart.made-by-comkom.de
-    branch: master
-    remote_user: p615504
-    identityFile: ~
-    http_user: p615504
-    deploy_path: /home/www/p615504/html/live-startsmart
+oze-essen.webseiten.cc:
+  host: oze-essen.webseiten.cc
+  stage: staging
+  branch: dev
+  user: ssh-869196-5058106
+  identityFile: ~
+  http_user: ssh-869196-5058106
+  deploy_path: /www/213585_70794/rp-hosting/5058106/6058106/typo3cms/oze_essen_2023

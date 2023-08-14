@@ -1,0 +1,19 @@
+span.phone, 
+span.fax, 
+span.mail {
+  display: inline;
+  color: #c3c3c3;
+}
+span.phone:before,
+span.fax:before,
+span.mail:before {
+    content: "·";
+    width: 1em;
+    float: left;
+    text-align: left;
+    font-weight: 700;
+    text-indent: 0;
+  }
+span.phone:before { content: "T"; color: #333; }
+span.fax:before { content: "F"; color: #333; }
+span.mail:before { content: "E"; color: #333; }

@@ -15,6 +15,27 @@
 # Hauer-Heinrich - Video Extender
 @import 'EXT:base_project/Extensions/hh_video_extender/Configuration/TypoScript/setup.typoscript'
 
+page {
+    10 {
+        variables {
+            opening-hours = RECORDS
+            opening-hours {
+                tables = tt_content
+                source = {$CeOpeningHoursId}
+                dontCheckPid = 1 
+            }
+        }
+        dataProcessing {
+            // Remove: 25 < lib.headermetanavigation
+            25 >
+            // Remove: 40 < lib.footermetanavigation
+            40 >
+            // Remove: 50 < lib.languagenavigation
+            50 >
+        }
+    }
+}
+
 [applicationContext == "Development" || "Production/Staging"]
 page.meta.robots = noindex,nofollow
 [END]
