@@ -25,7 +25,29 @@
         </f:case>
         <f:defaultCase>
             <article>
-                <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '5'}" />
+                <f:if condition="{f:cObject(typoscriptObjectPath: 'lib.dynamicContent', data:'5')}">
+                    <f:then>
+                        <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '5'}" />
+                    </f:then>
+                    <f:else>
+                        <div id="keyvisual" class="tc-0">
+                            <div id="branding-header">
+                                <div id="c227" class="card card-jumbotron has-content tc-0 page-jumbotron">
+                                    <div class="container">
+                                        <div id="c229" class="frame frame-default frame-type-header frame-layout-0">
+                                            <header class="header header-only">
+                                                <h2>{data.title}</h2>
+                                            </header>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </f:else>
+                </f:if>
+                <f:if condition="{data.uid} != {settings.rootPageId.value}">
+                    <f:render partial="Navigation/Breadcrumb" arguments="{breadcrumb: breadcrumb, leveluplink: leveluplink}"></f:render>
+                </f:if>
                 <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '0'}" />
             </article>
         </f:defaultCase>

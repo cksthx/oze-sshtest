@@ -121,6 +121,40 @@ footer#footer {
 }
 
 // _burger-animation.scss
+// _breadcrumb.scss
+
+.breadcrumb {
+    --bs-breadcrumb-font-size: 0.875rem;
+    --bs-breadcrumb-divider-color: #{$primary};
+    --bs-breadcrumb-item-active-color: #A0A0A0;
+    margin-top: var(--bs-breadcrumb-margin-bottom);
+    font-weight: $font-weight-semibold;
+    color: #A0A0A0;
+}
+
+// _breadcrumb.scss
+// _custom_fluid_styled_content.scss
+
+.frame .list-group + p {
+    margin-top: 0.625em;
+}
+
+// _custom_fluid_styled_content.scss
+
+a {
+    text-decoration: underline;
+    text-decoration-style: solid;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+}
+
+.list-group-numbered {
+    > .list-group-item::before {
+        font-family: $headings-font-family;
+        font-weight: $font-weight-bold;
+        color: $primary;
+    }
+}
 
 .frame-type-extendedSectionTeaser {
     @include media-breakpoint-up(md) {
@@ -349,4 +383,8 @@ footer#footer {
             padding: 24px;
         }
     }
+}
+.page-jumbotron {
+    background-color: $primary;
+    --bs-heading-color: #{$white};
 }
