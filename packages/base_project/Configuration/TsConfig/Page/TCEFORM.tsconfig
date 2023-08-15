@@ -7,6 +7,17 @@ TCEFORM {
 
     }
     tt_content {
-
+        layout {
+            types {
+                textmedia {
+                    altLabels.1 = Box
+                    removeItems = 2,3
+                }
+                text {
+                    altLabels.1 = Box
+                    removeItems = 2,3
+                }
+            }
+        }
     }
 }
