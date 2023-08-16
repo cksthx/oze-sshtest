@@ -1,3 +1,8 @@
 # =============================================
 # COMKOM° Typo3 Base Project: RTE configuration
 # =============================================
+
+// RTE default
+RTE.config.tt_content.bodytext.preset = base_project
+// This will provide only basic tool in the text RTE
+RTE.default.preset = base_project

@@ -3,7 +3,7 @@ defined('TYPO3_MODE') || die();
 
 # Add default RTE configuration
 # ==============================
-$GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['base_configuration'] = 'EXT:base_configuration/Configuration/RTE/Default.yaml';
+$GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['base_project'] = 'EXT:base_project/Configuration/RTE/Default.yaml';
 
 # PageTS
 # ==============================

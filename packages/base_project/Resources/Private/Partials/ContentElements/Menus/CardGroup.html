@@ -1,0 +1,53 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:ce="http://typo3.org/ns/TYPO3/CMS/FluidStyledContent/ViewHelpers" data-namespace-typo3-fluid="true">
+    <f:render partial="Menus/SkipNavigation" arguments="{_all}" />
+    <div class="{flexform_menu_pages.menuLayout}">
+        <f:for each="{menu}" as="page" iteration="iterator">
+            <f:variable name="columnsCountXs">{iterator.total}</f:variable>
+            <f:variable name="columnsCountSm">{iterator.total}</f:variable>
+            <f:variable name="columnsCountMd">{iterator.total}</f:variable>
+            <f:variable name="columnsCountLg">{iterator.total}</f:variable>
+            <f:variable name="columnsCountXl">{iterator.total}</f:variable>
+            <f:variable name="columnsCountXxl">{iterator.total}</f:variable>
+            <f:render section="CardGroupItem" arguments="{
+                flexform_menu_pages: flexform_menu_pages, 
+                data: data, 
+                columnsCountXs: columnsCountXs, 
+                columnsCountSm: columnsCountSm, 
+                columnsCountMd: columnsCountMd, 
+                columnsCountLg: columnsCountLg, 
+                columnsCountXl: columnsCountXl, 
+                columnsCountXxl: columnsCountXxl, 
+                page: page, 
+                DummyImage: DummyImage, 
+                CompanyName: CompanyName
+            }"/>
+        </f:for>
+    </div>
+    <f:section name="CardGroupItem">
+        <section class="card card-link{f:if(condition: '{flexform_menu_pages.menuLayout}==grid-cards && {flexform_menu_pages.equalheight}', then:' h-100')}">
+            <f:render partial="Media/Rendering/MenuPagesSubpagesImageSrcSet" arguments="{
+                columnsCountXs: columnsCountXs, 
+                columnsCountSm: columnsCountSm, 
+                columnsCountMd: columnsCountMd, 
+                columnsCountLg: columnsCountLg, 
+                columnsCountXl: columnsCountXl, 
+                columnsCountXxl: columnsCountXxl, 
+                image: page.files.0, 
+                DummyImage: DummyImage, 
+                CompanyName: CompanyName
+            }" />
+            <div class="card-body">
+                <header class="header">
+                    <f:if condition="{flexform_menu_pages.show_categories}">
+                        <f:render partial="Menus/Categories" arguments="{categories: page.categories}" />
+                    </f:if>
+                    <h3 class="card-title">{page.title}</h3>
+                </header>
+                <f:if condition="{page.data.abstract}">
+                    <f:format.html>{page.data.abstract}</f:format.html>
+                </f:if>
+                <p><a href="{page.link}"{f:if(condition: page.target, then: ' target="{page.target}"')} title="{page.title}" class="btn btn-read-more"><f:translate key="LLL:EXT:base_project/Resources/Private/Language/locallang.xlf:classes.btn.read_more"/></a></p>
+            </div>
+        </section>
+    </f:section>
+</html>

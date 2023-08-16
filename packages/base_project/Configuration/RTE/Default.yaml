@@ -32,6 +32,7 @@ editor:
       - { name: "LLL:EXT:base_configuration/Resources/Private/Language/rte.xlf:custom_rte.stylesset.mail", element: "span", attributes: { "class": "mail" }}
       - { name: "LLL:EXT:base_configuration/Resources/Private/Language/rte.xlf:stylesset.small", element: "span", attributes: { "class": "small" }}
       - { name: "LLL:EXT:base_configuration/Resources/Private/Language/rte.xlf:classes.btn.primary", element: "a", attributes: { 'class': 'btn btn-type-0' }}
+      - { name: "LLL:EXT:base_project/Resources/Private/Language/locallang.xlf:classes.btn.read_more", element: "a", attributes: { 'class': 'btn btn-read-more' }}
 
       # List styles
       - { name: "LLL:EXT:base_configuration/Resources/Private/Language/rte.xlf:stylesset.ulLead", element: "ul", attributes: { "class": "list-group ul-lead" } }
@@ -79,7 +80,7 @@ buttons:
       disabled: false
     properties:
       class:
-        allowedClasses: 'internalLink, externalLink, folder, mail, download, btn btn-type-0, btn btn-type-1'
+        allowedClasses: 'internalLink, externalLink, folder, mail, download, btn btn-type-0, btn btn-type-1, btn btn-read-more'
         title:
           readOnly: false
     queryParametersSelector:
@@ -120,6 +121,8 @@ classes:
       name: 'LLL:EXT:base_configuration/Resources/Private/Language/rte.xlf:classes.btn.default'
     btn btn-type-1:
       name: 'LLL:EXT:base_configuration/Resources/Private/Language/rte.xlf:classes.btn.type-1'
+    btn btn-read-more:
+      name: 'LLL:EXT:base_project/Resources/Private/Language/locallang.xlf:classes.btn.read_more'
 
 classesAnchor:
   internalLink:
@@ -150,3 +153,7 @@ classesAnchor:
     class: 'btn btn-type-1'
     type: 'url'
     target: '_blank'
+  internalButtonReadMore:
+    class: 'btn btn-read-more'
+    type: 'page'
+    target: '_self'

@@ -1,0 +1,68 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:ce="http://typo3.org/ns/TYPO3/CMS/FluidStyledContent/ViewHelpers" data-namespace-typo3-fluid="true">
+    <f:variable name="columnsCountXs">{f:if(condition: flexform_menu_pages.columncount_xs, then: '{flexform_menu_pages.columncount_xs}', else: '2')}</f:variable>
+    <f:variable name="columnsCountSm">{f:if(condition: flexform_menu_pages.columncount_sm, then: '{flexform_menu_pages.columncount_sm}', else: '{columnsCountXs}')}</f:variable>
+    <f:variable name="columnsCountMd">{f:if(condition: flexform_menu_pages.columncount_md, then: '{flexform_menu_pages.columncount_md}', else: '{columnsCountXs}')}</f:variable>
+    <f:variable name="columnsCountLg">{f:if(condition: flexform_menu_pages.columncount_lg, then: '{flexform_menu_pages.columncount_lg}', else: '{columnsCountXs}')}</f:variable>
+    <f:variable name="columnsCountXl">{f:if(condition: flexform_menu_pages.columncount_xl, then: '{flexform_menu_pages.columncount_xl}', else: '{columnsCountXs}')}</f:variable>
+    <f:variable name="columnsCountXxl">{f:if(condition: flexform_menu_pages.columncount_xxl, then: '{flexform_menu_pages.columncount_xxl}', else: '{columnsCountXs}')}</f:variable>
+    <f:variable name="colXs">{12/flexform_menu_pages.columncount_xs}</f:variable>
+    <f:variable name="colSm">{12/flexform_menu_pages.columncount_sm}</f:variable>
+    <f:variable name="colMd">{12/flexform_menu_pages.columncount_md}</f:variable>
+    <f:variable name="colLg">{12/flexform_menu_pages.columncount_lg}</f:variable>
+    <f:variable name="colXl">{12/flexform_menu_pages.columncount_xl}</f:variable>
+    <f:variable name="colXxl">{12/flexform_menu_pages.columncount_xxl}</f:variable>
+    <f:render partial="Menus/SkipNavigation" arguments="{_all}" />
+    <div class="{flexform_menu_pages.menuLayout} row {f:if(condition: '{flexform_menu_pages.no-gutters} != 1', then: '{settings.gutterClasses}', else: 'g-0')}">
+        <f:for each="{menu}" as="page">
+            <f:render section="MasonryItem" arguments="{
+                flexform_menu_pages: flexform_menu_pages, 
+                columnsCountXs: columnsCountXs, 
+                columnsCountSm: columnsCountSm, 
+                columnsCountMd: columnsCountMd, 
+                columnsCountLg: columnsCountLg, 
+                columnsCountXl: columnsCountXl, 
+                columnsCountXxl: columnsCountXxl, 
+                data: data, 
+                colXs: colXs, 
+                colSm: colSm, 
+                colMd: colMd, 
+                colLg: colLg, 
+                colXl: colXl, 
+                colXxl: colXxl, 
+                page: page, 
+                DummyImage: DummyImage, 
+                CompanyName: CompanyName
+            }"/>
+        </f:for>
+    </div>
+    <f:section name="MasonryItem">
+        <div class="{flexform_menu_pages.menuLayout}-item col-{colXs}{f:if(condition: '{colSm}', then: ' col-sm-{colSm}')}{f:if(condition: '{colMd}', then: ' col-md-{colMd}')}{f:if(condition: '{colLg}', then: ' col-lg-{colLg}')}{f:if(condition: '{colXl}', then: ' col-xl-{colXl}')}{f:if(condition: '{colXxl}', then: ' col-xxl-{colXxl}')}">
+            <section class="card card-link{f:if(condition: '{flexform_menu_pages.menuLayout}==grid-cards && {flexform_menu_pages.equalheight}', then:' h-100')}">
+                <f:render partial="Media/Rendering/MenuPagesSubpagesMasonryImageSrcSet" arguments="{
+                    columnsCountXs: columnsCountXs, 
+                    columnsCountSm: columnsCountSm, 
+                    columnsCountMd: columnsCountMd, 
+                    columnsCountLg: columnsCountLg, 
+                    columnsCountXl: columnsCountXl, 
+                    columnsCountXxl: columnsCountXxl, 
+                    image: page.files.0, 
+                    DummyImage: DummyImage, 
+                    CompanyName: CompanyName
+                }" />
+                <div class="card-body">
+                    <header class="header">
+                        <f:if condition="{flexform_menu_pages.show_categories}">
+                            <f:render partial="Menus/Categories" arguments="{categories: page.categories}" />
+                        </f:if>
+                        <h3 class="card-title">{page.title}</h3>
+                    </header>
+                    <f:if condition="{page.data.abstract}">
+                        <f:format.html>{page.data.abstract}</f:format.html>
+                    </f:if>
+                    <p><a href="{page.link}"{f:if(condition: page.target, then: ' target="{page.target}"')} title="{page.title}" class="btn btn-read-more"><f:translate key="LLL:EXT:base_project/Resources/Private/Language/locallang.xlf:classes.btn.read_more"/></a></p>
+                </div>
+            </section>
+        </div>
+    </f:section>
+    <f:render partial="Menus/Assets/MenuPagesSubpagesAssets" arguments="{flexform_menu_pages: flexform_menu_pages}" />
+</html>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2020-09-29UTC20:51:040">
+        <header>
+            <authorName>Team COMKOM°</authorName>
+            <authorEmail>mail@comkom.de</authorEmail>
+        </header>
+        <body>
+            <trans-unit id="classes.btn.read_more">
+                <source>Read more</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

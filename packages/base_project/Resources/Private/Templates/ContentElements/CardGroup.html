@@ -1,0 +1,256 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="CardGroupDefault" />
+
+<f:section name="CardGroupMain">
+	<f:variable name="columnsCountXs">{f:if(condition: flexform_card_group.columncount_xs, then: '{flexform_card_group.columncount_xs}', else: '2')}</f:variable>
+	<f:variable name="columnsCountSm">{f:if(condition: flexform_card_group.columncount_sm, then: '{flexform_card_group.columncount_sm}', else: '{columnsCountXs}')}</f:variable>
+	<f:variable name="columnsCountMd">{f:if(condition: flexform_card_group.columncount_md, then: '{flexform_card_group.columncount_md}', else: '{columnsCountXs}')}</f:variable>
+	<f:variable name="columnsCountLg">{f:if(condition: flexform_card_group.columncount_lg, then: '{flexform_card_group.columncount_lg}', else: '{columnsCountXs}')}</f:variable>
+	<f:variable name="columnsCountXl">{f:if(condition: flexform_card_group.columncount_xl, then: '{flexform_card_group.columncount_xl}', else: '{columnsCountXs}')}</f:variable>
+	<f:variable name="columnsCountXxl">{f:if(condition: flexform_card_group.columncount_xxl, then: '{flexform_card_group.columncount_xxl}', else: '{columnsCountXs}')}</f:variable>
+
+	<f:switch expression="{flexform_card_group.cardLayout}">
+		<f:case value="card-group">
+			<div class="{f:render(section:'CardGroupClasses', arguments:'{card_group:card_group, flexform_card_group: flexform_card_group, data: data}') -> cc:format.classes()}">
+				<f:for each="{cardGroupContent}" as="child" iteration="iterator">
+					<f:variable name="columnsCountXs">{iterator.total}</f:variable>
+					<f:variable name="columnsCountSm">{iterator.total}</f:variable>
+					<f:variable name="columnsCountMd">{iterator.total}</f:variable>
+					<f:variable name="columnsCountLg">{iterator.total}</f:variable>
+					<f:variable name="columnsCountXl">{iterator.total}</f:variable>
+					<f:variable name="columnsCountXxl">{iterator.total}</f:variable>
+					<f:render section="CardGroupItem" arguments="{_all}" />
+				</f:for>
+			</div>
+		</f:case>
+		<f:case value="grid-cards">
+			<f:variable name="alignItems">
+				<f:switch expression="{flexform_card_group.align_items}">
+					<f:case value="1">justify-content-end</f:case>
+					<f:case value="2">justify-content-center</f:case>
+					<f:case value="3">justify-content-between</f:case>
+					<f:case value="4">justify-content-around</f:case>
+					<f:case value="5">justify-content-evenly</f:case>
+				</f:switch>
+			</f:variable>
+			<div class="{f:render(section:'CardGroupClasses', arguments:'{alignItems: alignItems, card_group:card_group, flexform_card_group: flexform_card_group, data: data}') -> cc:format.classes()}">
+				<f:for each="{cardGroupContent}" as="child" iteration="iterator">
+					<div class="col">
+						<f:render section="CardGroupItem" arguments="{_all}" />
+					</div>
+				</f:for>
+			</div>
+		</f:case>
+		<f:case value="masonry-cards">
+			<div class="{f:render(section:'CardGroupClasses', arguments:'{card_group:card_group, flexform_card_group: flexform_card_group, data: data}') -> cc:format.classes()}">
+				<f:for each="{cardGroupContent}" as="child" iteration="iterator">
+					<div class="{f:render( partial: 'CardGroupMasonryCardsColumnClasses', arguments: {flexform_card_group: flexform_card_group, data: data} ) -> cc:format.classes()}">
+						<f:render section="CardGroupItem" arguments="{_all}" />
+					</div>
+				</f:for>
+			</div>
+			<f:render partial="CardGroupAssets" arguments="{flexform_card_group: flexform_card_group}" />
+		</f:case>
+		<f:case value="card-carousel">
+			<div class="{f:render(section:'CardGroupClasses', arguments:'{card_group:card_group, flexform_card_group: flexform_card_group, data: data}') -> cc:format.classes()}">
+				<div class="swiper-wrapper">
+					<f:for each="{cardGroupContent}" as="child" iteration="iterator">
+						<div class="swiper-slide {flexform_card_group.cardLayout}-item">
+							<f:render section="CardGroupItem" arguments="{_all}" />
+						</div>
+					</f:for>
+				</div>
+				<div class="swiper-pagination{f:if(condition:'{flexform_card_group.carousel_pagination}', then:' d-block', else:' d-none')}"></div>
+				<f:if condition="{flexform_card_group.carousel_navigation}">
+					<div class="swiper-button-next"></div>
+					<div class="swiper-button-prev"></div>
+				</f:if>
+			</div>
+			<f:render partial="CardGroupAssets" arguments="{flexform_card_group: flexform_card_group, data: data}" />
+		</f:case>
+		<f:case value="image-gallery-carousel">
+			<div class="{f:render(section:'CardGroupClasses', arguments:'{card_group:card_group, flexform_card_group: flexform_card_group, data: data}') -> cc:format.classes()}">
+				<div class="swiper-wrapper">
+					<f:for each="{cardGroupContent}" as="child" iteration="iterator">
+						<f:render section="ImageGalleryCarouselItem" arguments="{_all}" />
+					</f:for>
+				</div>
+				<div class="swiper-pagination{f:if(condition:'{flexform_card_group.carousel_pagination}', then:' d-block', else:' d-none')}"></div>
+				<f:if condition="{flexform_card_group.carousel_navigation}">
+					<div class="swiper-button-next"></div>
+					<div class="swiper-button-prev"></div>
+				</f:if>
+			</div>
+			<f:render partial="CardGroupAssets" arguments="{flexform_card_group: flexform_card_group, data: data}" />
+		</f:case>
+		<f:defaultCase>
+			<div class="{f:render(section:'CardGroupClasses', arguments:'{card_group:card_group, flexform_card_group: flexform_card_group, data: data}') -> cc:format.classes()}">
+				<f:for each="{cardGroupContent}" as="child" iteration="iterator">
+					<f:variable name="columnsCountXs">{iterator.total}</f:variable>
+					<f:variable name="columnsCountSm">{iterator.total}</f:variable>
+					<f:variable name="columnsCountMd">{iterator.total}</f:variable>
+					<f:variable name="columnsCountLg">{iterator.total}</f:variable>
+					<f:variable name="columnsCountXl">{iterator.total}</f:variable>
+					<f:variable name="columnsCountXxl">{iterator.total}</f:variable>
+					<f:render section="CardGroupItem" arguments="{_all}" />
+				</f:for>
+			</div>
+		</f:defaultCase>
+	</f:switch>
+</f:section>
+
+<f:section name="ImageGalleryCarouselItem">
+	<f:if condition="{child.images}">
+		<f:for each="{child.gallery.rows}" as="row">
+			<f:for each="{row.columns}" as="column">
+				<f:render partial="CardImage" arguments="{
+					file: column.media, 
+					position: child.gallery.position.vertical,
+					cardLayout: flexform_card_group.cardLayout,
+					flexibleWidth: flexform_card_group.flexible_width,
+					columnsCountXs: columnsCountXs,
+					columnsCountSm: columnsCountSm,
+					columnsCountMd: columnsCountMd,
+					columnsCountLg: columnsCountLg,
+					columnsCountXl: columnsCountXl,
+					columnsCountXxl: columnsCountXxl}" />
+			</f:for>
+		</f:for>
+    </f:if>
+</f:section>
+
+<f:section name="CardGroupItem">
+    <f:if condition="{child.data.bodytext} || {child.data.header} || {child.images}">
+        <div class="card{f:if(condition: '{flexform_card_group.cardLayout}==grid-cards && {flexform_card_group.equalheight}', then:' h-100')}{f:if(condition: child.data.header_link, then:' card-link')}{f:if(condition: flexform_card_group.backgroundcolor, then:' {flexform_card_group.backgroundcolor}')}{f:if(condition: child.data.layout, then:' card--layout-{child.data.layout}')}">
+			<f:if condition="{child.gallery.position.vertical} != 'below'">
+				<f:for each="{child.gallery.rows}" as="row">
+					<f:for each="{row.columns}" as="column">
+						<f:render partial="CardImage" arguments="{
+							file: column.media, 
+							position: child.gallery.position.vertical,
+							cardLayout: flexform_card_group.cardLayout,
+							columnsCountXs: columnsCountXs,
+							columnsCountSm: columnsCountSm,
+							columnsCountMd: columnsCountMd,
+							columnsCountLg: columnsCountLg,
+							columnsCountXl: columnsCountXl,
+							columnsCountXxl: columnsCountXxl,
+							imageCircle: child.data.imagecircle}" />
+                    </f:for>
+                </f:for>
+            </f:if>
+			<f:render section="CardBody" arguments="{_all}" />
+            <f:if condition="{child.gallery.position.vertical} == 'below'">
+                <f:for each="{child.gallery.rows}" as="row">
+                    <f:for each="{row.columns}" as="column">
+                        <f:render partial="CardImage" arguments="{
+							file: column.media, 
+							position: child.gallery.position.vertical,
+							cardLayout: flexform_card_group.cardLayout,
+							columnsCountXs: columnsCountXs,
+							columnsCountSm: columnsCountSm,
+							columnsCountMd: columnsCountMd,
+							columnsCountLg: columnsCountLg,
+							columnsCountXl: columnsCountXl,
+							columnsCountXxl: columnsCountXxl,
+							imageCircle: child.data.imagecircle}" />
+                    </f:for>
+                </f:for>
+            </f:if>
+        </div>
+    </f:if>
+</f:section>
+
+<f:section name="CardBody">
+	<div class="card-body">
+		<f:switch expression="{child.data.header_layout}">
+			<f:case value="100">
+				<f:comment> -- do not show header -- </f:comment>
+			</f:case>
+			<f:case value="110">
+				<header class="visually-hidden">
+					<f:render section="MyHeader" arguments="{_all}" />
+				</header>
+			</f:case>
+			<f:defaultCase>
+				<header class="header{f:if(condition: '{child.data.bodytext}', then: '', else: ' header-only')}">
+					<f:render section="MyHeader" arguments="{_all}" />
+				</header>
+			</f:defaultCase>
+		</f:switch>
+		<f:format.html>{child.data.bodytext}</f:format.html>
+	</div>
+</f:section>
+
+<f:section name="CardGroupClasses">
+	<f:switch expression="{flexform_card_group.cardLayout}">
+		<f:case value="card-group">
+            card-group
+        </f:case>
+		<f:case value="grid-cards">
+            grid-cards {alignItems} row {f:render( partial: 'CardGroupGridCardsColumnClasses', arguments: {flexform_card_group: flexform_card_group, data: data} ) -> cc:format.classes()}
+            {f:if(condition: '{flexform_card_group.no-gutters} != 1', then: '{settings.gutterClasses}', else: 'g-0')}
+			{f:if(condition: '{flexform_card_group.layout}', then: 'cardgroup--layout-{flexform_card_group.layout}')}
+        </f:case>
+		<f:case value="masonry-cards">
+            masonry-cards row
+            {f:if(condition: '{flexform_card_group.no-gutters} != 1', then: '{settings.gutterClasses}', else: 'g-0')}
+        </f:case>
+        <f:case value="card-carousel">
+            {flexform_card_group.cardLayout} carousel swiper swiper-container swiper-container-{data.uid}
+            <f:if condition="{flexform_card_group.equalheight}">equal-height</f:if>
+            <f:if condition="{flexform_card_group.carousel_autoplay}">carousel-autoplay</f:if>
+            <f:if condition="{flexform_card_group.carousel_movement}=='fade'">carousel-fade</f:if>
+            <f:if condition="{flexform_card_group.carousel_loop}">carousel-loop</f:if>
+            <f:if condition="{flexform_card_group.carousel_centered}">carousel-centered</f:if>
+			<f:if condition="{flexform_card_group.no-gutters}">carousel-spacebetween-0</f:if>
+        </f:case>
+        <f:case value="image-gallery-carousel">
+            {flexform_card_group.cardLayout} carousel swiper swiper-container swiper-container-{data.uid}
+            <f:if condition="{flexform_card_group.equalheight}">equal-height</f:if>
+            <f:if condition="{flexform_card_group.carousel_autoplay}">carousel-autoplay</f:if>
+            <f:if condition="{flexform_card_group.carousel_movement}=='fade'">carousel-fade</f:if>
+            <f:if condition="{flexform_card_group.carousel_loop}">carousel-loop</f:if>
+            <f:if condition="{flexform_card_group.carousel_centered}">carousel-centered</f:if>
+			<f:if condition="{flexform_card_group.flexible_width}">carousel-slidesperview-auto</f:if>
+			<f:if condition="{flexform_card_group.no-gutters}">carousel-spacebetween-0</f:if>
+        </f:case>
+		<f:defaultCase>
+			card-group
+		</f:defaultCase>
+    </f:switch>
+</f:section>
+
+<f:section name="MyHeader">
+	<f:if condition="{child.categories}">
+		<f:if condition="{child.categories -> f:count()} > 1">
+			<f:then>
+				<div class="{f:if(condition: child.data.header_position, then: 'ce-headline-{child.data.header_position}', else: 'ce-headline-left')}">
+					<f:for each="{child.categories}" as="category">
+						<span class="category-title-devider">{category.data.title}</span>
+					</f:for>
+				</div>
+			</f:then>
+			<f:else>
+				<p class="{f:if(condition: child.data.header_position, then: 'ce-headline-{child.data.header_position}', else: 'ce-headline-left')}">
+					<f:for each="{child.categories}" as="category">
+						<span class="category-title">{category.data.title}</span>
+					</f:for>
+				</p>
+			</f:else>
+		</f:if>
+	</f:if>
+	<f:render partial="Header/Header" arguments="{
+		header: child.data.header,
+		subheader: child.data.subheader,
+		layout: child.data.header_layout,
+		style: child.data.header_style,
+		positionClass: '{f:if(condition: child.data.header_position, then: \'ce-headline-{child.data.header_position}\')}',
+		link: child.data.header_link,
+		default: settings.defaultHeaderType}" />
+	<f:render partial="Header/Date" arguments="{
+		date: child.data.date,
+		positionClass: '{f:if(condition: child.data.header_position, then: \'ce-headline-{child.data.header_position}\')}'}" />
+</f:section>
+
+</html>
