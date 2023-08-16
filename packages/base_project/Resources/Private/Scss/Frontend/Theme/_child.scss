@@ -62,6 +62,48 @@
 // _extended-section.scss
 // _theme.scss
 
+h1, .h1, .frame[class*='frame-type-cols'] > header > h1 {
+    @include media-breakpoint-up(md) {
+        font-size: 2.375rem;
+        margin-bottom: 0.7em;
+    }
+    @include media-breakpoint-up(xl) {
+        font-size: 2.375rem;
+        margin-bottom: 0.583333333333333em;
+    }
+}
+h2, .h2, .frame[class*='frame-type-cols'] > header > h2 {
+    margin-bottom: 0.666666666666667em;
+    @include media-breakpoint-up(md) {
+        font-size: 2rem;
+        margin-bottom: 0.666666666666667em;
+    }
+    @include media-breakpoint-up(xl) {
+        font-size: 2rem;
+        margin-bottom: 0.666666666666667em;
+    }
+}
+h3, .h3, .frame[class*='frame-type-cols'] > header > h3 {
+    margin-bottom: 0.666666666666667em;
+    @include media-breakpoint-up(md) {
+        font-size: 1.75rem;
+        margin-bottom: 0.714285714285714em;
+    }
+    @include media-breakpoint-up(xl) {
+        font-size: 1.75rem;
+        margin-bottom: 0.705882352941176em;
+    }
+}
+h4, .h4, .frame[class*='frame-type-cols'] > header > h4 {
+    @include media-breakpoint-up(md) {
+		font-size: 1.5rem;
+	}
+    @include media-breakpoint-up(xl) {
+        font-size: 1.5rem;
+        margin-bottom: 1em;
+    }
+}
+
 .lead {
     @include media-breakpoint-up(md) {
         font-size: 1.25rem;
