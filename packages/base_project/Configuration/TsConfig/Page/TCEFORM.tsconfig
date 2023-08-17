@@ -19,5 +19,12 @@ TCEFORM {
                 }
             }
         }
+        pi_flexform {
+            extendedSection {
+                appearance.backgroundcolor {
+                    removeItems = tc-1,tc-2
+                }
+            }
+        }
     }
 }

@@ -545,7 +545,9 @@ footer#footer {
         }
     }
 }
-.page-jumbotron {
-    background-color: $primary;
+.page-jumbotron, .card-jumbotron.has-content.tc-0 {
     --bs-heading-color: #{$white};
+    --bs-card-color: #{$white};
+    background-color: $primary;
+    color: var(--bs-card-color);
 }
