@@ -25,6 +25,14 @@ TCEFORM {
                     removeItems = tc-1,tc-2
                 }
             }
+            section {
+                appearance.backgroundcolor {
+                    addItems {
+                        tc-3 = LLL:EXT:base_project/Resources/Private/Language/locallang.xlf:appearance.backgroundcolor.addItems.tc-3
+                        tc-4 = LLL:EXT:base_project/Resources/Private/Language/locallang.xlf:appearance.backgroundcolor.addItems.tc-4
+                    }
+                }
+            }
         }
     }
 }

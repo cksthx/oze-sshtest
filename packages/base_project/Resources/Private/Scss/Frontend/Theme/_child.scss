@@ -18,6 +18,20 @@
 }
 
 // _variables.scss
+// _globals.scss
+
+.has-image:not(.card-jumbotron):not(.section-50-50) {
+    * { color: $white; }
+    &.overlay-c1 {
+        --bs-heading-color: #{$primary};
+        *:not(.btn) { color: inherit; }
+        h1,h2,h3,h4 {
+            color: var(--bs-heading-color) !important;
+        }
+    }
+}
+
+// _globals.scss
 // _section.scss
 
 .section {
@@ -439,6 +453,24 @@ span {
             position: absolute;
             top: 3px;
             left: 0;
+        }
+    }
+}
+
+.tc-3 {
+    background: $background-gradient;
+}
+
+.tc-4 {
+    --bs-heading-color: #{$white};
+    color: $white;
+    background-color: $primary;
+    p>a {
+        --bs-link-color-rgb: #{$white};
+        --bs-link-hover-color-rgb: #{$primary-lightest};
+        color: var(--bs-link-color-rgb);
+        &:hover {
+            --#{$prefix}link-color-rgb: var(--#{$prefix}link-hover-color-rgb);
         }
     }
 }
