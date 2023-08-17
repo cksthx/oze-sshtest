@@ -14,14 +14,12 @@ $default = [
     ],
     'selectedRatio' => '1:1',
     'cropArea' => [
-        'x' => 0.0,
-        'y' => 0.0,
-        'width' => 1.5,
+        'x' => 0,
+        'y' => 0,
+        'width' => 1,
         'height' => 1,
     ],
 ];
-$medium = $default;
-$medium['title'] = 'Image (Tablet M)';
 $desktop = $default;
 $desktop = [
     'title' => 'LLL:EXT:base_contentelements/Resources/Private/Language/tca.xlf:tt_content.cropping.l',
@@ -31,51 +29,7 @@ $desktop = [
             'value' => 3 / 1
         ],
     ],
-    'selectedRatio' => '1:1',
-    'cropArea' => [
-        'x' => 0.0,
-        'y' => 0.0,
-        'width' => 3,
-        'height' => 1,
-    ],
-];
-
-// Hero croppings
-
-$heroDefault = [
-    'title' => 'Hero image (Phones, Tablets)',
-    'allowedAspectRatios' => [
-        '9:16' => [
-            'title' => '9:16',
-            'value' => 9 / 16
-        ],
-        'NaN' => [
-            'title' => 'LLL:EXT:base_contentelements/Resources/Private/Language/tca.xlf:tt_content.cropping.ratio.free',
-            'value' => 0.0
-        ],
-    ],
-    'selectedRatio' => 'NaN',
-    'cropArea' => [
-        'x' => 0,
-        'y' => 0,
-        'width' => 1,
-        'height' => 1,
-    ],
-];
-
-$heroDesktop = [
-    'title' => 'Hero image (Desktops)',
-    'allowedAspectRatios' => [
-        '16:9' => [
-            'title' => '16:9',
-            'value' => 16 / 9
-        ],
-        'NaN' => [
-            'title' => 'LLL:EXT:base_contentelements/Resources/Private/Language/tca.xlf:tt_content.cropping.ratio.free',
-            'value' => 0.0
-        ],
-    ],
-    'selectedRatio' => 'NaN',
+    'selectedRatio' => '3:1',
     'cropArea' => [
         'x' => 0,
         'y' => 0,
@@ -86,10 +40,7 @@ $heroDesktop = [
 
 $GLOBALS['TCA']['tt_content']['types']['extendedSectionImage']['columnsOverrides']['assets']['config']['overrideChildTca']['columns']['crop']['config']['cropVariants'] = array(
     'default' => $default,
-    'medium' => $medium,
     'desktop' => $desktop,
-    'herodefault' => $heroDefault,
-    'herodesktop' => $heroDesktop,
 );
 
 $GLOBALS['TCA']['tt_content']['types']['extendedSectionImage']['columnsOverrides']['assets']['config']['overrideChildTca']['columns']['crop']['config']['cropVariants']['medium']['disabled'] = true;
