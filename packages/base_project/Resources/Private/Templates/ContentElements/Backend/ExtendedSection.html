@@ -1,0 +1,47 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+{f:variable(name: '_backgroundcolor', value: pi_flexform_transformed.backgroundcolor)}
+{f:variable(name: '_content_width', value: pi_flexform_transformed.content_width)}
+{f:variable(name: '_color', value: pi_flexform_transformed.color)}
+{f:variable(name: '_gradient', value: pi_flexform_transformed.gradient)}
+{f:variable(name: '_layout', value: pi_flexform_transformed.layout)}
+<f:if condition="{_backgroundcolor} || {_color} || {_gradient}">
+    <f:variable name="backgroundcolorName"><f:switch expression="{_backgroundcolor}">
+        <f:case value="tc-1"><f:translate key="LLL:EXT:base_contentelements/Resources/Private/Language/extended_section.xlf:primary"/></f:case>
+        <f:case value="tc-2"><f:translate key="LLL:EXT:base_contentelements/Resources/Private/Language/extended_section.xlf:secondary"/></f:case>
+        <f:defaultCase>{_backgroundcolor}</f:defaultCase>
+    </f:switch></f:variable>
+    <f:variable name="content_widthName"><f:switch expression="{_content_width}">
+        <f:case value="1"><f:translate key="LLL:EXT:base_contentelements/Resources/Private/Language/extended_section.xlf:backendlayout.extendedSection.content_width.1"/></f:case>
+        <f:case value="2"><f:translate key="LLL:EXT:base_contentelements/Resources/Private/Language/extended_section.xlf:backendlayout.extendedSection.content_width.2"/></f:case>
+        <f:defaultCase>{_content_width}</f:defaultCase>
+    </f:switch></f:variable>
+    <f:variable name="colorName"><f:switch expression="{_color}">
+        <f:case value="overlay-c1"><f:translate key="LLL:EXT:base_contentelements/Resources/Private/Language/extended_section.xlf:backendlayout.module.color.c1"/></f:case>
+        <f:case value="overlay-c2"><f:translate key="LLL:EXT:base_contentelements/Resources/Private/Language/extended_section.xlf:backendlayout.module.color.c2"/></f:case>
+        <f:defaultCase>{_color}</f:defaultCase>
+    </f:switch></f:variable>
+    <f:variable name="gradientName"><f:switch expression="{_gradient}">
+        <f:case value="overlay-dark"><f:translate key="LLL:EXT:base_contentelements/Resources/Private/Language/extended_section.xlf:backendlayout.module.gradient.dark"/></f:case>
+        <f:case value="overlay-light"><f:translate key="LLL:EXT:base_contentelements/Resources/Private/Language/extended_section.xlf:backendlayout.module.gradient.light"/></f:case>
+        <f:defaultCase>{_gradient}</f:defaultCase>
+    </f:switch></f:variable>
+    <f:variable name="layoutName"><f:switch expression="{_layout}">
+        <f:case value="1"><f:translate key="LLL:EXT:base_project/Resources/Private/Language/locallang.xlf:backendlayout.section.layout.1"/></f:case>
+        <f:case value="2"><f:translate key="LLL:EXT:base_contentelements/Resources/Private/Language/extended_section.xlf:backendlayout.section.layout.2"/></f:case>
+        <f:case value="3"><f:translate key="LLL:EXT:base_contentelements/Resources/Private/Language/extended_section.xlf:backendlayout.section.layout.3"/></f:case>
+        <f:defaultCase>{_layout}</f:defaultCase>
+    </f:switch></f:variable>
+    <div class="tx-containerelements-preview">
+        <div class="t3-page-ce-footer">
+            <p>
+                <f:if condition="{_content_width}"><span class="badge text-bg-light"><f:translate key="LLL:EXT:base_contentelements/Resources/Private/Language/extended_section.xlf:backendlayout.extendedSection.content_width"/>: {content_widthName}</span></f:if>
+                <f:if condition="{_backgroundcolor} != 'tc-0'"><span class="badge text-bg-light"><f:translate key="LLL:EXT:base_contentelements/Resources/Private/Language/extended_section.xlf:backendlayout.section.backgroundcolor"/>: {backgroundcolorName}</span></f:if>
+                <f:if condition="{_color}"><span class="badge text-bg-light"><f:translate key="LLL:EXT:base_contentelements/Resources/Private/Language/extended_section.xlf:backendlayout.module.color.label"/> {colorName}</span></f:if>
+                <f:if condition="{_gradient}"><span class="badge text-bg-light"><f:translate key="LLL:EXT:base_contentelements/Resources/Private/Language/extended_section.xlf:backendlayout.module.gradient.label"/> {gradientName}</span></f:if>
+                <f:if condition="{_layout}"><span class="badge text-bg-warning">{layoutName}</span></f:if>
+            </p>
+        </div>
+    </div>
+</f:if>
+<f:format.raw>{tx_container_grid}</f:format.raw>
+</html>

@@ -17,3 +17,5 @@ call_user_func(function()
         'Base Project'
     );
 });
+
+$GLOBALS['TCA']['tt_content']['containerConfiguration']['extendedSection']['backendTemplate'] = 'EXT:base_project/Resources/Private/Templates/ContentElements/Backend/ExtendedSection.html';

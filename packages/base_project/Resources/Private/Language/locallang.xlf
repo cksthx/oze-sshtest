@@ -15,6 +15,9 @@
             <trans-unit id="appearance.backgroundcolor.addItems.tc-4">
                 <source>Blue</source>
             </trans-unit>
+            <trans-unit id="backendlayout.section.layout.1">
+                <source>OZE-Logo</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>

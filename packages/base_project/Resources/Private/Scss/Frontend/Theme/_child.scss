@@ -491,6 +491,30 @@ span {
     }
 }
 
+// Add Logo in extended section
+.extended-section-layout-1 {
+    @include media-breakpoint-up(lg) {
+        position: relative;
+        &:before {
+            content: url("data:image/svg+xml,%3Csvg width='167' height='166' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='M23.862 46C8.595 46 0 62.053 0 84.887 0 107.835 7.577 124 22.73 124c13.458 0 23.523-11.304 23.523-40.018C46.253 63.522 39.92 46 23.862 46zm-.566 10.513c8.143 0 10.404 14.244 10.404 28.035 0 15.26-2.488 28.939-10.291 28.939-7.69 0-10.856-11.87-10.856-28.487 0-15.94 3.166-28.487 10.743-28.487zm27.82 66.583h38.45v-10.514H65.476v-.339L89.68 55.608v-8.704H53.264v10.513h22.844v.226l-24.993 58.331v7.122zM164.51 78.33h-18.093V57.417h19.224V46.904h-31.325v76.192H167v-10.514h-20.582v-24.19h18.093V78.33z' fill='%23FEFEFE'/%3E%3Cpath d='M111.5 63c5.247 0 9.5-4.03 9.5-9s-4.253-9-9.5-9-9.5 4.03-9.5 9 4.253 9 9.5 9M111.5 121c5.247 0 9.5-4.03 9.5-9s-4.253-9-9.5-9-9.5 4.03-9.5 9 4.253 9 9.5 9' fill='%233EA3DC'/%3E%3Cpath d='M111.5 147a8.5 8.5 0 100-17 8.5 8.5 0 000 17' fill='%2386C2EB'/%3E%3Cpath d='M111.5 11a5.5 5.5 0 100-11 5.5 5.5 0 000 11M111.5 166c3.038 0 5.5-2.461 5.5-5.5a5.5 5.5 0 10-11 0 5.5 5.5 0 005.5 5.5' fill='%23BCE4FA'/%3E%3Cpath d='M111.5 36a8.5 8.5 0 100-17 8.5 8.5 0 000 17' fill='%2386C2EB'/%3E%3Cpath d='M112 94c6.075 0 11-4.925 11-11s-4.925-11-11-11-11 4.925-11 11 4.925 11 11 11' fill='%230073A5'/%3E%3C/g%3E%3C/svg%3E");
+            position: absolute;
+            bottom: -48px;
+            right: calc((100vw - #{map-get($container-max-widths, "lg")}) / 2 + #{$grid-gutter-width} / 2);
+            z-index: 1;
+        }
+    }
+    @include media-breakpoint-up(xl) {
+        &:before {
+            right: calc((100vw - #{map-get($container-max-widths, "xl")}) / 2 + #{$grid-gutter-width} / 2);
+        }
+    }
+    @include media-breakpoint-up(xxl) {
+        &:before {
+            right: calc((100vw - #{map-get($container-max-widths, "xxl")}) / 2 + #{$grid-gutter-width} / 2);
+        }
+    }
+}
+
 footer#footer {
     a { text-decoration: none; }
     p { font-size: 1rem; }

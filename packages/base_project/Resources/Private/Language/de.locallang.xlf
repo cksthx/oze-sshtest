@@ -18,6 +18,10 @@
                 <source>Blue</source>
                 <target>Blau</target>
             </trans-unit>
+            <trans-unit id="backendlayout.section.layout.1">
+                <source>OZE-Logo</source>
+                <target>OZE-Logo</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

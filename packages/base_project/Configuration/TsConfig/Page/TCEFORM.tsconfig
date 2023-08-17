@@ -24,6 +24,11 @@ TCEFORM {
                 appearance.backgroundcolor {
                     removeItems = tc-1,tc-2
                 }
+                appearance.layout {
+                    altLabels {
+                        1 = LLL:EXT:base_project/Resources/Private/Language/locallang.xlf:backendlayout.section.layout.1
+                    }
+                }
             }
             section {
                 appearance.backgroundcolor {
