@@ -48,6 +48,11 @@
     }
 }
 
+#maincontent .section.has-image.background-image-parallax:not(.has-content) {
+    height:auto;
+    padding-top: 33.33%;
+}
+
 // _section.scss
 // _extended-section.scss
 
@@ -623,3 +628,14 @@ footer#footer {
     background-color: $primary;
     color: var(--bs-card-color);
 }
+// Fix - Bug - begin
+#maincontent .section.has-image {
+    &.background-image-parallax, &.bgimg-fixed {
+        height:auto;
+        min-height:460px;
+        @include media-breakpoint-up(lg) {
+            min-height:500px;
+        }
+    }
+}
+// Fix - Bug - end
