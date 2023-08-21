@@ -1,0 +1,72 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+    <f:if condition="{data.space_before_class}">
+        <f:variable name="spaceBeforeClass"><f:switch expression="{data.space_before_class}">
+                <f:case value="extra-small">{settings.spaceClassExtraSmall}</f:case>
+                <f:case value="small">{settings.spaceClassSmall}</f:case>
+                <f:case value="medium">{settings.spaceClassMedium}</f:case>
+                <f:case value="large">{settings.spaceClassLarge}</f:case>
+                <f:case value="extra-large">{settings.spaceClassExtraLarge}</f:case>
+                <f:case value="grid-gutter-width">{settings.spaceClassGridGutterWidth}</f:case>
+                <f:case value="none">mt-0</f:case>
+                <f:defaultCase></f:defaultCase>
+        </f:switch></f:variable>
+    </f:if>
+    <f:if condition="{data.space_after_class}">
+        <f:variable name="spaceAfterClass"><f:switch expression="{data.space_after_class}">
+                <f:case value="extra-small">{settings.spaceClassExtraSmallAfter}</f:case>
+                <f:case value="small">{settings.spaceClassSmallAfter}</f:case>
+                <f:case value="medium">{settings.spaceClassMediumAfter}</f:case>
+                <f:case value="large">{settings.spaceClassLargeAfter}</f:case>
+                <f:case value="extra-large">{settings.spaceClassExtraLargeAfter}</f:case>
+                <f:case value="grid-gutter-width">{settings.spaceClassGridGutterWidthAfter}</f:case>
+                <f:case value="none">mb-0</f:case>
+                <f:defaultCase></f:defaultCase>
+        </f:switch></f:variable>
+    </f:if>
+    <f:if condition="{data.frame_class} != none">
+        <f:then>
+
+            <div id="c{data.uid}" class="frame frame-{data.frame_class} frame-type-{data.CType} frame-layout-{data.layout}{f:if(condition: spaceBeforeClass, then:' {spaceBeforeClass}')}{f:if(condition: spaceAfterClass, then: ' {spaceAfterClass}')}">
+                <f:if condition="{data._LOCALIZED_UID}">
+                    <a id="c{data._LOCALIZED_UID}"></a>
+                </f:if>
+                <f:render section="Before" optional="true">
+                    <f:render partial="DropIn/Before/All" arguments="{_all}" />
+                </f:render>
+                <f:render section="Main" optional="true" />
+                <f:render section="Footer" optional="true">
+                    <f:render partial="Footer/All" arguments="{_all}" />
+                </f:render>
+                <f:render section="After" optional="true">
+                    <f:render partial="DropIn/After/All" arguments="{_all}" />
+                </f:render>
+            </div>
+
+        </f:then>
+        <f:else>
+
+            <a id="c{data.uid}"></a>
+            <f:if condition="{data._LOCALIZED_UID}">
+                <a id="c{data._LOCALIZED_UID}"></a>
+            </f:if>
+            <f:if condition="{data.space_before_class}">
+                <div class="frame-space-before-{data.space_before_class}"></div>
+            </f:if>
+            <f:render section="Before" optional="true">
+                <f:render partial="DropIn/Before/All" arguments="{_all}" />
+            </f:render>
+            <f:render section="Main" optional="true" />
+            <f:render section="Footer" optional="true">
+                <f:render partial="Footer/All" arguments="{_all}" />
+            </f:render>
+            <f:render section="After" optional="true">
+                <f:render partial="DropIn/After/All" arguments="{_all}" />
+            </f:render>
+            <f:if condition="{data.space_after_class}">
+                <div class="frame-space-after-{data.space_after_class}"></div>
+            </f:if>
+
+        </f:else>
+    </f:if>
+
+</html>

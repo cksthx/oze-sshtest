@@ -1,0 +1,56 @@
+# NewContentElementWizard
+# =======================
+mod.wizards.newContentElement.wizardItems.common {
+    elements {
+        imageActionTeaser {
+            iconIdentifier = actions-image
+            title = LLL:EXT:base_project/Resources/Private/Language/locallang.xlf:imageActionTeaser.name
+            description = LLL:EXT:base_contentelements/Resources/Private/Language/blockquote.xlf:blockquote.description
+            tt_content_defValues {
+                CType = imageActionTeaser
+                imageorient = 10
+            }
+        }
+    }
+    show := addToList(imageActionTeaser)
+}
+
+# PREVIEW
+# =======
+// mod.web_layout.tt_content {
+//     preview {
+//         blockquote = EXT:base_contentelements/Resources/Private/Templates/Preview/AdvancedBlockquote.html
+//     }
+// }
+
+RTE.config.tt_content.bodytext.types.imageActionTeaser.preset = minimal
+
+# TCEFORM
+# =======
+TCEFORM {
+    tt_content {
+        # Standard-Frames: default,ruler-before,ruler-after,indent,indent-left,indent-right,none
+        frame_class.types.imageActionTeaser {
+            removeItems = ruler-before,ruler-after,indent,indent-left,indent-right,none,no-gutters
+        }
+        // header.types.blockquote.label = LLL:EXT:base_contentelements/Resources/Private/Language/blockquote.xlf:blockquote.header
+        // header_layout.types.blockquote {
+        //     label = LLL:EXT:base_contentelements/Resources/Private/Language/blockquote.xlf:blockquote.header_layout.label
+        //     removeItems = 1,2,3,4,5
+        //     altLabels {
+        //         0 = LLL:EXT:base_contentelements/Resources/Private/Language/blockquote.xlf:blockquote.header_layout.altLabel.0
+        //         100 = LLL:EXT:base_contentelements/Resources/Private/Language/blockquote.xlf:blockquote.header_layout.altLabel.100
+        //     }
+        // }
+        subheader.types.imageActionTeaser.label = LLL:EXT:base_project/Resources/Private/Language/locallang.xlf:imageActionTeaser.subheader.label
+        // header_link.types.blockquote.label = LLL:EXT:base_contentelements/Resources/Private/Language/blockquote.xlf:blockquote.header_link.label
+        // bodytext.types.blockquote.label = LLL:EXT:base_contentelements/Resources/Private/Language/blockquote.xlf:blockquote.bodytext.label
+        // date.types.blockquote.disabled = 1
+        imageorient.types.imageActionTeaser {
+            removeItems = 0,1,2,8,9,17,18,25,26
+        }
+        imagecols.types.imageActionTeaser {
+            disabled = 1
+        }
+    }
+}

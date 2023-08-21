@@ -1,0 +1,54 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:layout name="ImageActionTeaserDefault" />
+<f:section name="Main">
+    <f:variable name="small">{settings.imageSizeSmall}</f:variable>
+    <f:variable name="medium">{settings.imageSizeMedium}</f:variable>
+    <f:variable name="large">{settings.imageSizeLarge}</f:variable>
+    
+    <f:if condition="{files}">
+        <f:then>
+            <div class="card">
+                <f:for each="{files}" as="file">
+                    <f:render section="CardImage" arguments="{_all}"/>
+                </f:for>
+                <f:if condition="{data.header} || {data.bodytext}">
+                    <div class="card-img-overlay">
+                        <div class="bodytext tc-4">
+                            <f:render section="CardBody" arguments="{_all}"/>
+                        </div>
+                    </div>
+                </f:if>
+            </div>
+        </f:then>
+        <f:else>
+            <div class="card">
+                <div class="card-body tc-4">
+                    <f:render section="CardBody" arguments="{_all}"/>
+                </div>
+            </div>
+        </f:else>
+    </f:if>
+</f:section>
+
+<f:section name="CardBody">
+    <f:render partial="Header/Header" arguments="{
+        header: data.header,
+        layout: data.header_layout,
+        style: data.header_style,
+        default: settings.defaultHeaderType}" />
+    <f:format.html>{data.bodytext}</f:format.html>
+    <f:if condition="{data.header_link} && {data.subheader}">
+        <p><f:link.typolink parameter="{data.header_link}" title="{data.header}" class="btn btn-read-more">{data.subheader}</f:link.typolink></p>
+    </f:if>
+</f:section>
+
+<f:section name="CardImage">
+    <picture class="picture-match">
+        <source srcset="{f:uri.image(image: file, width: '{medium * 1.5}', cropVariant: 'default')}" media="(min-width: {settings.mediaQueryMediumMin}px) AND (max-width: {settings.mediaQueryMediumMax}px)">
+		<source srcset="{f:uri.image(image: file, width: '{large * 1.5}', cropVariant: 'desktop')}" media="(min-width: {settings.mediaQueryLargeMin}px)">
+		<f:media class="img-fluid card-img-top" file="{file}" width="{small * 1.5}" alt="{file.alternative}" title="{file.title}" cropVariant="default" loading="{settings.media.lazyLoading}"/>
+    </picture>
+</f:section>
+
+</html>

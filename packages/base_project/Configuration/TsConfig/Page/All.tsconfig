@@ -23,6 +23,7 @@
 @import 'EXT:base_contentelements/Configuration/TsConfig/Page/ContentElement/Element/Blockquote.tsconfig'
 @import 'EXT:base_contentelements/Configuration/TsConfig/Page/ContentElement/Element/Card.tsconfig'
 @import 'EXT:base_contentelements/Configuration/TsConfig/Page/ContentElement/Element/NavPagesAndSubPages.tsconfig'
+@import 'EXT:base_project/Configuration/TsConfig/Page/ContentElement/ImageActionTeaser.tsconfig'
 
 # =======================
 # PageTS for Base Project

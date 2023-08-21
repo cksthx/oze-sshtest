@@ -22,6 +22,14 @@
                 <source>OZE-Logo</source>
                 <target>OZE-Logo</target>
             </trans-unit>
+            <trans-unit id="imageActionTeaser.name">
+                <source>OZE Image Action Teaser</source>
+                <target>OZE Image Action Teaser</target>
+            </trans-unit>
+            <trans-unit id="imageActionTeaser.subheader.label">
+                <source>Link Text</source>
+                <target>Link Text</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

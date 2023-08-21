@@ -42,3 +42,4 @@
 @import 'EXT:base_contentelements/Configuration/TypoScript/ContentElement/Element/Card.typoscript'
 @import 'EXT:base_contentelements/Configuration/TypoScript/ContentElement/Element/CardGroup.typoscript'
 @import 'EXT:base_contentelements/Configuration/TypoScript/ContentElement/Element/NavPagesAndSubPages.typoscript'
+@import 'EXT:base_project/Configuration/TypoScript/ContentElement/ImageActionTeaser.typoscript'

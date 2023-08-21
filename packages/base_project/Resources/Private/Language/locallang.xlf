@@ -18,6 +18,12 @@
             <trans-unit id="backendlayout.section.layout.1">
                 <source>OZE-Logo</source>
             </trans-unit>
+            <trans-unit id="imageActionTeaser.name">
+                <source>OZE Image Action Teaser</source>
+            </trans-unit>
+            <trans-unit id="imageActionTeaser.subheader.label">
+                <source>Link Text</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>
