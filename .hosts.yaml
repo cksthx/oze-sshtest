@@ -6,3 +6,12 @@ oze-essen.webseiten.cc:
   identityFile: ~
   http_user: ssh-869196-5058106
   deploy_path: /www/213585_70794/rp-hosting/5058106/6058106/typo3cms/oze_essen_2023
+
+oze-essen.de:
+  host: oze-essen.de
+  stage: production
+  branch: master
+  user: ssh-869196-5058106
+  identityFile: ~
+  http_user: ssh-869196-5058106
+  deploy_path: /www/213585_70794/rp-hosting/5058106/6058106/typo3cms/oze_essen_2023
