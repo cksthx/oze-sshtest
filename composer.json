@@ -10,17 +10,17 @@
         }
     },
     "repositories": [
-        {"type": "vcs", "url": "https://oppro.comkom.de/git/comkom-base-configuration.git"},
-        {"type": "vcs", "url": "https://oppro.comkom.de/git/comkom-base-contentelements.git"},
-        {"type": "vcs", "url": "https://oppro.comkom.de/git/typo3-start-smart.git"},
+        {"type": "git", "url": "git@github.com:made-by-comkom/startsmart-configuration.git"},
+        {"type": "git", "url": "git@github.com:made-by-comkom/startsmart-contentelements.git"},
+        {"type": "git", "url": "git@github.com:made-by-comkom/startsmart-project.git"},
         {"type": "path", "url": "./packages/base_project/"},
         {"type": "path", "url": "./packages/base_theme/"}
     ],
     "require": {
         "plan2net/webp": "*",
         "b13/container": "^2.0",
-        "comkom/base-configuration": "^3.2.0",
-        "comkom/base-contentelements": "^3.2.0",
+        "comkom/base-configuration": "^3.3.0",
+        "comkom/base-contentelements": "^3.3.0",
         "comkom/base-project": "@dev",
         "comkom/base-theme": "@dev",
         "hauerheinrich/hh-video-extender": "^0.1.71",
