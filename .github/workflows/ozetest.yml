@@ -21,6 +21,19 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v4
+    
+    - name: Setup SSH for StartSmart Configuration
+      run: |
+        mkdir -p ~/.ssh
+        echo "${{ secrets.STSM_CONFIGURATION_SECRET }}" > ~/.ssh/id_ed25519_stsm_config
+        chmod 600 ~/.ssh/id_ed25519_stsm_config
+        ssh-keyscan github.com >> ~/.ssh/known_hosts
+
+    - name: Setup SSH for StartSmart Contentelements
+      run: |
+        echo "${{ secrets.STSM_CONTENTELEMENTS_SECRET }}" > ~/.ssh/id_ed25519_stsm_contel
+        chmod 600 ~/.ssh/id_ed25519_stsm_contel
+        ssh-keyscan github.com >> ~/.ssh/known_hosts
 
     - name: Validate composer.json and composer.lock
       run: composer validate
