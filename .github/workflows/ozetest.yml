@@ -44,11 +44,7 @@ jobs:
     - name: SSH-Agent starten und Schlüssel hinzufügen
       uses: webfactory/ssh-agent@v0.9.0
       with:
-        ssh-private-key: | 
-          ${{ secrets.STSM_CONFIGURATION_SECRET }}
-          ${{ secrets.STSM_CONTENTELEMENTS_SECRET }}
+        ssh-private-key: ${{ secrets.STSM_CONFIGURATION_SECRET }}
                 
     - name: Install dependencies
       run: composer install --prefer-dist --no-progress --no-scripts
-
-#newtest
