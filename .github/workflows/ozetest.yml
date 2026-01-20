@@ -29,11 +29,9 @@ jobs:
         ini-values: memory_limit=-1
         extensions: mbstring, intl
     - name: init SSH-Agent and add keys
-      uses: shaunco/ssh-agent@v0.4.0
+      uses: webfactory/ssh-agent@v0.9.0
       with:
-        ssh-private-key: |
-          ${{ secrets.STSM_CONTENTELEMENTS_SECRET }}
-          ${{ secrets.STSM_CONFIGURATION_SECRET }}
+        ssh-private-key: ${{ secrets.ALL_DEPLOY_SECRET }}
 
     - name: Validate composer.json and composer.lock
       run: composer validate
@@ -48,4 +46,4 @@ jobs:
             ${{ runner.os }}-php-${{ matrix.php-versions }}-
                 
     - name: Install dependencies
-      run: composer install --prefer-dist --no-progress --no-scripts 
+      run: composer install --no-dev --no-ansi --no-interaction --no-scripts --prefer-dist
