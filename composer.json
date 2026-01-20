@@ -19,7 +19,6 @@
     "require": {
         "plan2net/webp": "*",
         "b13/container": "^2.0",
-        "comkom/base-configuration": "^3.3.0",
         "comkom/base-contentelements": "^3.3.0",
         "comkom/base-project": "@dev",
         "comkom/base-theme": "@dev",

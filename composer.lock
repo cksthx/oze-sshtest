@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ce1391ef1c592087dc0e46ef56ffbd42",
+    "content-hash": "5ed13f1abf7a5986375e89cf6a2e980b",
     "packages": [
         {
             "name": "b13/container",
@@ -181,38 +181,6 @@
                 "source": "https://github.com/ChristianRiesen/base32/tree/1.6.0"
             },
             "time": "2021-02-26T10:19:33+00:00"
-        },
-        {
-            "name": "comkom/base-configuration",
-            "version": "3.3.0",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:made-by-comkom/startsmart-configuration.git",
-                "reference": "d61ab79e353ae6777e64b18ac9aa7fccbd480acd"
-            },
-            "require": {
-                "typo3/cms-core": "^10.4 || ^11.5",
-                "typo3/cms-fluid-styled-content": "^10.4 || ^11.5",
-                "typo3/cms-rte-ckeditor": "^10.4 || ^11.5"
-            },
-            "type": "typo3-cms-extension",
-            "extra": {
-                "typo3/cms": {
-                    "extension-key": "base_configuration"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Comkom\\BaseConfiguration\\": "Classes/"
-                }
-            },
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "keywords": [
-                "TYPO3 CMS"
-            ],
-            "time": "2026-01-16T12:19:47+00:00"
         },
         {
             "name": "comkom/base-contentelements",
