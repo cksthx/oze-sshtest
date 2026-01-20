@@ -19,17 +19,23 @@ jobs:
         typo3-versions: [11.5]
 
     steps:
+    - name: init SSH-Agent and add keys
+      uses: webfactory/ssh-agent@v0.9.0
+      with:
+        ssh-private-key: ${{ secrets.STSM_CONFIGURATION_SECRET }}
+      
     - name: Checkout
       uses: actions/checkout@v4
-
-    - name: Validate composer.json and composer.lock
-      run: composer validate
 
     - name: Setup PHP
       uses: shivammathur/setup-php@v2
       with:
         php-version: ${{ matrix.php-versions }}
         ini-values: memory_limit=-1
+        extensions: mbstring, intl
+
+    - name: Validate composer.json and composer.lock
+      run: composer validate
 
     - name: Cache Composer packages
       id: composer-cache
@@ -39,12 +45,6 @@ jobs:
         key: ${{ runner.os }}-php-${{ matrix.php-versions }}-${{ hashFiles('**/composer.lock') }}
         restore-keys: |
             ${{ runner.os }}-php-${{ matrix.php-versions }}-
-
-
-    - name: SSH-Agent starten und Schlüssel hinzufügen
-      uses: webfactory/ssh-agent@v0.9.0
-      with:
-        ssh-private-key: ${{ secrets.STSM_CONFIGURATION_SECRET }}
                 
     - name: Install dependencies
       run: composer install --prefer-dist --no-progress --no-scripts
