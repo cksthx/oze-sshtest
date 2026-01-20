@@ -31,7 +31,9 @@ jobs:
     - name: init SSH-Agent and add keys
       uses: webfactory/ssh-agent@v0.9.0
       with:
-        ssh-private-key: ${{ secrets.STSM_CONFIGURATION_SECRET }}
+        ssh-private-key: |
+          ${{ secrets.STSM_CONFIGURATION_SECRET }}
+          ${{ secrets.STSM_CONTENTELEMENTS_SECRET }}
     - name: Validate composer.json and composer.lock
       run: composer validate
 
