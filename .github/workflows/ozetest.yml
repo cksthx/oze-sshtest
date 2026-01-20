@@ -39,6 +39,14 @@ jobs:
         key: ${{ runner.os }}-php-${{ matrix.php-versions }}-${{ hashFiles('**/composer.lock') }}
         restore-keys: |
             ${{ runner.os }}-php-${{ matrix.php-versions }}-
+
+
+    - name: SSH-Agent starten und Schlüssel hinzufügen
+      uses: webfactory/ssh-agent@v0.9.0
+      with:
+        ssh-private-key: | 
+          ${{ secrets.STSM_CONFIGURATION_SECRET }}
+          ${{ secrets.STSM_CONTENTELEMENTS_SECRET }}
                 
-    #- name: Install dependencies
-    #  run: composer install --prefer-dist --no-progress --no-scripts
+    - name: Install dependencies
+      run: composer install --prefer-dist --no-progress --no-scripts
