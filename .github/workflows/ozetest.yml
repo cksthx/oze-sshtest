@@ -19,11 +19,6 @@ jobs:
         typo3-versions: [11.5]
 
     steps:
-    - name: init SSH-Agent and add keys
-      uses: webfactory/ssh-agent@v0.9.0
-      with:
-        ssh-private-key: ${{ secrets.STSM_CONFIGURATION_SECRET }}
-      
     - name: Checkout
       uses: actions/checkout@v4
 
@@ -33,7 +28,10 @@ jobs:
         php-version: ${{ matrix.php-versions }}
         ini-values: memory_limit=-1
         extensions: mbstring, intl
-
+    - name: init SSH-Agent and add keys
+      uses: webfactory/ssh-agent@v0.9.0
+      with:
+        ssh-private-key: ${{ secrets.STSM_CONFIGURATION_SECRET }}
     - name: Validate composer.json and composer.lock
       run: composer validate
 
