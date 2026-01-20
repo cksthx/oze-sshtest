@@ -46,4 +46,4 @@ jobs:
             ${{ runner.os }}-php-${{ matrix.php-versions }}-
                 
     - name: Install dependencies
-      run: composer install --no-dev --no-ansi --no-interaction --no-scripts --prefer-dist
+      run: composer install --no-dev --no-ansi --no-interaction --no-scripts --prefer-dist 
