@@ -12,10 +12,62 @@ on:
                     - staging
                     - production
 
+permissions:
+  contents: read
+
 jobs:
-    print-tag:
+    test:
+        name: OZE Website Test
+        runs-on: ubuntu-latest
+        strategy:
+            matrix:
+                php-versions: [8.3]
+                typo3-versions: [11.5]
+
+        steps:
+        - name: Checkout
+          uses: actions/checkout@v4
+
+        - name: Setup PHP
+          uses: shivammathur/setup-php@v2
+          with:
+            php-version: ${{ matrix.php-versions }}
+            ini-values: memory_limit=-1
+            extensions: mbstring, intl
+        - name: init SSH-Agent and add keys
+          uses: webfactory/ssh-agent@v0.9.0
+          with:
+            ssh-private-key: ${{ secrets.READ_ACCESS }}
+
+        - name: Validate composer.json and composer.lock
+          run: composer validate
+
+        - name: Cache Composer packages
+          id: composer-cache
+          uses: actions/cache@v3
+          with:
+            path: vendor
+            key: ${{ runner.os }}-php-${{ matrix.php-versions }}-${{ hashFiles('**/composer.lock') }}
+            restore-keys: |
+                ${{ runner.os }}-php-${{ matrix.php-versions }}-
+                
+        - name: Install dependencies
+          run: composer install --no-dev --no-ansi --no-interaction --no-scripts --prefer-dist 
+    
+    deploy:
         runs-on: ubuntu-latest
         steps:
-            - name: Print test
+            - name: Install Deployer
+              run: |
+                composer global require deployer/deployer
+                export PATH="$HOME/.composer/vendor/bin:$PATH"
+
+            - name: configure SSH
+              run: |
+                mkdir -p ~/.ssh
+                ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+                chmod 644 ~/.ssh/known_hosts
+
+            - name: Deploy on server
               run: echo dep deploy ${{ inputs.applicationContext }} -vvv
 
