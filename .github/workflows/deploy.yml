@@ -17,5 +17,5 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Print test
-              run: echo dep deploy ${{ inputs.applicationContext }}
+              run: echo dep deploy ${{ inputs.applicationContext }} -vvv
 
