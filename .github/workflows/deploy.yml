@@ -29,12 +29,6 @@ jobs:
               with:
                 ssh-private-key: ${{ secrets.READ_ACCESS }}
 
-            - name: configure SSH
-              run: |
-                mkdir -p ~/.ssh
-                ssh-keyscan -H ${{ secrets.SSH_HOSTS }} >> ~/.ssh/known_hosts
-                chmod 644 ~/.ssh/known_hosts
-
             - name: Deploy on server
               run: echo dep deploy ${{ inputs.applicationContext }} -vvv
 
