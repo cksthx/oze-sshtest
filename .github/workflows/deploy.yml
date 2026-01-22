@@ -1,0 +1,24 @@
+name: OZE Website Deployment
+
+on:
+    workflow_dispatch:
+        inputs:
+            applicationContext:
+                description: 'Application Context'
+                required: true
+                default: 'staging'
+                type: choice
+                options: 
+                    - staging
+                    - production
+
+jobs:
+    call-workflow-test:
+        uses: ./.github/workflows/test.yml
+
+    print-tag:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Print test
+              run: echo dep deploy ${{ inputs.applicationContext }}
+
