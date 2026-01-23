@@ -30,6 +30,12 @@ jobs:
         ini-values: memory_limit=-1
         extensions: mbstring, intl
 
+    - name: Install PHPStan
+      run: composer global require phpstan/phpstan
+
+    - name: PHP syntax check
+      run: vendor/bin/phpstan analyse -l 5
+
     - name: init SSH-Agent and add keys
       uses: webfactory/ssh-agent@v0.9.0
       with:
@@ -48,10 +54,7 @@ jobs:
             ${{ runner.os }}-php-${{ matrix.php-versions }}-
                 
     - name: Install dependencies
-      run: composer install --no-dev --no-ansi --no-interaction --no-scripts --prefer-dist 
-
-    - name: PHP syntax check
-      run: vendor/bin/phpstan analyse -l 5
+      run: composer install --no-dev --no-ansi --no-interaction --no-scripts --prefer-dist
 
     - name: Composer security audit
       run: composer audit
