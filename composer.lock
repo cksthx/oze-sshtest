@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "162fde1afb933e0565069020fadc78ce",
+    "content-hash": "75736077c69ea158b68cb7450c752055",
     "packages": [
         {
             "name": "b13/container",
@@ -4799,21 +4799,20 @@
         },
         {
             "name": "symfony/process",
-            "version": "v5.4.47",
+            "version": "v6.4.31",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
-                "reference": "5d1662fb32ebc94f17ddb8d635454a776066733d"
+                "reference": "8541b7308fca001320e90bca8a73a28aa5604a6e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/5d1662fb32ebc94f17ddb8d635454a776066733d",
-                "reference": "5d1662fb32ebc94f17ddb8d635454a776066733d",
+                "url": "https://api.github.com/repos/symfony/process/zipball/8541b7308fca001320e90bca8a73a28aa5604a6e",
+                "reference": "8541b7308fca001320e90bca8a73a28aa5604a6e",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.2.5",
-                "symfony/polyfill-php80": "^1.16"
+                "php": ">=8.1"
             },
             "type": "library",
             "autoload": {
@@ -4841,7 +4840,7 @@
             "description": "Executes commands in sub-processes",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/process/tree/v5.4.47"
+                "source": "https://github.com/symfony/process/tree/v6.4.31"
             },
             "funding": [
                 {
@@ -4853,11 +4852,15 @@
                     "type": "github"
                 },
                 {
+                    "url": "https://github.com/nicolas-grekas",
+                    "type": "github"
+                },
+                {
                     "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-11-06T11:36:42+00:00"
+            "time": "2025-12-15T19:26:35+00:00"
         },
         {
             "name": "symfony/property-access",
@@ -8246,62 +8249,6 @@
                 }
             ],
             "time": "2025-02-19T16:45:27+00:00"
-        },
-        {
-            "name": "deployer/recipes",
-            "version": "6.2.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/deployphp/recipes.git",
-                "reference": "4c2470771249fbff55eb56429c29d74590768fa0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/deployphp/recipes/zipball/4c2470771249fbff55eb56429c29d74590768fa0",
-                "reference": "4c2470771249fbff55eb56429c29d74590768fa0",
-                "shasum": ""
-            },
-            "require-dev": {
-                "deployer/deployer": "^6.3"
-            },
-            "type": "library",
-            "autoload": {
-                "files": [
-                    "autoload.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Anton Medvedev",
-                    "email": "anton@medv.io"
-                }
-            ],
-            "description": "3rd party deployer recipes",
-            "homepage": "https://github.com/deployphp/recipes",
-            "keywords": [
-                "cachetool",
-                "cloudflare",
-                "deploy",
-                "deployer",
-                "deployment",
-                "hipchat",
-                "newrelic",
-                "rabbit",
-                "recipes",
-                "sentry",
-                "slack",
-                "yarn"
-            ],
-            "support": {
-                "issues": "https://github.com/deployphp/recipes/issues",
-                "source": "https://github.com/deployphp/recipes"
-            },
-            "abandoned": true,
-            "time": "2019-01-17T06:03:27+00:00"
         },
         {
             "name": "phpstan/phpstan",
