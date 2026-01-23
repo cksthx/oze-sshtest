@@ -1,8 +1,8 @@
 hosts:
-  staging:
-    host: deployment.made-by-comkom.de
-    branch: master
-    user: p702307
-    identityFile: ~
-    http_user: p702307
-    deploy_path: /home/www/p702307/html/deploytest/staging
+  host: deployment.made-by-comkom.de
+  stage: staging
+  branch: master
+  user: p702307
+  identityFile: ~
+  http_user: p702307
+  deploy_path: /home/www/p702307/html/deploytest/staging
