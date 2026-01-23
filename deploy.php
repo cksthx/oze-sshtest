@@ -22,8 +22,8 @@ set('writable_mode', 'chmod');
 set('composer_action', 'install');
 set('update_code_strategy', 'clone');
 
-set('bin/php', '/home/www/p702307/.local/bin/php');
-set('bin/composer', '{{bin/php}} /home/www/p702307/.local/bin/composer');
+set('bin/php', '/home/www/p702307/cd ..bin/php');
+set('bin/composer', '/usr/local/composer/bin/composer');
 
 /**
  * Path to TYPO3 cli
