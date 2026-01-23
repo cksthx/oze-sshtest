@@ -45,7 +45,7 @@ jobs:
               with: 
                   ssh-private-key: |
                     ${{ secrets.SSH_HOST }}
-                    ${{ secrets.READ_ACCESS }}
+                    ${{ secrets.GH_ACTIONS }}
 
             - name: Install dependencies
               run: composer install --no-ansi --no-interaction --no-scripts --prefer-dist 
