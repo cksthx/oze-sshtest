@@ -10,7 +10,7 @@ require 'recipe/rsync.php';
 set('application', 'startsmart-project');
 
 # Define Git-Repository
-set('repository', 'git@github.com:made-by-comkom/oze-website.git');
+set('repository', 'git@github.com:cksthx/oze-sshtest.git');
 
 # [Optional] Allocate tty for git clone. The default value is false.
 set('git_tty', true);

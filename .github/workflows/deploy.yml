@@ -27,8 +27,8 @@ jobs:
             - name: init SSH-Agent and add keys
               uses: webfactory/ssh-agent@v0.9.0
               with:
-                ssh-private-key: ${{ secrets.READ_ACCESS }}
+                ssh-private-key: ${{ secrets.SSH_HOST }}
 
             - name: Deploy on server
-              run: echo dep deploy ${{ inputs.applicationContext }} -vvv
+              run: dep deploy ${{ inputs.applicationContext }} -vvv
 
