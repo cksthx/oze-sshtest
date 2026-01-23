@@ -4,7 +4,7 @@ namespace Deployer;
 
 # Call default recipe
 require 'recipe/common.php';
-require 'recipe/rsync.php';
+require 'contrib/rsync.php';
 
 # Project name
 set('application', 'startsmart-project');
