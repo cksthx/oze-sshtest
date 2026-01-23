@@ -47,6 +47,11 @@ jobs:
                     ${{ secrets.SSH_HOST }}
                     ${{ secrets.GH_ACTIONS }}
 
+            - name: Add server to known_hosts
+              run: |
+                mkdir -p ~/.ssh
+                ssh-keyscan -H deployment.made-by-comkom.de >> ~/.ssh/known_hosts
+
             - name: Install dependencies
               run: composer install --no-ansi --no-interaction --no-scripts --prefer-dist 
 
