@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ce1391ef1c592087dc0e46ef56ffbd42",
+    "content-hash": "d98f7ad82e4bcfc9c72409af90334236",
     "packages": [
         {
             "name": "b13/container",
@@ -253,7 +253,7 @@
         },
         {
             "name": "comkom/base-project",
-            "version": "dev-dev",
+            "version": "dev-master",
             "dist": {
                 "type": "path",
                 "url": "./packages/base_project",
@@ -289,7 +289,7 @@
         },
         {
             "name": "comkom/base-theme",
-            "version": "dev-dev",
+            "version": "dev-master",
             "dist": {
                 "type": "path",
                 "url": "./packages/base_theme",
@@ -8195,42 +8195,33 @@
     "packages-dev": [
         {
             "name": "deployer/deployer",
-            "version": "v6.9.0",
+            "version": "v7.5.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/deployphp/deployer.git",
-                "reference": "c4380effdc9f6d9c6ae549bb76f0a22bcb1d31d2"
+                "reference": "efc71dac9ccc86b3f9946e75d50cb106b775aae2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/deployphp/deployer/zipball/c4380effdc9f6d9c6ae549bb76f0a22bcb1d31d2",
-                "reference": "c4380effdc9f6d9c6ae549bb76f0a22bcb1d31d2",
+                "url": "https://api.github.com/repos/deployphp/deployer/zipball/efc71dac9ccc86b3f9946e75d50cb106b775aae2",
+                "reference": "efc71dac9ccc86b3f9946e75d50cb106b775aae2",
                 "shasum": ""
             },
             "require": {
-                "deployer/phar-update": "~2.2",
-                "php": "^7.2 || ^8.0",
-                "pimple/pimple": "~3.0",
-                "symfony/console": "~2.7|~3.0|~4.0|~5.0",
-                "symfony/process": "~2.7|~3.0|~4.0|~5.0",
-                "symfony/yaml": "~2.7|~3.0|~4.0|~5.0"
+                "ext-json": "*",
+                "php": "^8.0|^7.3"
             },
             "require-dev": {
-                "phpunit/phpunit": "^8"
+                "friendsofphp/php-cs-fixer": "^3.64",
+                "pestphp/pest": "^3.3",
+                "phpstan/phpstan": "^1.4",
+                "phpunit/php-code-coverage": "^11.0",
+                "phpunit/phpunit": "^11.4"
             },
             "bin": [
                 "bin/dep"
             ],
             "type": "library",
-            "autoload": {
-                "files": [
-                    "src/Support/helpers.php",
-                    "src/functions.php"
-                ],
-                "psr-4": {
-                    "Deployer\\": "src/"
-                }
-            },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
@@ -8250,72 +8241,11 @@
             },
             "funding": [
                 {
-                    "url": "https://github.com/antonmedv",
+                    "url": "https://github.com/sponsors/antonmedv",
                     "type": "github"
                 }
             ],
-            "time": "2022-08-03T18:09:01+00:00"
-        },
-        {
-            "name": "deployer/phar-update",
-            "version": "v2.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/deployphp/phar-update.git",
-                "reference": "9ad07422f2cd43a1382ee8e134bdcd3a374848e3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/deployphp/phar-update/zipball/9ad07422f2cd43a1382ee8e134bdcd3a374848e3",
-                "reference": "9ad07422f2cd43a1382ee8e134bdcd3a374848e3",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.3",
-                "symfony/console": "~2.7|~3.0|~4.0|~5.0"
-            },
-            "require-dev": {
-                "mikey179/vfsstream": "1.1.0",
-                "phpunit/phpunit": "3.7.*",
-                "symfony/process": "~2.7|~3.0|~4.0|~5.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Deployer\\Component\\PHPUnit\\": "src/PHPUnit/",
-                    "Deployer\\Component\\Version\\": "src/Version/",
-                    "Deployer\\Component\\PharUpdate\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Kevin Herrera",
-                    "email": "kevin@herrera.io",
-                    "homepage": "http://kevin.herrera.io"
-                },
-                {
-                    "name": "Anton Medvedev",
-                    "email": "anton@medv.io",
-                    "homepage": "https://medv.io"
-                }
-            ],
-            "description": "Integrates Phar Update to Symfony Console.",
-            "homepage": "https://github.com/deployphp/phar-update",
-            "keywords": [
-                "console",
-                "phar",
-                "update"
-            ],
-            "support": {
-                "issues": "https://github.com/deployphp/phar-update/issues",
-                "source": "https://github.com/deployphp/phar-update/tree/v2.2.0"
-            },
-            "abandoned": true,
-            "time": "2019-12-12T13:45:57+00:00"
+            "time": "2025-02-19T16:45:27+00:00"
         },
         {
             "name": "deployer/recipes",
@@ -8372,59 +8302,6 @@
             },
             "abandoned": true,
             "time": "2019-01-17T06:03:27+00:00"
-        },
-        {
-            "name": "pimple/pimple",
-            "version": "v3.6.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/silexphp/Pimple.git",
-                "reference": "020029849cc55ad360066844df8ed880fb20c5bb"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/silexphp/Pimple/zipball/020029849cc55ad360066844df8ed880fb20c5bb",
-                "reference": "020029849cc55ad360066844df8ed880fb20c5bb",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.2.5",
-                "psr/container": "^1.1 || ^2.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "*"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.4.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Pimple": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                }
-            ],
-            "description": "Pimple, a simple Dependency Injection Container",
-            "homepage": "https://pimple.symfony.com",
-            "keywords": [
-                "container",
-                "dependency injection"
-            ],
-            "support": {
-                "source": "https://github.com/silexphp/Pimple/tree/v3.6.1"
-            },
-            "time": "2025-12-31T08:24:29+00:00"
         }
     ],
     "aliases": [],

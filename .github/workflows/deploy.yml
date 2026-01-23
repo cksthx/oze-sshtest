@@ -46,9 +46,9 @@ jobs:
                   ssh-private-key: |
                     ${{ secrets.SSH_HOST }}
                     ${{ secrets.READ_ACCESS }}
-                    
+
             - name: Install dependencies
-              run: composer install --no-dev --no-ansi --no-interaction --no-scripts --prefer-dist 
+              run: composer install --no-ansi --no-interaction --no-scripts --prefer-dist 
 
             - name: Deploy on server
               run: dep deploy ${{ inputs.applicationContext }} -vvv
