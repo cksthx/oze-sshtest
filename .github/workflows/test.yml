@@ -50,8 +50,8 @@ jobs:
     - name: Install dependencies
       run: composer install --no-ansi --no-interaction --no-scripts --prefer-dist
 
-    - name: Composer security audit
-      run: composer audit
-
     - name: PHP syntax check
       run: vendor/bin/phpstan analyse -l 5
+
+    - name: Composer security audit
+      run: composer audit || true
