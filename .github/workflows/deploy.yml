@@ -50,8 +50,12 @@ jobs:
             - name: Add server to known_hosts
               run: |
                 mkdir -p ~/.ssh
-                for host in ${{ secrets.SSH_HOSTS }}; do
+                chmod 700 ~/.ssh
+                IFS=' ' read -r -a hosts <<< "${{ secrets.SSH_HOSTS }}"
+                for host in "${hosts[@]}"; do
                   ssh-keyscan -H $host >> ~/.ssh/known_hosts
+                done
+                chmod 644 ~/.ssh/known_hosts
 
             - name: Install dependencies
               run: composer install --no-ansi --no-interaction --no-scripts --prefer-dist 
