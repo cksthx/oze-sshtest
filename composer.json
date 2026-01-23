@@ -91,6 +91,7 @@
     },
     "require-dev": {
         "deployer/deployer": "*",
-        "deployer/recipes": "*"
+        "deployer/recipes": "*",
+        "phpstan/phpstan": "*"
     }
 }

@@ -35,11 +35,6 @@ jobs:
                 ini-values: memory_limit=-1
                 extensions: mbstring, intl
 
-            - name: Install Deployer
-              run: |
-                composer global require deployer/deployer
-                echo "$HOME/.composer/vendor/bin" >> $GITHUB_PATH
-
             - name: init SSH-Agent and add keys
               uses: webfactory/ssh-agent@v0.9.0
               with: 
