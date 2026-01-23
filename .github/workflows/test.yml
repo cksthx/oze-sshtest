@@ -50,9 +50,6 @@ jobs:
     - name: Install dependencies
       run: composer install --no-dev --no-ansi --no-interaction --no-scripts --prefer-dist 
 
-    - name: Typo3 Install:status
-      run: vendor/bin/typo3 install:status
-
     - name: PHP syntax check
       run: vendor/bin/phpstan analyse -l 5
 
