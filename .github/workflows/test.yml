@@ -23,6 +23,11 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
 
+    - name: PHP syntax check
+      uses: php-actions/phpstan@v3
+      with:
+        path: ./
+
     - name: Setup PHP
       uses: shivammathur/setup-php@v2
       with:
@@ -49,9 +54,6 @@ jobs:
                 
     - name: Install dependencies
       run: composer install --no-ansi --no-interaction --no-scripts --prefer-dist
-
-    - name: PHP syntax check
-      run: vendor/bin/phpstan analyse -l 5 .
 
     - name: Composer security audit
       run: composer audit || true
