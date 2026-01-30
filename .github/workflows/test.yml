@@ -55,3 +55,9 @@ jobs:
 
     - name: Composer security audit
       run: composer audit || true
+
+    - name: Check outdated node-modules
+      uses: actions/setup-node@v4
+
+    - run: npm install
+    - run: npm outdated
